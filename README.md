@@ -12,10 +12,12 @@ SideBarKit enables apps to decouled generic sidebar implementation from app code
 - BYO (Bring your own) enum models
 
 ## Todo:
+- Add toggle btns for items 👈 🏀
+- Add optional sidebar toggle button at the top 👈
+- make a selectionIndex that works across groups (use uuid?) 👈
+- begin moving styles over
+- add bidnings in an example proj.
+- simulating change with dispatch etc (maybe)
+- add previewcontainer  (later)
 - Make gif
 - Improve readme (copilot)
-- Add toggle btns for items 👈
-- Add optional sidebar toggle button at the top 👈
-- add bidnings in an example proj. simulating change with dispatch etc
-- add previewcontainer and darkmode modifiers etc (later)
-- make a selectionIndex that works across groups

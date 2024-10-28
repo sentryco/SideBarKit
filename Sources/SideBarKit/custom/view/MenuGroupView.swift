@@ -5,6 +5,7 @@ import SwiftUI
  */
 struct MenuGroupView: View, MenuGroupKind {
    let groupType: any GroupKind.Type
+   @State var isOn: Bool = false
 }
 /**
  * Content
@@ -25,21 +26,28 @@ extension MenuGroupView {
     * - Fixme: ⚠️️ use hstack
     */
    var groupTitle: some View {
-      HStack {
-         Text(groupType.title)
-            .font(.title)
-         Spacer()
-      }
+      MenuHeaderView(
+         text: groupType.title,
+         isOn: $isOn
+      )
+//      HStack {
+//         Text(groupType.title)
+//            .font(.title)
+//         Spacer()
+//      }
       .padding()
-      .background(.green)
+//      .background(.green)
    }
    /**
     * rowItems
+    * - Fixme: ⚠️️ add animation to the isON toggeling
     */
-   var rowItems: some View {
-      VStack(spacing: .zero) {
-         ForEach(groupType.items.indices, id: \.self) { i in
-            self.rowItem(rowItem: groupType.items[i], index: i)
+   @ViewBuilder var rowItems: some View {
+      if !isOn { // Toggle visibility via the arrow icon
+         VStack(spacing: .zero) {
+            ForEach(groupType.items.indices, id: \.self) { i in
+               self.rowItem(rowItem: groupType.items[i], index: i)
+            }
          }
       }
    }

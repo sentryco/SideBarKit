@@ -7,4 +7,6 @@ import SwiftUI
  */
 struct MenuStack: View {
    let groups: GroupKinds
+   // - Fixme: ⚠️️ Maybe make selection: UUID ? (that works in multi-dimensional setup etc)
 }
+var isTest: Bool = false

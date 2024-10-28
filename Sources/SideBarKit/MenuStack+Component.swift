@@ -13,7 +13,7 @@ extension MenuStack {
    @ViewBuilder var content: some View {
       ForEach(groups.indices, id: \.self) { (_ i: Int) in
          let groupType: any GroupKind.Type = groups[i]
-         MenuGroupView.init(groupType: groupType)
+         MenuGroupView(groupType: groupType)
       }
    }
 }
