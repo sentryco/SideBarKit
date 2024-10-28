@@ -1,0 +1,15 @@
+{
+  "originHash" : "82893791fd124e867d0f9eec79f76b170ecbbb512ec25b9bf7c7cdb528fb20d4",
+  "pins" : [
+    {
+      "identity" : "hybridcolor",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/sentryco/HybridColor",
+      "state" : {
+        "branch" : "main",
+        "revision" : "6592be98979ff0201e94f0b7a29e98f3c292715b"
+      }
+    }
+  ],
+  "version" : 3
+}
