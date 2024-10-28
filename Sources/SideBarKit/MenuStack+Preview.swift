@@ -1,13 +1,20 @@
 import SwiftUI
 /**
- * - Fixme: ⚠️️ add description
+ * Preview of menustack
  */
 #Preview {
-   MenuStack(
-      groups: [
-         FilterGroup.self, // top
-         MiscGroup.self, // middle
-         LabelGroup.self // bottom
-      ]
-   )
+   ZStack {
+      Color.whiteOrBlack
+         .edgesIgnoringSafeArea(.all)
+      MenuStack(
+         groups: [
+            FilterGroup.self, // top
+            MiscGroup.self, // middle
+            LabelGroup.self // bottom
+         ]
+      )
+         .padding()
+         .background(Color.blackOrWhite)
+         .environment(\.colorScheme, .dark)
+   }
 }

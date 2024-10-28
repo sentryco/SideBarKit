@@ -1,4 +1,4 @@
-import Foundation
+import SwiftUI
 // custom
 // - Fixme: ⚠️️ move to example project?
 enum FilterGroup: GroupKind {
@@ -19,6 +19,13 @@ extension FilterGroup {
 }
 // - Fixme: ⚠️️ add group preview etc
 #Preview {
-   MenuGroupView(groupType: FilterGroup.self)
-      .padding()
+   ZStack {
+      Color.whiteOrBlack
+         .edgesIgnoringSafeArea(.all)
+      MenuGroupView(groupType: FilterGroup.self)
+         .padding()
+         .background(Color.blackOrWhite)
+         .environment(\.colorScheme, .dark)
+   }
 }
+

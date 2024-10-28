@@ -27,4 +27,15 @@ extension LabelGroup {
       }
    }
 }
-// - Fixme: ⚠️️ add preview
+// - Fixme: ⚠️️ add darkmode modifier etc
+#Preview {
+   ZStack {
+      Color.whiteOrBlack
+         .edgesIgnoringSafeArea(.all)
+      MenuGroupView(groupType: LabelGroup.self)
+         .padding()
+         .background(Color.blackOrWhite)
+         .environment(\.colorScheme, .dark)
+   }
+}
+

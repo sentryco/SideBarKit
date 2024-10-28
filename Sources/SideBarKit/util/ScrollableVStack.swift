@@ -27,7 +27,10 @@ struct ScrollableVStack<Content: View>: View {
       self.content = content
    }
    var body: some View {
-      ScrollView {
+      ScrollView(
+         .vertical, // - Fixme: ⚠️️ doc this line
+         showsIndicators: showsIndicators // - Fixme: ⚠️️ doc this line
+      ) {
          VStack(spacing: spacing) {
             content() // Inject content here
          }

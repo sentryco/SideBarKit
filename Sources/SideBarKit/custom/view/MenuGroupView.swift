@@ -1,5 +1,6 @@
 import SwiftUI
 /**
+ * - Abstract: Boilerplate view for the groups
  * - Note: Previews are in implementation groups
  */
 struct MenuGroupView: View, MenuGroupKind {

@@ -1,10 +1,11 @@
-import Foundation
+import SwiftUI
+import HybridColor
 /**
  * - Fixme: ⚠️️ move to example project?
  */
 enum MiscGroup: GroupKind {
    static let title: String = "Misc"
-   case prefs, all, favorites
+   case all, favorites, prefs
 }
 extension MiscGroup {
    // Custom implementation
@@ -14,5 +15,15 @@ extension MiscGroup {
       case .all: return FilteringType(icon: "heart", title: "All items", action: { Swift.print("action") }, tag: .constant(0))
       case .favorites: return FilteringType(icon: "heart", title: "Favourites", action: { Swift.print("action") }, tag: .constant(0))
       }
+   }
+}
+#Preview {
+   ZStack {
+      Color.whiteOrBlack
+         .edgesIgnoringSafeArea(.all)
+      MenuGroupView(groupType: MiscGroup.self)
+         .padding()
+         .background(Color.blackOrWhite)
+         .environment(\.colorScheme, .dark)
    }
 }
