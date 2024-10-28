@@ -15,8 +15,11 @@ extension FilterRowView {
       HStack {
          icon
          text
+         Spacer()
          tag
       }
+      .padding()
+      .background(Color.yellow)
    }
 }
 /**
@@ -31,6 +34,7 @@ extension FilterRowView {
    }
    var tag: some View {
       Circle()
+         .frame(width: 24, height: 24)
    }
 }
 /**
