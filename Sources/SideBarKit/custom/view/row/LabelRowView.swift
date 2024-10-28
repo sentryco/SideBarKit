@@ -4,7 +4,14 @@ struct LabelRowView: View, MenuRowKind {
    let titleText: String
    let action: () -> Void
    let color: Color
+   /**
+    * The number of tags associated with the menu item.
+    * - Abstract: This property holds the number of tags associated with the menu item.
+    * - Description: Represents the number of tags associated with the menu item, which can be used to indicate the item's relevance or categorization.
+    * - Note: This should be a binding
+    */
    @Binding var tagCount: Int
+   let isSelected: Bool = false
 }
 extension LabelRowView {
    // - Fixme: ⚠️️ maybe use RowKind and add to MenuRowKind? or make it generic or something?

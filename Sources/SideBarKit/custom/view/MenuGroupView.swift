@@ -59,12 +59,13 @@ extension MenuGroupView {
    /**
     * rowItem
     * - Fixme: ⚠️️ Add HStack, left aligned
+    * - Fixme: ⚠️️ implement isSelected index == selected etc
     * - Note: index is used for keeping track of selection index etc
     */
    @ViewBuilder func rowItem(rowItem: RowKind, index: Int) -> some View {
       switch rowItem {
-      case let labelType as LabelType: LabelRowView(labelType: labelType)
-      case let filterType as FilteringType: FilterRowView(filterType: filterType)
+      case let labelType as LabelType: LabelRowView(labelType: labelType/*, isSelected: false*/)
+      case let filterType as FilteringType: FilterRowView(filterType: filterType, isSelected: false)
       case let miscType as MiscType: MiscRowView.init(miscType: miscType)
       default: fatalError("not supported")
       }
