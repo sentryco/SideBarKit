@@ -19,11 +19,12 @@ extension LabelGroup {
    // Custom implementation
    static func getItem(item: Self) -> RowKind {
       switch item {
-      case .otp: return LabelType(color: .pink, title: "OTP", tag: .constant(0))
-      case .passkeys: return LabelType(color: .green, title: "PassKeys", tag: .constant(0))
-      case .work: return LabelType(color: .teal, title: "Work", tag: .constant(0))
-      case .personal: return LabelType(color: .purple, title: "Personal", tag: .constant(0))
-      case .custom(let title, let color): return LabelType(color: color, title: title, tag: .constant(0))
+      case .otp: return LabelType(color: .pink, title: "OTP", action: { Swift.print("action") }, tag: .constant(0))
+      case .passkeys: return LabelType(color: .green, title: "PassKeys", action: { Swift.print("action") }, tag: .constant(0))
+      case .work: return LabelType(color: .teal, title: "Work", action: { Swift.print("action") }, tag: .constant(0))
+      case .personal: return LabelType(color: .purple, title: "Personal", action: { Swift.print("action") }, tag: .constant(0))
+      case .custom(let title, let color): return LabelType(color: color, title: title, action: { Swift.print("action") }, tag: .constant(0))
       }
    }
 }
+// - Fixme: ⚠️️ add preview

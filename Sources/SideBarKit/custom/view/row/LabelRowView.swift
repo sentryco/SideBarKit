@@ -6,6 +6,17 @@ struct LabelRowView: View, MenuRowKind {
    let color: Color
    @Binding var tagCount: Int
 }
+extension LabelRowView {
+   // - Fixme: ⚠️️ maybe use RowKind and add to MenuRowKind? or make it generic or something?
+   init(labelType: LabelType) {
+      self.init(
+         titleText: labelType.title,
+         action: labelType.action,
+         color: labelType.color,
+         tagCount: labelType.$tag
+      )
+   }
+}
 /**
  * Content
  */

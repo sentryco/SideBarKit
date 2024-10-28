@@ -5,6 +5,7 @@ import SwiftUI
 struct FilteringType: RowKind {
    let icon: String
    let title: String
+   let action: () -> Void
    // we can rebind from db etc here
    @Binding var tag: Int
 }

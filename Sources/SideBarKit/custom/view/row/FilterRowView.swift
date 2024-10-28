@@ -7,6 +7,16 @@ struct FilterRowView: View, MenuRowKind {
    // tagCount hock (group,row) // we do wiring in the implementor. switch enum for enum etc
    @Binding var tagCount: Int
 }
+extension FilterRowView {
+   init(filterType: FilteringType) {
+      self.init(
+         titleText: filterType.title,
+         iconName: filterType.icon,
+         action: filterType.action,
+         tagCount: filterType.$tag
+      )
+   }
+}
 /**
  * Content
  */

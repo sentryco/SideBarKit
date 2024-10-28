@@ -1,5 +1,7 @@
 import SwiftUI
-
+/**
+ * - Note: Previews are in implementation groups
+ */
 struct MenuGroupView: View, MenuGroupKind {
    let groupType: any GroupKind.Type
 }
@@ -11,32 +13,50 @@ extension MenuGroupView {
     * Content
     */
    var body: some View {
-      VStack {
-         self.groupTitle(text: groupType.title)
+      VStack(spacing: .zero) {
+         groupTitle
+         rowItems
+      }
+   }
+   /**
+    * groupTitle
+    * - Fixme: ⚠️️ add the hide button
+    * - Fixme: ⚠️️ use hstack
+    */
+   var groupTitle: some View {
+      HStack {
+         Text(groupType.title)
+            .font(.title)
+         Spacer()
+      }
+      .padding()
+      .background(.green)
+   }
+   /**
+    * rowItems
+    */
+   var rowItems: some View {
+      VStack(spacing: .zero) {
          ForEach(groupType.items.indices, id: \.self) { i in
             self.rowItem(rowItem: groupType.items[i], index: i)
          }
       }
    }
-   /**
-    * topTitleText
-    * - Fixme: ⚠️️ add the hide button
-    * - Fixme: ⚠️️ use hstack
-    */
-   func groupTitle(text: String) -> some View {
-      Text(text)
-         .font(.title)
-   }
+}
+/**
+ * Maker
+ */
+extension MenuGroupView {
    /**
     * rowItem
-    * - Fixme: ⚠️️ add HStack, left aligned
+    * - Fixme: ⚠️️ Add HStack, left aligned
     * - Note: index is used for keeping track of selection index etc
     */
-   func rowItem(rowItem: RowKind, index: Int) -> some View {
+   @ViewBuilder func rowItem(rowItem: RowKind, index: Int) -> some View {
       switch rowItem {
-      case is LabelType: EmptyView()
-      case is FilteringType: EmptyView()
-      case is MiscType: EmptyView()
+      case let labelType as LabelType: LabelRowView(labelType: labelType)
+      case let filterType as FilteringType: FilterRowView(filterType: filterType)
+      case let miscType as MiscType: MiscRowView.init(miscType: miscType)
       default: fatalError("not supported")
       }
    }
