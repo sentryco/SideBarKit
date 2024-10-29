@@ -9,11 +9,11 @@ extension FilterGroup {
    // implementation code
    static func getItem(item: Self) -> any RowKind {
       switch item {
-      case .login: return FilteringType(icon: "heart", title: "Login", action: { Swift.print("action") }, tag: .constant(0))
-      case .paymentcard: return FilteringType(icon: "heart", title: "Payment card", action: { Swift.print("action") }, tag: .constant(0))
-      case .wifi: return FilteringType(icon: "heart", title: "WiFi", action: { Swift.print("action") }, tag: .constant(0))
-      case .securenote: return FilteringType(icon: "heart", title: "Secure note", action: { Swift.print("action") }, tag: .constant(0))
-      case .other: return FilteringType(icon: "heart", title: "Other", action: { Swift.print("action") }, tag: .constant(0))
+      case .login: return FilteringType(icon: "heart", title: "Login", action: { Swift.print("action") }, tag: .constant(14))
+      case .paymentcard: return FilteringType(icon: "heart", title: "Payment card", action: { Swift.print("action") }, tag: .constant(3))
+      case .wifi: return FilteringType(icon: "heart", title: "WiFi", action: { Swift.print("action") }, tag: .constant(5))
+      case .securenote: return FilteringType(icon: "heart", title: "Secure note", action: { Swift.print("action") }, tag: .constant(44))
+      case .other: return FilteringType(icon: "heart", title: "Other", action: { Swift.print("action") }, tag: .constant(9))
       }
    }
 }

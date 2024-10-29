@@ -1,6 +1,7 @@
 import SwiftUI
 /**
  * - Fixme: ⚠️️ Add doc from legacy
+ * - Fixme: ⚠️️ could we make these types .modifiers? or button styles?
  */
 struct FilterRowView: View, MenuRowKind {
    /**

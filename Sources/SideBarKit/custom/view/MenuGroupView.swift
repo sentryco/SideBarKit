@@ -1,6 +1,6 @@
 import SwiftUI
 /**
- * - Abstract: Boilerplate view for the groups
+ * - Abstract: Boilerplate view for the group models
  * - Note: Previews are in implementation groups
  */
 struct MenuGroupView: View, MenuGroupKind {
@@ -30,13 +30,7 @@ extension MenuGroupView {
          text: groupType.title,
          isOn: $isOn
       )
-//      HStack {
-//         Text(groupType.title)
-//            .font(.title)
-//         Spacer()
-//      }
       .padding()
-//      .background(.green)
    }
    /**
     * rowItems
@@ -44,7 +38,7 @@ extension MenuGroupView {
     */
    @ViewBuilder var rowItems: some View {
       if !isOn { // Toggle visibility via the arrow icon
-         VStack(spacing: .zero) {
+         VStack(/*spacing: .zero*/) {
             ForEach(groupType.items.indices, id: \.self) { i in
                self.rowItem(rowItem: groupType.items[i], index: i)
             }

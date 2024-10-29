@@ -1,10 +1,21 @@
 import SwiftUI
-
+/**
+ * Preview
+ */
 #Preview {
-   LabelRowView(
-      titleText: "Hobby",
-      action: { Swift.print("action") },
-      color: .green,
-      tagCount: .constant(0)
-   )
+   PreviewContainer {
+      LabelRowView(
+         titleText: "Hobby",
+         action: { Swift.print("action") },
+         color: .green,
+         tagCount: .constant(4)
+      )
+      .padding(16)
+      .background(Color.blackOrWhite.opacity(1)) // Color.blackOrWhite
+      #if os(macOS)
+      .padding(.horizontal)
+      #endif
+   }
+   .environment(\.colorScheme, .dark)
 }
+ 

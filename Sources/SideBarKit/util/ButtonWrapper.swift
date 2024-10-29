@@ -21,6 +21,7 @@ extension ButtonWrapper {
          }
       }, label: {
          content
+            .contentShape(Rectangle()) // ⚠️️ key to making the entire button tappable / pressable, or else only the text fill is tappable etc
       })
       .noButtonStyle // This avoids down state changing apperance of text etc, it seems also to works as a fix for the multiple action firing at once issue that was solved with a .plain buttonstyle. but plain has the downstate, so thats why we use this custom style
       // ⚠️️ New, macOS needed space between

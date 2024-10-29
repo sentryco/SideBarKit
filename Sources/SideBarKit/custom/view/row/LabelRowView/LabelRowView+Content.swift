@@ -7,22 +7,30 @@ extension LabelRowView {
     * Body
     */
    var body: some View {
-      HStack {
-         labelColor
-         Text(titleText)
+      HStack(/*spacing: .zero*/) {
+         labelColor()
+         Self.text(isSelected: isSelected, titleText: titleText)// center
          Spacer()
-         Circle()
-            .frame(width: 24, height: 24)
+         Self.rightSideTag(tagCount: $tagCount, isSelected: isSelected) // right
       }
-      .padding()
-      .background(Color.orange)
+      .fixedSize(horizontal: false, vertical: true)
+      .buttonWrapper(action: action) // - Fixme: ⚠️️ doc this line
+     
    }
+}
+/**
+ * Component
+ */
+extension LabelRowView {
    /**
     * - Fixme: ⚠️️ This should be relative to height of parent, width should be 1:1
     */
-   var labelColor: some View {
+   func labelColor() -> some View {
       Circle()
-         .frame(width: 24, height: 24)
+         .frame(width: 20, height: 20)
          .foregroundColor(color)
+//         .padding(4)
    }
 }
+
+

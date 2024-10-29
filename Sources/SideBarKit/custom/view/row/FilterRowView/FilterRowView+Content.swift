@@ -3,75 +3,18 @@ import SwiftUI
  * Content
  */
 extension FilterRowView {
-   var body: some View {
-      content
-         .buttonWrapper(action: action) // - Fixme: ⚠️️ doc this line
-   }
    /**
     * Content (left-icon, title, right-tag)
     * - Abstract: This view composes the left-icon, title, and right-tag views into a horizontal stack.
     * - Description: Combines the left-side icon, title, and right-side tag into a cohesive horizontal layout, ensuring all elements are aligned and interactively responsive.
     */
-   var content: some View {
+   var body: some View {
       HStack(spacing: .zero) {
          Self.leftSideIcon(isSelected: isSelected, iconName: iconName) // left
          Self.text(isSelected: isSelected, titleText: titleText)// center
          Spacer()
          Self.rightSideTag(tagCount: $tagCount, isSelected: isSelected) // right
       }
-      .contentShape(Rectangle()) // ⚠️️ key to making the entire button tappable / pressable, or else only the text fill is tappable etc
-   }
-}
-/**
- * Component
- */
-extension FilterRowView {
-   /**
-    * Icon (left side)
-    * - Abstract: This view displays the left-side icon as an image.
-    * - Description: Displays the icon on the left side of the menu item, which visually represents the item's purpose or category.
-    * - Fixme: ⚠️️ Maybe use the modifier that doesn't need a size, see other icon code etc 👈
-    */
-   internal static func leftSideIcon(isSelected: Bool, iconName: String) -> some View {
-      // - Fixme: ⚠️️ Add the bellow later
-      // icon color for active / inactive state
-      // let iconColor: Color = isSelected ? Palette.SideBar.iconTint.active : Palette.SideBar.iconTint.inActive
-      let iconColor: Color = .whiteOrBlack.opacity(isSelected ? 1.0 : 0.6) // We change color based on selected state
-      return Image(systemName: iconName)
-         .iconStyle(
-            // - Fixme: ⚠️️ use Metric.iconSize or relative?
-            size: 18, // Sets the size of the icon
-            padding: 12, // Applies default margin padding around the icon
-            color: iconColor // Sets the color of the icon based on the iconColor variable
-         )
-         .background(isTest ? .pink : .clear) // ⚠️️ debug
-   }
-   /**
-    * TitleText (left aligned)
-    * - Abstract: This view displays the title text as a label.
-    * - Description: Displays the title of the menu item, enhancing readability and providing context about the item's function within the application.
-    */
-   internal static func text(isSelected: Bool, titleText: String) -> some View {
-      // - Fixme: ⚠️️ add the bellow later
-      // let textColor = isSelected ? Palette.SideBar.buttonText.active : Palette.SideBar.buttonText.inActive
-      let textColor: Color = .whiteOrBlack.opacity(isSelected ? 1.0 : 0.6) // We change color based on selected state
-      return Text(titleText)
-         .rowTextStyle(textColor: textColor)
-         .background(isTest ? .blue : .clear) // ⚠️️ debug
-   }
-   /**
-    * Tag - Create the `Tag-view` (badge with number of items)
-    * - Abstract: This view displays the tag count as a label.
-    * - Description: Displays the tag count on the right side of the menu item, providing a visual indicator of associated items or notifications.
-    * - Fixme: ⚠️️ Add some selected-state to tag icon as well? 👈 or is this in now?
-    */
-   internal static func rightSideTag(tagCount: Binding<Int>, isSelected: Bool) -> some View {
-      MenuTagView( // Initializes the MenuTagView
-         title: "\(tagCount/* ?? .zero*/)", // Converts the optional tagCount to a string, defaulting to "0" if nil,
-         isSelected: isSelected // Passes the isSelected state to the MenuTagView
-      )
-      // ⚠️️ New is that it also is hidden if tagCount is zero. this way things are more minimalistic
-      .opacity(/*tagCount == nil || */tagCount.wrappedValue == .zero ? .zero : 1) // hide prefs for instance, prefs has no tags and is set to nil
-      // .background(.teal) // ⚠️️ debug
+         .buttonWrapper(action: action) // - Fixme: ⚠️️ doc this line
    }
 }
