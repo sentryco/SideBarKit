@@ -16,7 +16,8 @@ extension FilterRowView {
          Self.rightSideTag(tagCount: $tagCount, isSelected: isSelected.wrappedValue) // right
       }
       .buttonWrapper { // - Fixme: ⚠️️ doc this line
-         selected.wrappedValue = self.uuid
+         // selected.wrappedValue = self.uuid
+         selection.wrappedValue = self.index
          action()
       }
    }

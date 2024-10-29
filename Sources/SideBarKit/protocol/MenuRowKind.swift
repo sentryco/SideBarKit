@@ -31,6 +31,12 @@ protocol MenuRowKind {
     * - Fixme: ⚠️️ add doc
     */
    var selected: Binding<UUID?> { get }
+   
+   var selection: Binding<CombinedIndex?> { get }
+   /**
+    * Index
+    */
+   var index: CombinedIndex { get }
 }
 /**
  * Getter
@@ -41,7 +47,8 @@ extension MenuRowKind {
     */
    var isSelected: Binding<Bool> {
       .init {
-         selected.wrappedValue == uuid
+         //selected.wrappedValue == uuid
+         selection.wrappedValue == index
       } set: { value in
          _ = value
       }

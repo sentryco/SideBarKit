@@ -34,7 +34,7 @@ extension MenuGroupView {
       if !isOn { // Toggle visibility via the arrow icon
          VStack(/*spacing: .zero*/) {
             ForEach(groupType.items.indices, id: \.self) { i in
-               rowItem(rowItem: groupType.items[i], uuid: .init()/*, index: i*/)
+               rowItem(rowItem: groupType.items[i], uuid: .init(), index: .init(row: i, column: index)/*, index: i*/)
             }
          }
       }

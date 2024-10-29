@@ -34,8 +34,9 @@ extension FilterGroup {
 #Preview {
    struct DebugContainer: View {
       @State var selected: UUID? = nil
+      @State var selectedIndex: CombinedIndex? = .init(row: 0, column: 0)
       var body: some View {
-         MenuGroupView(groupType: FilterGroup.self, selected: $selected)
+         MenuGroupView(selection: $selectedIndex, index: 0, groupType: FilterGroup.self, selected: $selected)
 //            .padding()
             .background(Color.blackOrWhite)
             .environment(\.colorScheme, .dark)

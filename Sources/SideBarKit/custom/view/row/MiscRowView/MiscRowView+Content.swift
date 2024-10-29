@@ -11,7 +11,8 @@ extension MiscRowView {
          Spacer()
       }
       .buttonWrapper { // - Fixme: ⚠️️ doc this line
-         selected.wrappedValue = self.uuid
+//         selected.wrappedValue = self.uuid
+         selection.wrappedValue = self.index
          action()
       }
    }

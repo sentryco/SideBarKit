@@ -4,6 +4,15 @@ import SwiftUI
  */
 struct MiscRowView: View, MenuRowKind {
    /**
+    * selection
+    */
+   let selection: Binding<CombinedIndex?>
+//   @Binding var selection: CombinedIndex?
+   /**
+    * Index
+    */
+   let index: CombinedIndex
+   /**
     * - Fixme: ⚠️️ add doc
     */
    var selected: Binding<UUID?>
@@ -35,8 +44,10 @@ extension MiscRowView {
    /**
     * - Fixme: ⚠️️ add doc
     */
-   init(miscType: MiscType, selected: Binding<UUID?>) {
+   init(miscType: MiscType, selected: Binding<UUID?>, index: CombinedIndex, selection: Binding<CombinedIndex?>) {
       self.init(
+         selection: selection,
+         index: index,
          selected: selected, 
          uuid: .init(),
          titleText: miscType.title,

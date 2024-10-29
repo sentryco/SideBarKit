@@ -3,6 +3,9 @@ import SwiftUI
  * - Fixme: ⚠️️ add description
  */
 struct LabelRowView: View, MenuRowKind {
+   let selection: Binding<CombinedIndex?>
+//   @Binding var selection: CombinedIndex?
+   let index: CombinedIndex
    /**
     * - Fixme: ⚠️️ add doc
     */
@@ -40,8 +43,10 @@ struct LabelRowView: View, MenuRowKind {
  */
 extension LabelRowView {
    // - Fixme: ⚠️️ maybe use RowKind and add to MenuRowKind? or make it generic or something?
-   init(labelType: LabelType, selected: Binding<UUID?>) {
+   init(labelType: LabelType, selected: Binding<UUID?>, index: CombinedIndex, selection: Binding<CombinedIndex?>) {
       self.init(
+         selection: selection,
+         index: index,
          selected: selected,
          uuid: .init(),
          titleText: labelType.title,

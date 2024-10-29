@@ -31,7 +31,7 @@ extension MiscGroup {
    ZStack {
       Color.whiteOrBlack
          .edgesIgnoringSafeArea(.all)
-      MenuGroupView(groupType: MiscGroup.self, selected: .constant(.init()))
+      MenuGroupView(selection: .constant(.init(row: 0, column: 0)), index: 1, groupType: MiscGroup.self, selected: .constant(.init()))
          .padding()
          .background(Color.blackOrWhite)
          .environment(\.colorScheme, .dark)

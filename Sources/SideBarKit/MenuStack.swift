@@ -14,7 +14,8 @@ struct MenuStack: View {
     * - Fixme: ⚠️️ add note about CombinedIndex. Equatable etc?
     */
    @State var selected: UUID?
-//   @State var selectedIndex = CombinedIndex(row: 0, column: 0)
+   // can be nil, for instance in compact mode for ipad etc
+   @State var selectedIndex: CombinedIndex? = .init(row: 0, column: 0)
    let groups: GroupKinds
    // - Fixme: ⚠️️ Maybe make selection: UUID ? (that works in multi-dimensional setup etc)
 }
@@ -25,7 +26,8 @@ var isTest: Bool = false
 // typealias Selection = (column: Int, row: Int)
 // We define a CombinedIndex struct to represent the row and column together.
 // equatable so we can assert if its selected etc
-//struct CombinedIndex: Equatable {
-//   var row: Int
-//   var column: Int
-//}
+// - Fixme: ⚠️️ use combinedIndex, as its easier to set init selection etc
+struct CombinedIndex: Equatable {
+   var row: Int
+   var column: Int
+}
