@@ -1,8 +1,19 @@
 import SwiftUI
-
+/**
+ * - Fixme: ⚠️️ add description
+ */
 struct LabelRowView: View, MenuRowKind {
+   /**
+    * - Fixme: ⚠️️ add description
+    */
    let titleText: String
+   /**
+    * - Fixme: ⚠️️ add description
+    */
    let action: () -> Void
+   /**
+    * - Fixme: ⚠️️ add description
+    */
    let color: Color
    /**
     * The number of tags associated with the menu item.
@@ -11,8 +22,14 @@ struct LabelRowView: View, MenuRowKind {
     * - Note: This should be a binding
     */
    @Binding var tagCount: Int
+   /**
+    * - Fixme: ⚠️️ add description
+    */
    let isSelected: Bool = false
 }
+/**
+ * Init
+ */
 extension LabelRowView {
    // - Fixme: ⚠️️ maybe use RowKind and add to MenuRowKind? or make it generic or something?
    init(labelType: LabelType) {
@@ -24,32 +41,4 @@ extension LabelRowView {
       )
    }
 }
-/**
- * Content
- */
-extension LabelRowView {
-   /**
-    * Body
-    */
-   var body: some View {
-      HStack {
-         Circle()
-            .frame(width: 24, height: 24)
-            .foregroundColor(color)
-         Text(titleText)
-         Spacer()
-         Circle()
-            .frame(width: 24, height: 24)
-      }
-      .padding()
-      .background(Color.orange)
-   }
-}
-#Preview {
-   LabelRowView(
-      titleText: "Hobby",
-      action: { Swift.print("action") },
-      color: .green,
-      tagCount: .constant(0)
-   )
-}
+
