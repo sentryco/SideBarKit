@@ -5,6 +5,7 @@ import SwiftUI
  * - Fixme: ⚠️️ move into seperate files etc 👈
  */
 enum FilterGroup: GroupKind {
+//   static var index: Int { 0 }
    static let title: String = "Type"
    case login, paymentcard, wifi, securenote, other
 }
@@ -12,7 +13,7 @@ extension FilterGroup {
    /**
     * implementation code
     */
-   static func getItem(item: Self) -> any RowKind {
+   static func getItem(item: Self/*, index: Int*/) -> any RowKind {
       switch item {
       case .login:
          return FilteringType(icon: "heart", title: "Login", action: { Swift.print("action");  }, tag: .constant(14))

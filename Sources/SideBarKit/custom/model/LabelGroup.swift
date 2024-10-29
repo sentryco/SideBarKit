@@ -5,6 +5,7 @@ import SwiftUI
  * - Fixme: ⚠️️ move to example project?
  */
 enum LabelGroup: GroupKind {
+//   static var index: Int { 2 }
    static let title: String = "Tags"
    case otp, passkeys, work, personal, custom(title: String, color: Color, tagCount: Binding<Int>)
 }
@@ -24,7 +25,7 @@ extension LabelGroup {
    /**
     * Custom implementation
     */
-   static func getItem(item: Self) -> RowKind {
+   static func getItem(item: Self/*, index: Int*/) -> RowKind {
       switch item {
       case .otp: 
          return LabelType(color: .pink, title: "OTP", action: { Swift.print("action") }, tag: .constant(4))

@@ -4,6 +4,7 @@ import HybridColor
  * - Fixme: ⚠️️ move to example project?
  */
 enum MiscGroup: GroupKind {
+//   static var index: Int { 1 }
    static let title: String = "Misc"
    case all, favorites, trash, archived, prefs
 }
@@ -11,7 +12,7 @@ extension MiscGroup {
    /**
     * Custom implementation
     */
-   static func getItem(item: Self) -> any RowKind {
+   static func getItem(item: Self/*, index: Int*/) -> any RowKind {
       switch item {
       case .prefs: 
          return MiscType(title: "Preferences", icon: "star", action: { Swift.print("action") })
