@@ -5,6 +5,7 @@ import SwiftUI
 #Preview {
    PreviewContainer {
       LabelRowView(
+         selected: .constant(nil),
          titleText: "Hobby",
          action: { Swift.print("action") },
          color: .green,

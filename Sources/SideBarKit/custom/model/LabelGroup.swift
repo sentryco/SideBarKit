@@ -26,11 +26,16 @@ extension LabelGroup {
     */
    static func getItem(item: Self) -> RowKind {
       switch item {
-      case .otp: return LabelType(color: .pink, title: "OTP", action: { Swift.print("action") }, tag: .constant(4))
-      case .passkeys: return LabelType(color: .green, title: "PassKeys", action: { Swift.print("action") }, tag: .constant(2))
-      case .work: return LabelType(color: .teal, title: "Work", action: { Swift.print("action") }, tag: .constant(1))
-      case .personal: return LabelType(color: .purple, title: "Personal", action: { Swift.print("action") }, tag: .constant(9))
-      case .custom(let title, let color, let tagCount): return LabelType(color: color, title: title, action: { Swift.print("action") }, tag: tagCount)
+      case .otp: 
+         return LabelType(color: .pink, title: "OTP", action: { Swift.print("action") }, tag: .constant(4))
+      case .passkeys: 
+         return LabelType(color: .green, title: "PassKeys", action: { Swift.print("action") }, tag: .constant(2))
+      case .work: 
+         return LabelType(color: .teal, title: "Work", action: { Swift.print("action") }, tag: .constant(1))
+      case .personal: 
+         return LabelType(color: .purple, title: "Personal", action: { Swift.print("action") }, tag: .constant(9))
+      case .custom(let title, let color, let tagCount): 
+         return LabelType(color: color, title: title, action: { Swift.print("action") }, tag: tagCount)
       }
    }
 }
@@ -39,7 +44,7 @@ extension LabelGroup {
    ZStack {
       Color.whiteOrBlack
          .edgesIgnoringSafeArea(.all)
-      MenuGroupView(groupType: LabelGroup.self)
+      MenuGroupView(groupType: LabelGroup.self, selected: .constant(.init()))
          .padding()
          .background(Color.blackOrWhite)
          .environment(\.colorScheme, .dark)

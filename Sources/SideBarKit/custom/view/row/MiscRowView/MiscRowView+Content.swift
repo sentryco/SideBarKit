@@ -10,6 +10,9 @@ extension MiscRowView {
          Self.text(isSelected: isSelected, titleText: titleText)// center
          Spacer()
       }
-      .buttonWrapper(action: action) // - Fixme: ⚠️️ doc this line
+      .buttonWrapper { // - Fixme: ⚠️️ doc this line
+         selected.wrappedValue = self.uuid
+         action()
+      }
    }
 }

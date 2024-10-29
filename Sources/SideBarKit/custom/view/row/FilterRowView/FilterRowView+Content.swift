@@ -15,6 +15,9 @@ extension FilterRowView {
          Spacer()
          Self.rightSideTag(tagCount: $tagCount, isSelected: isSelected) // right
       }
-         .buttonWrapper(action: action) // - Fixme: ⚠️️ doc this line
+      .buttonWrapper { // - Fixme: ⚠️️ doc this line
+         selected?.wrappedValue = self.uuid
+         action()
+      }
    }
 }

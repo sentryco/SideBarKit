@@ -1,6 +1,7 @@
-import Foundation
+import SwiftUI
 /**
  * Each row view needs to contain this
+ * - Fixme: ⚠️️ extend identifiable? or hashable?
  */
 protocol MenuRowKind {
    /**
@@ -22,4 +23,23 @@ protocol MenuRowKind {
     * - Fixme: ⚠️️ See selected state in DevicePicker?
     */
    var isSelected: Bool { get }
+   /**
+    * - Fixme: ⚠️️ add doc
+    */
+   var uuid: UUID { get }
+   /**
+    * - Fixme: ⚠️️ add doc
+    */
+   var selected: Binding<UUID?> { get }
+}
+/**
+ * Getter
+ */
+extension MenuRowKind {
+   /**
+    * is item selected
+    */
+   var isSelected: Bool {
+      selected.wrappedValue == uuid
+   }
 }

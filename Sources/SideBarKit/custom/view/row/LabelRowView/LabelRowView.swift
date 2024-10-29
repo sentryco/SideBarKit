@@ -4,6 +4,14 @@ import SwiftUI
  */
 struct LabelRowView: View, MenuRowKind {
    /**
+    * - Fixme: ⚠️️ add doc
+    */
+   let selected: Binding<UUID?>
+   /**
+    * - Fixme: ⚠️️ add doc
+    */
+   let uuid: UUID = .init()
+   /**
     * - Fixme: ⚠️️ add description
     */
    let titleText: String
@@ -25,15 +33,16 @@ struct LabelRowView: View, MenuRowKind {
    /**
     * - Fixme: ⚠️️ add description
     */
-   let isSelected: Bool = false
+//   let isSelected: Bool = false
 }
 /**
  * Init
  */
 extension LabelRowView {
    // - Fixme: ⚠️️ maybe use RowKind and add to MenuRowKind? or make it generic or something?
-   init(labelType: LabelType) {
+   init(labelType: LabelType, selected: Binding<UUID?>) {
       self.init(
+         selected: selected,
          titleText: labelType.title,
          action: labelType.action,
          color: labelType.color,

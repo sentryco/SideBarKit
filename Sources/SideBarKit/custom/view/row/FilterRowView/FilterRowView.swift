@@ -4,6 +4,11 @@ import SwiftUI
  * - Fixme: ⚠️️ could we make these types .modifiers? or button styles?
  */
 struct FilterRowView: View, MenuRowKind {
+   var selected: Binding<UUID?>
+   /**
+    * - Fixme: ⚠️️ add doc
+    */
+   let uuid: UUID = .init()
    /**
     * - Fixme: ⚠️️ add description
     */
@@ -24,7 +29,7 @@ struct FilterRowView: View, MenuRowKind {
    /**
     * - Fixme: ⚠️️ add description
     */
-   let isSelected: Bool
+//   let isSelected: Bool
 }
 /**
  * Init
@@ -33,13 +38,14 @@ extension FilterRowView {
    /**
     * - Parameter filterType: - Fixme: ⚠️️ add doc
     */
-   init(filterType: FilteringType, isSelected: Bool) {
+   init(filterType: FilteringType/*, isSelected: Bool*/) {
       self.init(
+         selected: .constant(.init()),
          titleText: filterType.title,
          iconName: filterType.icon,
          action: filterType.action,
-         tagCount: filterType.$tag, 
-         isSelected: isSelected
+         tagCount: filterType.$tag//,
+//         isSelected: isSelected
       )
    }
 }
