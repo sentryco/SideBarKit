@@ -14,7 +14,7 @@ extension FilterGroup {
     */
    static func getItem(item: Self) -> any RowKind {
       switch item {
-      case .login: 
+      case .login:
          return FilteringType(icon: "heart", title: "Login", action: { Swift.print("action");  }, tag: .constant(14))
       case .paymentcard:
          return FilteringType(icon: "star", title: "Payment card", action: { Swift.print("action") }, tag: .constant(3))
@@ -31,10 +31,22 @@ extension FilterGroup {
  * - Fixme: ⚠️️ Add group preview etc
  */
 #Preview {
-   ZStack {
+   struct DebugContainer: View {
+      @State var selected: UUID? = nil
+      var body: some View {
+         MenuGroupView(groupType: FilterGroup.self, selected: $selected)
+//            .padding()
+            .background(Color.blackOrWhite)
+            .environment(\.colorScheme, .dark)
+            .onChange(of: selected) { _, _ in
+               Swift.print("selected:  \(String(describing: selected))")
+            }
+      }
+   }
+   return ZStack {
       Color.whiteOrBlack
          .edgesIgnoringSafeArea(.all)
-      MenuGroupView(groupType: FilterGroup.self, selected: .constant(UUID()))
+      DebugContainer()
          .padding()
          .background(Color.blackOrWhite)
          .environment(\.colorScheme, .dark)

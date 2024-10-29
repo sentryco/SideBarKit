@@ -22,7 +22,7 @@ protocol MenuRowKind {
     * - Description: Indicates the current selection state of the menu item, where `true` means the item is active or highlighted in the UI.
     * - Fixme: ⚠️️ See selected state in DevicePicker?
     */
-   var isSelected: Bool { get }
+   var isSelected: Binding<Bool> { get }
    /**
     * - Fixme: ⚠️️ add doc
     */
@@ -39,7 +39,11 @@ extension MenuRowKind {
    /**
     * is item selected
     */
-   var isSelected: Bool {
-      selected.wrappedValue == uuid
+   var isSelected: Binding<Bool> {
+      .init {
+         selected.wrappedValue == uuid
+      } set: { value in
+         _ = value
+      }
    }
 }

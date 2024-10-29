@@ -6,8 +6,8 @@ extension MiscRowView {
     */
    var body: some View {
       HStack(spacing: .zero) {
-         Self.leftSideIcon(isSelected: isSelected, iconName: icon) // left
-         Self.text(isSelected: isSelected, titleText: titleText)// center
+         Self.leftSideIcon(isSelected: isSelected.wrappedValue, iconName: icon) // left
+         Self.text(isSelected: isSelected.wrappedValue, titleText: titleText)// center
          Spacer()
       }
       .buttonWrapper { // - Fixme: ⚠️️ doc this line

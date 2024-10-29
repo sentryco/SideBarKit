@@ -4,11 +4,14 @@ import SwiftUI
  * - Fixme: ⚠️️ could we make these types .modifiers? or button styles?
  */
 struct FilterRowView: View, MenuRowKind {
+   /**
+    * - Fixme: ⚠️️ add docc
+    */
    var selected: Binding<UUID?>
    /**
     * - Fixme: ⚠️️ add doc
     */
-   let uuid: UUID = .init()
+   let uuid: UUID/* = .init()*/
    /**
     * - Fixme: ⚠️️ add description
     */
@@ -38,9 +41,10 @@ extension FilterRowView {
    /**
     * - Parameter filterType: - Fixme: ⚠️️ add doc
     */
-   init(filterType: FilteringType/*, isSelected: Bool*/) {
+   init(filterType: FilteringType, selected: Binding<UUID?>, uuid: UUID) {
       self.init(
-         selected: .constant(.init()),
+         selected: selected,
+         uuid: uuid,
          titleText: filterType.title,
          iconName: filterType.icon,
          action: filterType.action,

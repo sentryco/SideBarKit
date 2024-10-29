@@ -10,7 +10,7 @@ struct MiscRowView: View, MenuRowKind {
    /**
     * - Fixme: ⚠️️ add doc
     */
-   let uuid: UUID = .init()
+   let uuid: UUID/* = .init()*/
    /**
     * - Fixme: ⚠️️ add doc
     */
@@ -35,9 +35,10 @@ extension MiscRowView {
    /**
     * - Fixme: ⚠️️ add doc
     */
-   init(miscType: MiscType) {
+   init(miscType: MiscType, selected: Binding<UUID?>) {
       self.init(
-         selected: .constant(nil),
+         selected: selected, 
+         uuid: .init(),
          titleText: miscType.title,
          action: miscType.action,
          icon: miscType.icon

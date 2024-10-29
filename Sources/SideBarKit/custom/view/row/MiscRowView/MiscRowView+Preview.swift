@@ -5,7 +5,8 @@ import SwiftUI
 #Preview {
    PreviewContainer {
       MiscRowView(
-         selected: .constant(.init()),
+         selected: .constant(.init()), 
+         uuid: .init(),
          titleText: "Prefs",
          action: { Swift.print("action") },
          icon: "heart"

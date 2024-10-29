@@ -10,13 +10,13 @@ extension FilterRowView {
     */
    var body: some View {
       HStack(spacing: .zero) {
-         Self.leftSideIcon(isSelected: isSelected, iconName: iconName) // left
-         Self.text(isSelected: isSelected, titleText: titleText)// center
+         Self.leftSideIcon(isSelected: isSelected.wrappedValue, iconName: iconName) // left
+         Self.text(isSelected: isSelected.wrappedValue, titleText: titleText)// center
          Spacer()
-         Self.rightSideTag(tagCount: $tagCount, isSelected: isSelected) // right
+         Self.rightSideTag(tagCount: $tagCount, isSelected: isSelected.wrappedValue) // right
       }
       .buttonWrapper { // - Fixme: ⚠️️ doc this line
-         selected?.wrappedValue = self.uuid
+         selected.wrappedValue = self.uuid
          action()
       }
    }

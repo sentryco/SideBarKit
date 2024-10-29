@@ -10,7 +10,7 @@ struct LabelRowView: View, MenuRowKind {
    /**
     * - Fixme: ⚠️️ add doc
     */
-   let uuid: UUID = .init()
+   let uuid: UUID /*= .init()*/
    /**
     * - Fixme: ⚠️️ add description
     */
@@ -43,6 +43,7 @@ extension LabelRowView {
    init(labelType: LabelType, selected: Binding<UUID?>) {
       self.init(
          selected: selected,
+         uuid: .init(),
          titleText: labelType.title,
          action: labelType.action,
          color: labelType.color,

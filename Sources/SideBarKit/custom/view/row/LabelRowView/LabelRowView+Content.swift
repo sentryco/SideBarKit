@@ -9,9 +9,9 @@ extension LabelRowView {
    var body: some View {
       HStack(/*spacing: .zero*/) {
          labelColor()
-         Self.text(isSelected: self.isSelected, titleText: titleText)// center
+         Self.text(isSelected: self.isSelected.wrappedValue, titleText: titleText)// center
          Spacer()
-         Self.rightSideTag(tagCount: $tagCount, isSelected: isSelected) // right
+         Self.rightSideTag(tagCount: $tagCount, isSelected: isSelected.wrappedValue) // right
       }
       .buttonWrapper { // - Fixme: ⚠️️ doc this line
          selected.wrappedValue = self.uuid
