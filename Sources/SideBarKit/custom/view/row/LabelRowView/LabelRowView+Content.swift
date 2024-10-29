@@ -27,9 +27,9 @@ extension LabelRowView {
     */
    func labelColor() -> some View {
       Circle()
-         .frame(width: 20, height: 20)
+         .frame(width: 18, height: 18)
          .foregroundColor(color)
-//         .padding(4)
+         .padding(.horizontal, 12)
    }
 }
 

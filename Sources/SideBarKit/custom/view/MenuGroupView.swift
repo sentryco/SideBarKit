@@ -30,7 +30,7 @@ extension MenuGroupView {
          text: groupType.title,
          isOn: $isOn
       )
-      .padding()
+      .padding(.vertical)
    }
    /**
     * rowItems
