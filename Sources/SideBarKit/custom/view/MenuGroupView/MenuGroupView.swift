@@ -4,6 +4,9 @@ import SwiftUI
  * - Note: Previews are in implementation groups
  */
 struct MenuGroupView: View, MenuGroupKind {
+   /**
+    * Selection binding
+    */
    @Binding var selection: CombinedIndex?
    /**
     * - Fixme: ⚠️️ add doc
@@ -17,8 +20,4 @@ struct MenuGroupView: View, MenuGroupKind {
     * - Fixme: ⚠️️ add doc
     */
    @State var isOn: Bool = false
-   /**
-    * Selection binding
-    */
-//   @Binding var selected: UUID?
 }

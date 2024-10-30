@@ -13,14 +13,12 @@ SideBarKit enables apps to decouled generic sidebar implementation from app code
 - Works for iOS (iPad) and macOS
 
 ## Todo:
-- Add the selection code 🏀
-- Make a selectionIndex that works across groups (use uuid?) 🏀
-- Animate the  toggle btns action 
-- Transfer doc, and clean up
+- Add better ForEach loops (ask copilot) 👈
+- Transfer doc, and clean up 👈
+- Improve comments with copilot
+- Improve readme (copilot)
 - Make things public
 - Make gif
-- Improve readme (copilot)
-- Add better ForEach loops (ask copilot)
 
 ## Not-todo:
 - Add optional sidebar toggle button at the top 🚫 (we can put that elsewhere?)

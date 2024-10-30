@@ -37,7 +37,7 @@ extension MenuGroupView {
                rowItem(
                   rowItem: groupType.items[i],
                   index: .init(row: i, column: index)
-               ) /*uuid: .init(),*/
+               )  
             }
          }
       }
