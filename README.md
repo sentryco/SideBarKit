@@ -1,3 +1,5 @@
+[![Tests](https://github.com/sentryco/SideBarKit/actions/workflows/Tests.yml/badge.svg)](https://github.com/sentryco/SideBarKit/actions/workflows/Tests.yml)
+
 # SideBarKit
 
 > Plug and play modular SideBar for macOS / iPad
