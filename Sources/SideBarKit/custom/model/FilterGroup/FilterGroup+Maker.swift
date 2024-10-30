@@ -5,11 +5,17 @@ import SwiftUI
 extension FilterGroup {
    /**
     * implementation code
+    * - Fixme: ⚠️️ add more vertical space, use cursor etc
     */
    /*static*/ func getItem(item: Items) -> any RowKind {
       switch item {
       case .login:
-         return FilteringType(icon: "heart", title: "Login", action: { Swift.print("action");  }, tag: .constant(14))
+         return FilteringType(
+            icon: "heart",
+            title: "Login",
+            action: { Swift.print("action") },
+            tag: .constant(14)
+         )
       case .paymentcard:
          return FilteringType(icon: "star", title: "Payment card", action: { Swift.print("action") }, tag: .constant(3))
       case .wifi:

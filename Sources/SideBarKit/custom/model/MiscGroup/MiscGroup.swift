@@ -11,6 +11,7 @@ import HybridColor
  */
 struct MiscGroup: GroupKind {
    /*static*/ let title: String = "Misc"
+   @Binding var isPrefsPresented: Bool
 }
 extension MiscGroup {
    typealias EnumType = Items

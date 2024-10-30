@@ -9,7 +9,7 @@ import SwiftUI
       MenuGroupView(
          selection: .constant(.init(group: 0, item: 0)),
          index: 1,
-         groupType: MiscGroup()//,.self
+         groupType: MiscGroup(isPrefsPresented: .constant(false))//,.self
          // selected: .constant(.init())
       )
       .padding()

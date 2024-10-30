@@ -10,7 +10,7 @@ import SwiftUI
 #Preview(traits: .fixedLayout(width: 450, height: 550)) {
    struct DebugView: View { // ⚠️️ we use debug view to hold the states
       @State var selectedIdx: CombinedIndex? = .init(group: 0, item: 0)
-//      @State var isPrefsPresented: Bool = false
+      @State var isPrefsPresented: Bool = false
       var body: some View {
          sideBar
             #if os(macOS)
@@ -19,6 +19,14 @@ import SwiftUI
             .onChange(of: selectedIdx) { _, _ in // ⚠️️ debug
                Swift.print("selectedIdx: \(String(describing: selectedIdx))")
             }
+            .onChange(of: isPrefsPresented) { oldValue, newValue in
+               print("isPrefsPresented changed to: \(newValue)")
+            }
+//            .sheet(isPresented: $isPrefsPresented) { // This modifier presents a sheet when the binding to a Boolean value you provide becomes true
+//               Button("Dismiss") {
+//                  isPrefsPresented = false
+//               }
+//            }
       }
       var sideBar: some View {
          ZStack(alignment: .topLeading) {
@@ -28,7 +36,7 @@ import SwiftUI
                selectedIndex: $selectedIdx,
                groups: [
                   FilterGroup(), // top
-                  MiscGroup(), // middle
+                  MiscGroup(isPrefsPresented: $isPrefsPresented), // middle
                   LabelGroup() // bottom
                ]
             )
@@ -36,7 +44,7 @@ import SwiftUI
             .background(Color.blackOrWhite)
             .environment(\.colorScheme, .dark)
          }
-         
+
       }
    }
 //

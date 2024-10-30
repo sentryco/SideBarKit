@@ -5,11 +5,19 @@ import SwiftUI
 extension MiscGroup {
    /**
     * Custom implementation
+    * - Fixme: ⚠️️ add more vertical space, use cursor etc
     */
    /*static*/ func getItem(item: Items) -> any RowKind {
       switch item {
       case .prefs:
-         return MiscType(title: "Preferences", icon: "star", action: { Swift.print("action") })
+         return MiscType(
+            title: "Preferences",
+            icon: "star",
+            action: {
+               Swift.print("action")
+               isPrefsPresented = true
+            }
+         )
       case .all:
          return FilteringType(icon: "shield", title: "All items", action: { Swift.print("action") }, tag: .constant(29))
       case .favorites:

@@ -5,6 +5,7 @@ import SwiftUI
 extension LabelGroup {
    /**
     * Custom implementation
+    * - Fixme: ⚠️️ add more vertical space, use cursor etc
     */
    /*static*/ func getItem(item: Items) -> RowKind {
       switch item {

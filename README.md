@@ -13,7 +13,8 @@ SideBarKit enables apps to decouled generic sidebar implementation from app code
 - Works for iOS (iPad) and macOS
 
 ## Todo:
-- Add better ForEach loops (ask copilot) 👈
+- Add better ForEach loops (ask copilot) ✅
+- Add prefstoggle ✅
 - Transfer doc, and clean up 👈
 - Improve comments with copilot
 - Improve readme (copilot)
