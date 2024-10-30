@@ -4,7 +4,7 @@ import SwiftUI
  * - Description: Represents a filtering type with an icon, title, and action.
  * - Fixme: ⚠️️ Move to example project?
  */
-struct FilterRowModel: RowKind {
+public struct FilterRowModel: RowKind {
    /**
     * The icon associated with the filtering type.
     */
@@ -12,13 +12,27 @@ struct FilterRowModel: RowKind {
    /**
     * The title of the filtering type.
     */
-   let title: String
+   public let title: String
    /**
     * The action to be performed when the filtering type is selected.
     */
-   let action: EmptyClosure
+   public let action: () -> Void
    /**
     * - Note: We can rebind from db etc here
     */
    @Binding var tag: Int
+   /**
+    * - Fixme: ⚠️️ add doc
+    * - Parameters:
+    *   - icon: - Fixme: ⚠️️ add doc
+    *   - title: - Fixme: ⚠️️ add doc
+    *   - action: - Fixme: ⚠️️ add doc
+    *   - tag: - Fixme: ⚠️️ add doc
+    */
+   public init(icon: String, title: String, action: @escaping () -> Void, tag: Binding<Int>) {
+      self.icon = icon
+      self.title = title
+      self.action = action
+      self._tag = tag
+   }
 }

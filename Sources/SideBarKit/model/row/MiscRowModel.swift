@@ -4,11 +4,11 @@ import SwiftUI
  * - Description: Represents a miscellaneous type with a title, icon, and action.
  * - Fixme: ⚠️️ Move to example project?
  */
-struct MiscRowModel: RowKind {
+public struct MiscRowModel: RowKind {
    /**
     * The title of the miscellaneous type.
     */
-   let title: String
+   public let title: String
    /**
     * The icon associated with the miscellaneous type.
     */
@@ -16,5 +16,17 @@ struct MiscRowModel: RowKind {
    /**
     * The action to be performed when the miscellaneous type is selected.
     */
-   let action: EmptyClosure
+   public let action: () -> Void
+   /**
+    * - Fixme: ⚠️️ add doc
+    * - Parameters:
+    *   - title: - Fixme: ⚠️️ add doc
+    *   - icon: - Fixme: ⚠️️ add doc
+    *   - action: - Fixme: ⚠️️ add doc
+    */
+   init(title: String, icon: String, action: @escaping () -> Void) {
+      self.title = title
+      self.icon = icon
+      self.action = action
+   }
 }
