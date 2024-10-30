@@ -7,7 +7,9 @@ extension MenuRowKind {
    /**
     * Icon (left side)
     * - Abstract: This view displays the left-side icon as an image.
-    * - Description: Displays the icon on the left side of the menu item, which visually represents the item's purpose or category.
+    * - Description: Displays the icon on the left side of the menu 
+    *                item, which visually represents the item's 
+    *                purpose or category.
     * - Fixme: ⚠️️ move this to MenuRowKind
     * - Fixme: ⚠️️ Maybe use the modifier that doesn't need a size, see other icon code etc 👈
     */
@@ -28,7 +30,9 @@ extension MenuRowKind {
    /**
     * TitleText (left aligned)
     * - Abstract: This view displays the title text as a label.
-    * - Description: Displays the title of the menu item, enhancing readability and providing context about the item's function within the application.
+    * - Description: Displays the title of the menu item, enhancing 
+    *                readability and providing context about the 
+    *                item's function within the application.
     * - Fixme: ⚠️️ move this to MenuRowKind
     */
    internal static func text(isSelected: Bool, titleText: String) -> some View {
@@ -42,7 +46,9 @@ extension MenuRowKind {
    /**
     * Tag - Create the `Tag-view` (badge with number of items)
     * - Abstract: This view displays the tag count as a label.
-    * - Description: Displays the tag count on the right side of the menu item, providing a visual indicator of associated items or notifications.
+    * - Description: Displays the tag count on the right side of 
+    *                the menu item, providing a visual indicator of 
+    *                associated items or notifications.
     * - Fixme: ⚠️️ Add some selected-state to tag icon as well? 👈 or is this in now?
     */
    internal static func rightSideTag(tagCount: Binding<Int>, isSelected: Bool) -> some View {

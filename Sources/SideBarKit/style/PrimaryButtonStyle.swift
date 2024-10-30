@@ -1,7 +1,12 @@
 import SwiftUI
 /**
  * Primary (blue capsule button)
- * - Description: A button style for creating prominent, eye-catching capsule-shaped buttons that are typically used for primary actions in the app. The style applies a customizable background color, text color, and horizontal padding, ensuring the button stands out and is easily tappable.
+ * - Description: A button style for creating prominent, eye-catching 
+ *                capsule-shaped buttons. These are typically used for 
+ *                primary actions in the app. The style applies a 
+ *                customizable background color, text color, and 
+ *                horizontal padding. This ensures the button stands 
+ *                out and is easily tappable.
  * - Note: Used in menu-tags in the side-menu
  * - Note: Alternative name: `BlueCapsuleButton`
  * - Fixme: ⚠️️ Describe this style in words 👈
@@ -22,7 +27,9 @@ internal struct PrimaryButtonStyle: ButtonStyle {
     */
    internal let padding: CGFloat
    /**
-    * This style creates a primary button with a capsule shape, blue background, and white text. It applies horizontal padding to the button.
+    * - Description: This style creates a primary button with a 
+    *               capsule shape, blue background, and white text. 
+    *               It applies horizontal padding to the button.
     */
    internal func makeBody(configuration: Configuration) -> some View {
       configuration.label // The label of the button
@@ -82,8 +89,3 @@ extension Button {
       #endif
    }
 }
-// extension ButtonStyle where Self == PrimaryButtonStyle {
-//   static func primary(color: Color, textColor: Color, padding: CGFloat = 20) -> Self {
-//      return .init(color: color, textColor: textColor, padding: padding)
-//   }
-// }

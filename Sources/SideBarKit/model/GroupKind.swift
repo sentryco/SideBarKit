@@ -1,16 +1,21 @@
 import Foundation
 /**
- * - Description: This protocol defines a group of items, each represented by an enum case, with a title and methods to retrieve the items.
+ * - Description: This protocol defines a group of items, each 
+ *                represented by an enum case, with a title and 
+ *                methods to retrieve the items.
  */
 public protocol GroupKind {
    /**
     * The type of the enum that represents the items in the group.
-    * - Description: This associated type represents the type of the enum that contains the items for the group.
+    * - Description: This associated type represents the type of 
+    *                the enum that contains the items for the 
+    *                group.
     */
    associatedtype EnumType: CaseIterable
    /**
     * The title of the group.
-    * - Description: This property represents the title of the group, providing a human-readable name for the group.
+    * - Description: This property represents the title of the group, 
+    *                providing a human-readable name for the group.
     */
    var title: String { get }
    /**
@@ -21,14 +26,18 @@ public protocol GroupKind {
    func getItem(item: EnumType) -> any RowKind /*, index: Int*/
    /**
     * The items in the group.
-    * - Description: This property represents an array of items conforming to `RowKind` that belong to the group.
+    * - Description: This property represents an array of items 
+    *                conforming to `RowKind` that belong to the 
+    *                group.
     */
    var items: RowKinds { get }
 }
 extension GroupKind {
    /**
     * The items in the group.
-    * - Description: This property represents an array of items conforming to `RowKind` that belong to the group.
+    * - Description: This property represents an array of items 
+    *                conforming to `RowKind` that belong to the 
+    *                group.
     * - Fixme: ⚠️️ try to move items to a protocol extension
     */
    var items: RowKinds {
@@ -39,6 +48,10 @@ extension GroupKind {
 }
 /**
  * - Abstract: This struct represents the data for the top and bottom menues, including the filter on credential-types and the misc items like prefs, favs, archived, and trash.
- * - Description: This struct organizes the menu data into two main categories: top and bottom. The top menu typically contains items related to credential types, while the bottom menu includes miscellaneous items such as preferences, favorites, archived items, and trash.
+ * - Description: This struct organizes the menu data into two main 
+ *                categories: top and bottom. The top menu typically 
+ *                contains items related to credential types, while 
+ *                the bottom menu includes miscellaneous items such 
+ *                as preferences, favorites, archived items, and trash.
  */
 public typealias GroupKinds = [any GroupKind]

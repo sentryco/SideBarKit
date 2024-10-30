@@ -1,7 +1,9 @@
 import SwiftUI
 /**
  * Preview
- * - Description: Provides a preview of the `MenuTagView` component, showcasing its appearance with a randomly generated item count.
+ * - Description: Provides a preview of the `MenuTagView` component, 
+ *                showcasing its appearance with a randomly generated 
+ *                item count.
  * - Fixme: ⚠️️ Maybe use the bg color that is used in the menu?
  */
 #Preview(traits: .fixedLayout(width: 300, height: 300)) {

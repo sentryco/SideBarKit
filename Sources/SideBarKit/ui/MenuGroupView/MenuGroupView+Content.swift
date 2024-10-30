@@ -5,7 +5,8 @@ import SwiftUI
 extension MenuGroupView {
    /**
     * Content
-    * - Description: The main body of the MenuGroupView, displaying the group title and row items.
+    * - Description: The main body of the MenuGroupView, 
+    *                displaying the group title and row items.
     */
    internal var body: some View {
       VStack(spacing: .zero) { // - Fixme: ⚠️️ add some sort of metric here

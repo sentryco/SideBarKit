@@ -5,7 +5,9 @@ import SwiftUI
 struct LabelRowView: View, MenuRowKind {
    /**
     * Represents the selection binding for the row.
-    * - Description: A binding to the currently selected index, allowing the row to update its appearance based on selection state.
+    * - Description: A binding to the currently selected index, allowing 
+    *                the row to update its appearance based on selection 
+    *                state.
     */
    let selection: Binding<CombinedIndex?>
    /**
@@ -31,7 +33,9 @@ struct LabelRowView: View, MenuRowKind {
    /**
     * The number of tags associated with the menu item.
     * - Abstract: This property holds the number of tags associated with the menu item.
-    * - Description: Represents the number of tags associated with the menu item, which can be used to indicate the item's relevance or categorization.
+    * - Description: Represents the number of tags associated with the 
+    *                menu item, which can be used to indicate the item's 
+    *                relevance or categorization.
     * - Note: This should be a binding
     */
    @Binding var tagCount: Int

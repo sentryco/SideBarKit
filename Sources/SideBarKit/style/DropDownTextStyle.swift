@@ -2,7 +2,9 @@ import SwiftUI
 import HybridColor
 /**
  * Convenient
- * - Description: A view modifier that applies a consistent style to dropdown text elements, setting the font and color according to the provided parameters.
+ * - Description: A view modifier that applies a consistent style 
+ *                to dropdown text elements, setting the font and 
+ *                color according to the provided parameters.
  * - Note: Used in menu-header-view and drop-down-row
  * - Note: Alt name: `DropDownTextModifier`
  */
@@ -27,7 +29,9 @@ internal struct DropDownTextStyle: ViewModifier {
 }
 /**
  * Convenient
- * - Description: This extension provides a convenient way to create a `DropDownTextStyle` using a static method within the `ViewModifier` protocol.
+ * - Description: This extension provides a convenient way to create a 
+ *                `DropDownTextStyle`. It uses a static method within 
+ *                the `ViewModifier` protocol.
  * - Note: The `where Self == DropDownTextStyle` clause ensures that this method is only available for the `DropDownTextStyle` type.
  */
 extension ViewModifier where Self == DropDownTextStyle {

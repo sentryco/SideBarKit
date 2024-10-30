@@ -2,7 +2,9 @@ import SwiftUI
 import HybridColor
 /**
  * Style
- * - Description: Provides a consistent visual style for menu tag text elements, adjusting opacity to indicate selection state.
+ * - Description: Provides a consistent visual style for menu tag text 
+ *                elements, adjusting opacity to indicate selection 
+ *                state.
  */
 extension View {
    /**

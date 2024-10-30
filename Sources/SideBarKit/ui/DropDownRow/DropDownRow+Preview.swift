@@ -1,7 +1,8 @@
 import SwiftUI
 /**
  * Preview (Dark / Light mode)
- * - Description: This section provides a preview of the DropDownRow in both dark and light modes.
+ * - Description: This section provides a preview of the DropDownRow in 
+ *                both dark and light modes.
  */
 #Preview(traits: .fixedLayout(width: 400, height: 200)) {
    struct DebugView: View {

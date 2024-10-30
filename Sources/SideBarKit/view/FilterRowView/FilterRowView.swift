@@ -19,8 +19,10 @@ struct FilterRowView: View, MenuRowKind {
    let titleText: String
    /**
     * The name of the image to display next to the menu item.
-    * - Abstract: This property specifies the name of the image displayed next to the menu item.
-    * - Description: Specifies the icon displayed next to the menu item, enhancing visual identification.
+    * - Abstract: This property specifies the name of the image displayed 
+    *             next to the menu item.
+    * - Description: Specifies the icon displayed next to the menu item, 
+    *                enhancing visual identification.
     * - Note: Alternative name: `trailingIconImageName`
     */
    let iconName: String
@@ -41,10 +43,12 @@ struct FilterRowView: View, MenuRowKind {
  */
 extension FilterRowView {
    /**
-    * Initializes a new instance of `FilterRowView` with the specified filtering type, index, and selection binding.
+    * - Description: Initializes a new instance of `FilterRowView` 
+    *                with the specified filtering type, index, 
+    *                and selection binding.
     * - Parameter filterType: The filtering type to be displayed.
     */
-   init(filterType: FilterRowModel, /*selected: Binding<UUID?>, *//*uuid: UUID,*/ index: CombinedIndex, selection: Binding<CombinedIndex?>) {
+   init(filterType: FilterRowModel, index: CombinedIndex, selection: Binding<CombinedIndex?>) {
       self.init(
          selection: selection,
          index: index,

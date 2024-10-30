@@ -2,7 +2,8 @@ import SwiftUI
 /**
  * The tag in the menu - Used to show item count in the `SideBar`
  * - Abstract: Badge with number of items
- * - Description: This is a view that displays a tag in the menu. It is used to display the tag icon and title.
+ * - Description: This is a view that displays a tag in the menu. 
+ *                It is used to display the tag icon and title.
  * - Note: Alt name: `TagView`
  * - Fixme: ⚠️️ Add subtle stroke? maybe yes
  * - Fixme: ⚠️️ Tweak the font for menu-item's for macos, what's wrong with it? size?

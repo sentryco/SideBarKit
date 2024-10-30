@@ -2,7 +2,7 @@ import SwiftUI
 /**
  * Preview
  * - Abstract: creats 2x2 variations. selected, unselected, dark, light?
- * - Description: Provides a preview of the MenuItemView in various states (selected/unselected) and themes (dark/light) to visualize its appearance in different UI contexts.
+ * - Description: Provides a preview of the MenuItemView in various states (selected / unselected) and themes (dark/light) to visualize its appearance in different UI contexts.
  * - Fixme: ⚠️️ Adjust design for macOS? okay for now?
  * - Fixme: ⚠️️ Align the tag-labels better, see legacy? make it more round, less elongated?
  */

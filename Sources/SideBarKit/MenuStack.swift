@@ -2,7 +2,9 @@ import SwiftUI
 /**
  * MenuView for `mac` and `iPad` ("SideBar")
  * - Abstract: This is the main menu view for the sidebar. It is a list of menu items that are displayed in the sidebar.
- * - Description: This view serves as the primary navigation panel, allowing users to access different sections of the application through a sidebar interface.
+ * - Description: This view serves as the primary navigation panel, allowing 
+ *                users to access different sections of the application 
+ *                through a sidebar interface.
  * - Important: Model has the action callback
  * - Note: Sections should be minimizable
  * - Note: Use style modifiers as much as possible
@@ -20,7 +22,8 @@ public struct MenuStack: View {
    /**
     * Index of selected sidebar menu item (Persistant selected index)
     * - Abstract: Persistant selected index
-    * - Description: This is toggled from the Button action, and trigered in a callback defind in the model
+    * - Description: This is toggled from the Button action, and trigered 
+    *               in a callback defind in the model
     * - Important: ⚠️️ The state is located in the caller of this view
     * - Note: When this is changed, the main/detail views change
     * - Note: For more code on selected binding, see device-picker
@@ -38,7 +41,10 @@ public struct MenuStack: View {
    @Binding var selectedIndex: CombinedIndex?
    /**
     * - Abstract: Stores the data for the top and the bottom menues
-    * - Description: This property holds the data for the menu groups, which are used to organize and display the menu items in the sidebar. It defines the structure and content of the top and bottom sections of the menu.
+    * - Description: This property holds the data for the menu groups, 
+    *               which are used to organize and display the menu 
+    *               items in the sidebar. It defines the structure and 
+    *               content of the top and bottom sections of the menu.
     */
    let groups: GroupKinds
    /**
@@ -53,7 +59,10 @@ public struct MenuStack: View {
    }
 }
 /**
- * - Description: This property is used to determine if the menu is in test mode. It is set to true when the menu is in test mode, which is used for debugging and visualizing the menu structure.
+ * - Description: This property is used to determine if the menu is in 
+ *               test mode. It is set to true when the menu is in test 
+ *               mode, which is used for debugging and visualizing the 
+ *               menu structure.
  */
 var isTest: Bool = false
 

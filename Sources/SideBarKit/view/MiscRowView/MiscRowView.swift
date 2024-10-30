@@ -5,7 +5,9 @@ import SwiftUI
 struct MiscRowView: View, MenuRowKind {
    /**
     * Selection
-    * - Description: A binding to the currently selected index, allowing the row to update its appearance based on selection state.
+    * - Description: A binding to the currently selected index, allowing 
+    *                the row to update its appearance based on selection 
+    *                state.
     */
    let selection: Binding<CombinedIndex?>
    /**
@@ -34,11 +36,16 @@ struct MiscRowView: View, MenuRowKind {
  */
 extension MiscRowView {
    /**
-    * - Description: Initializes a new instance of `MiscRowView` with the provided miscellaneous type, index, and selection binding.
+    * - Description: Initializes a new instance of `MiscRowView` with 
+    *                the provided miscellaneous type, index, and selection 
+    *                binding.
     * - Parameters:
-    *   - miscType: The type of miscellaneous item to be displayed, containing the title, action, and icon information.
+    *   - miscType: The type of miscellaneous item to be displayed, 
+    *              containing the title, action, and icon information.
     *   - index: The index of the row item in the collection.
-    *   - selection: A binding to the currently selected index, allowing the row to update its appearance based on selection state.
+    *   - selection: A binding to the currently selected index, allowing 
+    *               the row to update its appearance based on selection 
+    *               state.
     */
    init(miscType: MiscRowModel, index: CombinedIndex, selection: Binding<CombinedIndex?>) {
       self.init(

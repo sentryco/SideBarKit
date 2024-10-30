@@ -1,7 +1,9 @@
 import SwiftUI
 /**
  * Preview for iPad and macOS (Dark-mode)
- * - Description: Provides a preview environment for the MenuView tailored for iPad and macOS in dark mode, showcasing the UI components and layout.
+ * - Description: Provides a preview environment for the MenuView tailored 
+ *                for iPad and macOS in dark mode, showcasing the UI 
+ *                components and layout.
  * - Note: Preview works for iPhone as well (more narrow way of previewing)
  * - Fixme: ⚠️️ Make dual PreviewContainer to see both dark and light mode at the same time, maybe only for iPad and macOS? or? at least maybe horizontally stacked then? for ipad at leat?
  * - Fixme: ⚠️️ add the subdued background

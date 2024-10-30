@@ -2,12 +2,18 @@ import SwiftUI
 import HybridColor
 /**
  * MenuTagStyle
- * - Description: A style configuration for menu tags that visually distinguishes selected tags from unselected ones using opacity changes. It is used within menus to provide a clear and interactive way to display tag options.
+ * - Description: A style configuration for menu tags that visually 
+ *                distinguishes selected tags from unselected ones 
+ *                using opacity changes. It is used within menus to 
+ *                provide a clear and interactive way to display 
+ *                tag options.
  */
 extension Button {
    /**
     * Custom style just for menu-tag, that reuse the bellow etc
-    * - Description: Applies a custom style to the menu tag button, changing its background and text color based on the selection state.
+    * - Description: Applies a custom style to the menu tag button, 
+    *                changing its background and text color based 
+    *                on the selection state.
     * - Note: See `MenuTagView` for preview
     * - Note: Alternative name: `menuTagTextStyle`
     * - Parameter selected: Indicates if the menu tag is selected
@@ -30,7 +36,8 @@ extension Button {
 extension View {
    /**
     * Applies a row text style to the view
-    * - Description: Applies a row text style to the view, changing its text color, padding, and font.
+    * - Description: Applies a row text style to the view, changing its 
+    *                text color, padding, and font.
     * - Note: See `LabelRow` for preview
     * - Fixme: ⚠️️ Move somewhere else? elaborate
     * - Fixme: ⚠️️ Move defaults into a tuple or struct

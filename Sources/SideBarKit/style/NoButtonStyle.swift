@@ -1,7 +1,9 @@
 import SwiftUI
 /**
  * NoButtonStyle
- * - Description: This style prevents the button from visually responding to interactions, maintaining a consistent look.
+ * - Description: This style prevents the button from visually 
+ *                responding to interactions, maintaining a 
+ *                consistent look.
  * - Note: Needed to avoid down-state changing apperance of text and to avoid multi trigger action bug when buttons are used in a list etc
  * - Note: ref: https://stackoverflow.com/a/76575022/5389500
  * - Fixme: ⚠️️ find a better name, check copilot?
@@ -27,7 +29,9 @@ internal struct NoButtonStyle: ButtonStyle {
 extension Button {
    /**
     * Provides a button style that does not change appearance when pressed.
-    * - Description: This style prevents the button from visually responding to interactions, maintaining a consistent look.
+    * - Description: This style prevents the button from visually 
+    *                responding to interactions, maintaining a 
+    *                consistent look.
     */
    internal var noButtonStyle: some View {
       let style = NoButtonStyle()

@@ -1,7 +1,8 @@
 import SwiftUI
 /**
  * Preview
- * - Description: Provides a preview of the ScrollableVStack component, displaying a list of items with dynamic content.
+ * - Description: Provides a preview of the ScrollableVStack component, 
+ *                displaying a list of items with dynamic content.
  */
 #Preview {
    ScrollableVStack {

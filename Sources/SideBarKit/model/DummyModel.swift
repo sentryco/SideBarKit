@@ -1,5 +1,6 @@
+#if DEBUG// Debug-specific code or comments can be added here
 import SwiftUI
-// - Fixme: ⚠️️ mark all as debug
+
 struct TopGroup: GroupKind {
    let title: String = "Categories"
    typealias EnumType = Items
@@ -73,3 +74,4 @@ struct BottomGroup: GroupKind {
       }
    }
 }
+#endif

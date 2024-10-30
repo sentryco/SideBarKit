@@ -2,7 +2,9 @@ import SwiftUI
 /**
  * MenuItemHeader /w drop down button
  * - Abstract: Header for each "menu-group"
- * - Description: This component serves as the header for each menu group in the application, featuring a dropdown button to expand or collapse the respective menu section.
+ * - Description: This component serves as the header for each menu group in the 
+ *                application, featuring a dropdown button to expand or collapse 
+ *                the respective menu section.
  * - Important: ⚠️️ The logic is in DropDownRow
  * - Fixme: ⚠️️ make this a menuTextStyle instead of a struct?  elaborate please
  * - Fixme: ⚠️️ add some sort of subtle stroke around icon? rounded rect or circle etc?
@@ -14,7 +16,8 @@ internal typealias MenuHeaderView = DropDownRow
 extension MenuHeaderView {
    /**
     * Init
-    * - Description: Initializes a new instance of `MenuHeaderView` with the specified text and isOn binding.
+    * - Description: Initializes a new instance of `MenuHeaderView` with the 
+    *                specified text and isOn binding.
     * - Anstract: Used for descripton title header above menu cells etc
     * - Parameters:
     *   - text: The text to be displayed as the header.
