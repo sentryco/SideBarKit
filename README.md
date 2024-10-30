@@ -4,11 +4,11 @@
 
 > Plug and play modular SideBar for macOS / iPad
 
+<img width="284" alt="img" src="https://s11.gifyu.com/images/SO1fC.gif">
+
 ## Description
 
 SideBarKit is a customizable Sidebar framework. Decouple the sidebar implementation. This results in cleaner, more manageable code.
-
-<img width="284" alt="img" src="https://s11.gifyu.com/images/SO1fC.gif">
 
 ## Features:
 
