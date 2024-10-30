@@ -18,6 +18,14 @@ SideBarKit is a customizable Sidebar framework. Decouple the sidebar implementat
 - BYO (Bring your own) enum models
 - Works for iOS (iPad) and macOS
 
+## Example:
+
+```swiftui
+@State var selectedIdx: CombinedIndex? = .init(group: 0, item: 0) // Track selection
+let model = [Top(), Middle(), Bottom()] // Define your model
+MenuStack(selectedIndex: $selectedIdx, groups: model) // Add sidebar view
+```
+
 ## Installation:
 
 To install SideBarKit using Swift Package Manager, add the following dependency to your `Package.swift` file:
