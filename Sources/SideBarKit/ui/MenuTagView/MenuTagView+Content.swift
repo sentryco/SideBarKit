@@ -10,7 +10,7 @@ extension MenuTagView {
     * - Fixme: ⚠️️ Use view or capsule or rounded-rect instead of button 👈 yepp easy fix, but maybe wait till after we have compact mode support for menu?
     * - Fixme: ⚠️️ Merge `menuTagStyle` and `menuTagTextStyle`, how? elaborate
     */
-   var body: some View {
+   internal var body: some View {
       Button(action: {}, // ⚠️️ We need button for the style to work, for now, maybe ask copilot for different syntax?
              label: {
                 titleText

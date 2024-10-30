@@ -2,7 +2,7 @@ import Foundation
 /**
  * - Description: This protocol defines a group of items, each represented by an enum case, with a title and methods to retrieve the items.
  */
-protocol GroupKind {
+public protocol GroupKind {
    /**
     * The type of the enum that represents the items in the group.
     * - Description: This associated type represents the type of the enum that contains the items for the group.
@@ -23,7 +23,7 @@ protocol GroupKind {
     * The items in the group.
     * - Description: This property represents an array of items conforming to `RowKind` that belong to the group.
     */
-   var items: [RowKind] { get }
+   var items: RowKinds { get }
 }
 extension GroupKind {
    /**
@@ -31,7 +31,7 @@ extension GroupKind {
     * - Description: This property represents an array of items conforming to `RowKind` that belong to the group.
     * - Fixme: ⚠️️ try to move items to a protocol extension
     */
-   var items: [RowKind] {
+   var items: RowKinds {
       EnumType.allCases.enumerated().map {
          getItem(item: $0.element)
       }
@@ -41,4 +41,4 @@ extension GroupKind {
  * - Abstract: This struct represents the data for the top and bottom menues, including the filter on credential-types and the misc items like prefs, favs, archived, and trash.
  * - Description: This struct organizes the menu data into two main categories: top and bottom. The top menu typically contains items related to credential types, while the bottom menu includes miscellaneous items such as preferences, favorites, archived items, and trash.
  */
-typealias GroupKinds = [any GroupKind]
+public typealias GroupKinds = [any GroupKind]

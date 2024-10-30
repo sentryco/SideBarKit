@@ -11,7 +11,7 @@ extension View {
     * - Fixme: ⚠️️ Use const from ConstLib?
     * - Parameter selected: Indicates if the menu tag is selected.
     */
-   public func menuTagTextStyle(selected: Bool) -> some View {
+   internal func menuTagTextStyle(selected: Bool) -> some View {
       // let fontColor = Palette.SideBar.Tag.text
       let fontColor = Color.whiteOrBlack.opacity(selected ? 1 : 0.7)
       return self

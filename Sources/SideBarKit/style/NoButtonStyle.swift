@@ -8,18 +8,28 @@ import SwiftUI
  * - Fixme: ⚠️️ add preview 👈
  * - Fixme: ⚠️️ this might be achivable by doing .animation(nil, value: configuration.isPressed) // Disable animation during button's pressed state
  */
-public struct NoButtonStyle: ButtonStyle {
-   public init() {} // - Fixme: ⚠️️ seems like this must be here to make public work
-   public func makeBody(configuration: Self.Configuration) -> some View {
+internal struct NoButtonStyle: ButtonStyle {
+   /**
+    *  - Fixme: ⚠️️ Seems like this must be here to make public work
+    */
+   internal init() {}
+   /**
+    * - Parameter configuration: - Fixme: ⚠️️ add doc
+    * - Returns: - Fixme: ⚠️️ add doc
+    */
+   internal func makeBody(configuration: Self.Configuration) -> some View {
       configuration.label
    }
 }
+/**
+ * Convenient
+ */
 extension Button {
    /**
     * Provides a button style that does not change appearance when pressed.
     * - Description: This style prevents the button from visually responding to interactions, maintaining a consistent look.
     */
-   public var noButtonStyle: some View {
+   internal var noButtonStyle: some View {
       let style = NoButtonStyle()
       return self.buttonStyle(style)
    }

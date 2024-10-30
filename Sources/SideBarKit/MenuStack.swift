@@ -16,7 +16,7 @@ import SwiftUI
  * - Fixme: ⚠️️ Remove down state for buttons in macOS and for ipad? `configuration.isPressed`
  * - Fixme: ⚠️️ Simplify all this, probably use VStack embedded in a scroller etc. List is very tricky to style across OSes
  */
-struct MenuStack: View {
+public struct MenuStack: View {
    /**
     * Index of selected sidebar menu item (Persistant selected index)
     * - Abstract: Persistant selected index
@@ -41,6 +41,16 @@ struct MenuStack: View {
     * - Description: This property holds the data for the menu groups, which are used to organize and display the menu items in the sidebar. It defines the structure and content of the top and bottom sections of the menu.
     */
    let groups: GroupKinds
+   /**
+    * - Fixme: ⚠️️ add description
+    * - Parameters:
+    *   - selectedIndex: - Fixme: ⚠️️ add doc
+    *   - groups: - Fixme: ⚠️️ add doc
+    */
+   public init(selectedIndex: Binding<CombinedIndex?>, groups: GroupKinds) {
+      self._selectedIndex = selectedIndex
+      self.groups = groups
+   }
 }
 /**
  * - Description: This property is used to determine if the menu is in test mode. It is set to true when the menu is in test mode, which is used for debugging and visualizing the menu structure.

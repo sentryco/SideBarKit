@@ -8,27 +8,27 @@ import SwiftUI
  * - Note: Performance: For very large lists, you might want to consider using LazyVStack instead of VStack for better performance.
  * - Fixme: ⚠️️ move to interfacelib, potentially move to OSS etc
  */
-struct ScrollableVStack<Content: View>: View {
+internal struct ScrollableVStack<Content: View>: View {
    /**
     * spacing
     * - Description: The spacing between the items in the VStack.
     */
-   let spacing: CGFloat
+   internal let spacing: CGFloat
    /**
     * showsIndicators
     * - Description: A boolean value indicating whether to show the scroll indicators.
     */
-   let showsIndicators: Bool
+   internal let showsIndicators: Bool
    /**
     * padding
     * - Description: The padding around the VStack.
     */
-   let padding: EdgeInsets?
+   internal let padding: EdgeInsets?
    /**
     * content
     * - Description: The content of the VStack.
     */
-   let content: () -> Content
+   internal let content: () -> Content
    /**
     * - Parameters:
     *   - spacing: The spacing between the items in the VStack.
@@ -36,7 +36,7 @@ struct ScrollableVStack<Content: View>: View {
     *   - padding: The padding around the VStack.
     *   - content: The content of the VStack.
     */
-   init(spacing: CGFloat = 16, showsIndicators: Bool = false, padding: EdgeInsets? = nil, @ViewBuilder content: @escaping () -> Content) {
+   internal init(spacing: CGFloat = 16, showsIndicators: Bool = false, padding: EdgeInsets? = nil, @ViewBuilder content: @escaping () -> Content) {
       self.spacing = spacing
       self.showsIndicators = showsIndicators
       self.padding = padding

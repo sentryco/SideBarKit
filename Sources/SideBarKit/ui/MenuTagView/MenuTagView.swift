@@ -7,16 +7,16 @@ import SwiftUI
  * - Fixme: ⚠️️ Add subtle stroke? maybe yes
  * - Fixme: ⚠️️ Tweak the font for menu-item's for macos, what's wrong with it? size?
  */
-struct MenuTagView: View {
+internal struct MenuTagView: View {
    /**
     * The title of the tag.
     * - Description: The text label that represents the tag's name in the user interface.
     * - Note: This does not need to be a binding. Bindings are only need when updating upstream, not downstream
     */
-   let title: String
+   internal let title: String
    /**
     * Used for changing the opacity on selected state etc
     * - Description: A boolean value indicating whether the tag is currently selected.
     */
-   let isSelected: Bool
+   internal let isSelected: Bool
 }

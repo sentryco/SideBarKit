@@ -7,7 +7,7 @@ extension MenuGroupView {
     * Content
     * - Description: The main body of the MenuGroupView, displaying the group title and row items.
     */
-   var body: some View {
+   internal var body: some View {
       VStack(spacing: .zero) { // - Fixme: ⚠️️ add some sort of metric here
          groupTitle
          rowItems
@@ -18,7 +18,7 @@ extension MenuGroupView {
     * - Description: The title of the group.
     * - Fixme: ⚠️️ use hstack
     */
-   var groupTitle: some View {
+   internal var groupTitle: some View {
       MenuHeaderView(
          text: groupType.title,
          isOn: $isOn
@@ -31,7 +31,7 @@ extension MenuGroupView {
     * - Fixme: ⚠️️ add animation to the isON toggeling
     * - Fixme: ⚠️️ use better forloop
     */
-   @ViewBuilder var rowItems: some View {
+   @ViewBuilder internal var rowItems: some View {
       if !isOn { // Toggle visibility via the arrow icon
          VStack(/*spacing: .zero*/) { // Measure.defaultDoubleSpacing
             // Iterates through each element in the top section of the menu model, along with its index

@@ -13,7 +13,7 @@ extension Button {
     * - Parameter selected: Indicates if the menu tag is selected
     * - Fixme: ⚠️️ maybe there is a way to mix button styles?
     */
-   public func menuTagStyle(selected: Bool) -> some View {
+   internal func menuTagStyle(selected: Bool) -> some View {
       let color = Color.whiteOrBlack.opacity(selected ? 0.2 : 0.1)
       let textColor = Color.whiteOrBlack.opacity(0.8)
       return self.primaryButtonStyle(
@@ -40,7 +40,7 @@ extension View {
     *   - font: The font style of the text.
     * - Returns: A view with the applied row text style.
     */
-   public func rowTextStyle(textColor: Color = Color.whiteOrBlack.opacity(0.8), padding: CGFloat = 4, font: Font = Font.headline) -> some View {
+   internal func rowTextStyle(textColor: Color = Color.whiteOrBlack.opacity(0.8), padding: CGFloat = 4, font: Font = Font.headline) -> some View {
       self
          .font(font) 
          .foregroundColor(textColor)  

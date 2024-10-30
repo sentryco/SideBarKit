@@ -9,7 +9,7 @@ extension MenuStack {
     * - Fixme: ⚠️️ Hide tags from other items that doesn't have it like prefs, I think that's done now
     * - Fixme: ⚠️️ Consider using sideMenu as List style etc? elaborate? or no, custom is king? or use the structure from the dropdown section we have in pass-genview?
     */
-   var body: some View {
+   public var body: some View {
       scrollStack
          .background(isTest ? .indigo : .clear) // ⚠️️ Debug
          .accessibilityIdentifier("sideBar")
@@ -22,18 +22,18 @@ extension MenuStack {
    /**
     * scrollStack
     * - Description: This property is used to create a scrollable stack of views, which is essential for displaying the menu items in the sidebar. It ensures that the menu items are scrollable and can be viewed in a list format.
-    * - Fixme: ⚠️️ use better foreach here
+    * - Fixme: ⚠️️ Use better foreach here
     */
-   var scrollStack: some View {
-      ScrollableVStack { // handles scrolling and vStacking
-         content // embed group-views
+   internal var scrollStack: some View {
+      ScrollableVStack { // Handles scrolling and vStacking
+         content // Embed group-views
       }
    }
    /**
     * Content
     * - Description: This property is used to create a scrollable stack of views, which is essential for displaying the menu items in the sidebar. It ensures that the menu items are scrollable and can be viewed in a list format.
     */
-   @ViewBuilder var content: some View {
+   @ViewBuilder internal var content: some View {
       let list = Array(groups.enumerated())
       ForEach(list, id: \.offset) { (_ i: Int, groupType: any GroupKind/*.Type*/) in
          MenuGroupView( // group view

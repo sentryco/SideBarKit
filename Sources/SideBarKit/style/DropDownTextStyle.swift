@@ -6,20 +6,20 @@ import HybridColor
  * - Note: Used in menu-header-view and drop-down-row
  * - Note: Alt name: `DropDownTextModifier`
  */
-public struct DropDownTextStyle: ViewModifier {
+internal struct DropDownTextStyle: ViewModifier {
    /**
     * - Description: The color of the text.
     */
-   public let textColor: Color
+   internal let textColor: Color
    /**
     * - Description: The font of the text.
     */
-   public let font: Font // - Fixme: ⚠️️ Make the padding edgeInset?
+   internal let font: Font // - Fixme: ⚠️️ Make the padding edgeInset?
    /**
     * - Description: Applies the DropDownTextStyle to the content.
     * - Returns: A view with the DropDownTextStyle applied.
     */
-   public func body(content: Content) -> some View {
+   internal func body(content: Content) -> some View {
       content
          .foregroundColor(textColor) // Sets the foreground color of the text to the specified textColor.
          .font(font) // Sets the font style of the text to the specified font.
@@ -39,7 +39,7 @@ extension ViewModifier where Self == DropDownTextStyle {
     *   - textColor: The color of the text. Defaults to a constant color black for light mode and white for dark mode.
     *   - font: The font of the text. Defaults to the body font.
     */
-   public static func dropDownTextStyle(textColor: Color = .init(light: .black, dark: .white), font: Font = .body) -> Self {
+   internal static func dropDownTextStyle(textColor: Color = .init(light: .black, dark: .white), font: Font = .body) -> Self {
       .init(
          textColor: textColor, // Sets the text color of the DropDownTextStyle to the specified textColor.
          font: font // Sets the font style of the DropDownTextStyle to the specified font.
@@ -54,7 +54,7 @@ extension View {
     * - Description: Applies the DropDownTextStyle to the view.
     * - Returns: A view with the DropDownTextStyle applied.
     */
-   public var dropDownTextStyle: some View {
+   internal var dropDownTextStyle: some View {
       self.modifier(.dropDownTextStyle())
    }
 }

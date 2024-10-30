@@ -6,24 +6,25 @@ import SwiftUI
  * - Note: Alternative name: `BlueCapsuleButton`
  * - Fixme: ⚠️️ Describe this style in words 👈
  * - Fixme: ⚠️️ make the padding edgeInset?
+ * - Fixme: ⚠️️ break up this into many files
  */
-public struct PrimaryButtonStyle: ButtonStyle {
+internal struct PrimaryButtonStyle: ButtonStyle {
    /**
     * The background color of the button.
     */
-   public let backgroundColor: Color
+   internal let backgroundColor: Color
    /**
     * The color of the button text.
     */
-   public let textColor: Color
+   internal let textColor: Color
    /**
     * The horizontal padding to apply to the button.
     */
-   public let padding: CGFloat
+   internal let padding: CGFloat
    /**
     * This style creates a primary button with a capsule shape, blue background, and white text. It applies horizontal padding to the button.
     */
-   public func makeBody(configuration: Configuration) -> some View {
+   internal func makeBody(configuration: Configuration) -> some View {
       configuration.label // The label of the button
          .background(backgroundColor) // Sets the background color of the button
          .clipShape(Capsule()) // Clips the button shape to a capsule
@@ -51,7 +52,7 @@ extension Button {
     * - Returns: A view styled as a primary button with the specified color, text color, and padding.
     */
    @warn_unqualified_access // ref: https://www.hackingwithswift.com/quick-start/swiftui/how-to-make-swiftui-modifiers-safer-to-use-with-warn-unqualified-access
-   public func primaryButtonStyle(color: Color, textColor: Color, padding: CGFloat = 20) -> some View {
+   internal func primaryButtonStyle(color: Color, textColor: Color, padding: CGFloat = 20) -> some View {
       let style = PrimaryButtonStyle(
          backgroundColor: color, // Sets the background color of the button.
          textColor: textColor, // Sets the color of the button text.

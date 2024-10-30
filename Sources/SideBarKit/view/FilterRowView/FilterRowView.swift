@@ -2,6 +2,7 @@ import SwiftUI
 /**
  * - Fixme: ⚠️️ Add doc from legacy
  * - Fixme: ⚠️️ could we make these types .modifiers? or button styles?
+ * - Fixme: ⚠️️ rename to FilterRowView
  */
 struct FilterRowView: View, MenuRowKind {
    // - Fixme: ⚠️️ add doc
@@ -43,7 +44,7 @@ extension FilterRowView {
     * Initializes a new instance of `FilterRowView` with the specified filtering type, index, and selection binding.
     * - Parameter filterType: The filtering type to be displayed.
     */
-   init(filterType: FilteringType, /*selected: Binding<UUID?>, *//*uuid: UUID,*/ index: CombinedIndex, selection: Binding<CombinedIndex?>) {
+   init(filterType: FilterRowModel, /*selected: Binding<UUID?>, *//*uuid: UUID,*/ index: CombinedIndex, selection: Binding<CombinedIndex?>) {
       self.init(
          selection: selection,
          index: index,

@@ -40,7 +40,7 @@ extension MiscRowView {
     *   - index: The index of the row item in the collection.
     *   - selection: A binding to the currently selected index, allowing the row to update its appearance based on selection state.
     */
-   init(miscType: MiscType, index: CombinedIndex, selection: Binding<CombinedIndex?>) {
+   init(miscType: MiscRowModel, index: CombinedIndex, selection: Binding<CombinedIndex?>) {
       self.init(
          selection: selection,
          index: index,

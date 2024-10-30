@@ -7,7 +7,7 @@ import SwiftUI
  * - Fixme: ⚠️️ make this a menuTextStyle instead of a struct?  elaborate please
  * - Fixme: ⚠️️ add some sort of subtle stroke around icon? rounded rect or circle etc?
  */
-typealias MenuHeaderView = DropDownRow
+internal typealias MenuHeaderView = DropDownRow
 /**
  * Hide and show sections in the menu view
  */
@@ -20,7 +20,7 @@ extension MenuHeaderView {
     *   - text: The text to be displayed as the header.
     *   - isOn: A binding to a boolean value indicating whether the dropdown is currently expanded (true) or collapsed (false), which determines the direction of the arrow icon.
     */
-   init(text: String, isOn: Binding<Bool>) {
+   internal init(text: String, isOn: Binding<Bool>) {
       self.init( // Initializes a new instance of MenuHeaderView
          title: text, // Initializes the title of the header with the provided text
          isOn: isOn, // Initializes the isOn state of the header with the provided binding

@@ -22,11 +22,6 @@ import SwiftUI
             .onChange(of: isPrefsPresented) { oldValue, newValue in
                print("isPrefsPresented changed to: \(newValue)")
             }
-//            .sheet(isPresented: $isPrefsPresented) { // This modifier presents a sheet when the binding to a Boolean value you provide becomes true
-//               Button("Dismiss") {
-//                  isPrefsPresented = false
-//               }
-//            }
       }
       var sideBar: some View {
          ZStack(alignment: .topLeading) {
@@ -35,9 +30,12 @@ import SwiftUI
             MenuStack(
                selectedIndex: $selectedIdx,
                groups: [
-                  FilterGroup(), // top
-                  MiscGroup(isPrefsPresented: $isPrefsPresented), // middle
-                  LabelGroup() // bottom
+                  TopGroup(),
+                  MiddleGroup(isPrefsPresented: $isPrefsPresented),
+                  BottomGroup()
+//                  FilterGroup(), // top
+//                  MiscGroup(isPrefsPresented: $isPrefsPresented), // middle
+//                  LabelGroup() // bottom
                ]
             )
             .padding()
@@ -47,7 +45,6 @@ import SwiftUI
 
       }
    }
-//
    return DebugView()
       .background(Color.gray.opacity(0.2)) // This is the background of the entire view, outside safearea too, Color.blackOrWhite
       .background(Color.blackOrWhite) // No effect on iPad and iPhone it seems, works now

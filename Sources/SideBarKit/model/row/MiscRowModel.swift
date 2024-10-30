@@ -1,10 +1,10 @@
 import SwiftUI
 /**
  * Normal will be used for prefs for instance
- * - Fixme: ⚠️️ Move to example project?
  * - Description: Represents a miscellaneous type with a title, icon, and action.
+ * - Fixme: ⚠️️ Move to example project?
  */
-struct MiscType: RowKind {
+struct MiscRowModel: RowKind {
    /**
     * The title of the miscellaneous type.
     */

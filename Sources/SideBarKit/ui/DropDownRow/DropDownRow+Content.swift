@@ -11,7 +11,7 @@ extension DropDownRow {
     * - Fixme: ⚠️️ move iconName to let?
     * - Fixme: ⚠️️ consider increasing the size of the chevron icon etc
     */
-   public var body: some View {
+   internal var body: some View {
       Button(title) {
          withAnimation { // withAnimation: This function automatically applies the specified animation to any changes that occur within the block. Here, it's used to animate the toggle of the isOn state.
             $isOn.wrappedValue.toggle() // Toggles the value of the isOn binding with animation

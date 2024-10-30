@@ -5,28 +5,27 @@ import HybridColor
  * - Description: A button style for list items that may include leading and trailing icons, such as a chevron arrow, with text in between. It is designed to be used in lists where additional information or actions are presented with a clear visual hierarchy.
  * - Note: Has `left-icon` and `text next to it
  */
-public struct AccessoryButtonStyle: ButtonStyle {
+internal struct AccessoryButtonStyle: ButtonStyle {
    /**
     * - Description: The name of the leading icon.
     */
-   public let leadingIconName: String?
+   internal let leadingIconName: String?
    /**
     * - Description: The name of the trailing icon.
     */
-   public let trailingIconName: String?
+   internal let trailingIconName: String?
    /**
     * - Description: The font style of the text.
     */
-   public let font: Font
+   internal let font: Font
    /**
     * - Description: The color of the text.
     */
-   public let textColor: Color
+   internal let textColor: Color
    /**
     * - Description: The color of icon.
     */
-   public let iconColor: Color
-   
+   internal let iconColor: Color
    /**
     * Makes the body of the button.
     * - Description: Makes the body of the button.
@@ -37,7 +36,7 @@ public struct AccessoryButtonStyle: ButtonStyle {
     *   - configuration: The configuration of the button.
     * - Returns: A view representing the body of the button.
     */
-   public func makeBody(configuration: Configuration) -> some View {
+   internal func makeBody(configuration: Configuration) -> some View {
       HStack(spacing: 6) { // Creates a horizontal stack with default spacing between elements
          leftIcon // Displays the left icon
          configuration.label // Displays the label of the configuration
@@ -101,7 +100,7 @@ extension Button {
     *   - textColor: The color of the button's text. Defaults to Color.whiteOrBlack.opacity(0.8).
     * - Returns: A view with the applied accessory button style.
     */
-   public func accessoryButtonStyle(leadingIconName: String?, trailingIconName: String?, font: Font = Font.headline, textColor: Color = Color.whiteOrBlack.opacity(0.8), iconColor: Color = Color.whiteOrBlack.opacity(0.8)) -> some View {
+   internal func accessoryButtonStyle(leadingIconName: String?, trailingIconName: String?, font: Font = Font.headline, textColor: Color = Color.whiteOrBlack.opacity(0.8), iconColor: Color = Color.whiteOrBlack.opacity(0.8)) -> some View {
       let style: AccessoryButtonStyle = .init(
          leadingIconName: leadingIconName, // The name of the icon to be displayed on the leading side of the button.
          trailingIconName: trailingIconName, // The name of the icon to be displayed on the trailing side of the button.

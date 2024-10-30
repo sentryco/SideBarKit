@@ -19,8 +19,24 @@ import Foundation
  * - Fixme: ⚠️️ Rename to group, item?
  * - Fixme: ⚠️️ Use combinedIndex, as its easier to set init selection etc
  */
-struct CombinedIndex: Equatable {
-   var group: Int
-   var item: Int
+public struct CombinedIndex: Equatable {
+   /**
+    * - Fixme: ⚠️️ add description
+    */
+   public var group: Int
+   /**
+    * - Fixme: ⚠️️ add description
+    */
+   public var item: Int
+   /**
+    * - Fixme: ⚠️️ add description
+    * - Parameters:
+    *   - group: - Fixme: ⚠️️ add doc
+    *   - item: - Fixme: ⚠️️ add doc
+    */
+   public init(group: Int, item: Int) {
+      self.group = group
+      self.item = item
+   }
 }
 

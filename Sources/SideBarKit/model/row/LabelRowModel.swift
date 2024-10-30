@@ -4,7 +4,7 @@ import SwiftUI
  * - Description: Represents a label with a color, title, and action.
  * - Fixme: ⚠️️ move to example project?
  */
-struct LabelType: RowKind {
+struct LabelRowModel: RowKind {
    /**
     * The color of the label.
     */

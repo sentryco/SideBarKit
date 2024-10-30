@@ -2,10 +2,9 @@ import SwiftUI
 /**
  * Filter etc, login, payment, securenote, other, wifi
  * - Description: Represents a filtering type with an icon, title, and action.
- * - Fixme: ⚠️️ rename to FilterType again
- * - Fixme: ⚠️️ move to example project?
+ * - Fixme: ⚠️️ Move to example project?
  */
-struct FilteringType: RowKind {
+struct FilterRowModel: RowKind {
    /**
     * The icon associated with the filtering type.
     */
