@@ -16,7 +16,7 @@ extension MenuGroupView {
     *   - index: The index of the row item.
     * - Returns: A view representing the row item.
     */
-   @ViewBuilder internal func rowItem(rowItem: RowKind, index: CombinedIndex) -> some View {
+   @ViewBuilder public func rowItem(rowItem: RowKind, index: CombinedIndex) -> some View {
       switch rowItem {
       case let labelType as LabelRowModel:
          LabelRowView(
