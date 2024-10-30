@@ -31,7 +31,7 @@ public struct MenuGroupView: View, MenuGroupKind {
     *   - groupType: - Fixme: ⚠️️ add doc
     *   - isOn: - Fixme: ⚠️️ add doc
     */
-   init(selection: Binding<CombinedIndex?>, index: Int, groupType: any GroupKind, isOn: Bool = false) {
+   public init(selection: Binding<CombinedIndex?>, index: Int, groupType: any GroupKind, isOn: Bool = false) {
       self._selection = selection
       self.index = index
       self.groupType = groupType
