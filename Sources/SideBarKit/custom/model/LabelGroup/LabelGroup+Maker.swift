@@ -1,14 +1,5 @@
 import SwiftUI
 /**
- * Label group (tags) (custom)
- * - Fixme: ⚠️️ this needs to also have custom type custom(String) where users can create their own labels
- * - Fixme: ⚠️️ move to example project?
- */
-enum LabelGroup: GroupKind {
-   static let title: String = "Tags"
-   case otp, passkeys, work, personal, custom(title: String, color: Color, tagCount: Binding<Int>)
-}
-/**
  * Maker
  */
 extension LabelGroup {
@@ -26,33 +17,16 @@ extension LabelGroup {
     */
    static func getItem(item: Self) -> RowKind {
       switch item {
-      case .otp: 
+      case .otp:
          return LabelType(color: .pink, title: "OTP", action: { Swift.print("action") }, tag: .constant(4))
-      case .passkeys: 
+      case .passkeys:
          return LabelType(color: .green, title: "PassKeys", action: { Swift.print("action") }, tag: .constant(2))
-      case .work: 
+      case .work:
          return LabelType(color: .teal, title: "Work", action: { Swift.print("action") }, tag: .constant(1))
-      case .personal: 
+      case .personal:
          return LabelType(color: .purple, title: "Personal", action: { Swift.print("action") }, tag: .constant(9))
-      case .custom(let title, let color, let tagCount): 
+      case .custom(let title, let color, let tagCount):
          return LabelType(color: color, title: title, action: { Swift.print("action") }, tag: tagCount)
       }
    }
 }
-// - Fixme: ⚠️️ add darkmode modifier etc
-#Preview {
-   ZStack {
-      Color.whiteOrBlack
-         .edgesIgnoringSafeArea(.all)
-      MenuGroupView(
-         selection: .constant(.init(row: 0, column: 0)),
-         index: 2,
-         groupType: LabelGroup.self//,
-//         selected: .constant(.init())
-      )
-         .padding()
-         .background(Color.blackOrWhite)
-         .environment(\.colorScheme, .dark)
-   }
-}
-

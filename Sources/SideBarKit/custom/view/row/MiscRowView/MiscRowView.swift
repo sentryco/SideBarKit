@@ -27,7 +27,7 @@ struct MiscRowView: View, MenuRowKind {
    /**
     * - Fixme: ⚠️️ add doc
     */
-   let action: () -> Void
+   let action: EmptyClosure
    /**
     * - Fixme: ⚠️️ add doc
     */

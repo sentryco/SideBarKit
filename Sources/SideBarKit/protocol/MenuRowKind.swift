@@ -15,7 +15,7 @@ protocol MenuRowKind {
     * - Abstract: This property defines the action to be executed when the menu item is tapped.
     * - Description: Defines the closure to be executed when the menu item is selected, triggering any specific behavior associated with this action.
     */
-   var action: () -> Void { get } // (Binding or closure)
+   var action: EmptyClosure { get } // (Binding or closure)
    /**
     * Indicates if the menu item is selected.
     * - Abstract: This property indicates whether the menu item is currently selected or not.

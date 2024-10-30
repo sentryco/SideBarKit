@@ -4,7 +4,7 @@ import HybridColor
  * View modifier
  */
 fileprivate struct ButtonWrapper: ViewModifier {
-   let action: () -> Void
+   let action: EmptyClosure
 }
 /**
  * Content
@@ -39,7 +39,7 @@ extension View {
     * Convenient
     */
    @warn_unqualified_access // ref: https://www.hackingwithswift.com/quick-start/swiftui/how-to-make-swiftui-modifiers-safer-to-use-with-warn-unqualified-access
-   public func buttonWrapper(action: @escaping () -> Void) -> some View {
+   internal func buttonWrapper(action: @escaping EmptyClosure) -> some View {
       let modifier = ButtonWrapper(action: action)
       return self.modifier(modifier)
    }

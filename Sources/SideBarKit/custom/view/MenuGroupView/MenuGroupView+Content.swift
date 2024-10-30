@@ -32,10 +32,11 @@ extension MenuGroupView {
     */
    @ViewBuilder var rowItems: some View {
       if !isOn { // Toggle visibility via the arrow icon
-         VStack(/*spacing: .zero*/) {
-            ForEach(groupType.items.indices, id: \.self) { i in
+         VStack(/*spacing: .zero*/) { // Measure.defaultDoubleSpacing
+            // Iterates through each element in the top section of the menu model, along with its index
+            ForEach(Array(groupType.items.enumerated()), id: \.offset) { i, element in
                rowItem(
-                  rowItem: groupType.items[i],
+                  rowItem: element,
                   index: .init(row: i, column: index)
                )  
             }

@@ -24,4 +24,8 @@ extension GroupKind {
       }
    }
 }
+/**
+ * - Abstract: This struct represents the data for the top and bottom menues, including the filter on credential-types and the misc items like prefs, favs, archived, and trash.
+ * - Description: This struct organizes the menu data into two main categories: top and bottom. The top menu typically contains items related to credential types, while the bottom menu includes miscellaneous items such as preferences, favorites, archived items, and trash.
+ */
 typealias GroupKinds = [any GroupKind.Type]

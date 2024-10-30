@@ -3,17 +3,14 @@ import SwiftUI
  * - Fixme: ⚠️️ add description
  */
 struct LabelRowView: View, MenuRowKind {
+   /**
+    * - Fixme: ⚠️️ add description
+    */
    let selection: Binding<CombinedIndex?>
-//   @Binding var selection: CombinedIndex?
+   /**
+    * - Fixme: ⚠️️ add description
+    */
    let index: CombinedIndex
-   /**
-    * - Fixme: ⚠️️ add doc
-    */
-//   let selected: Binding<UUID?>
-   /**
-    * - Fixme: ⚠️️ add doc
-    */
-//   let uuid: UUID = .init()
    /**
     * - Fixme: ⚠️️ add description
     */
@@ -21,7 +18,7 @@ struct LabelRowView: View, MenuRowKind {
    /**
     * - Fixme: ⚠️️ add description
     */
-   let action: () -> Void
+   let action: EmptyClosure
    /**
     * - Fixme: ⚠️️ add description
     */
@@ -42,13 +39,17 @@ struct LabelRowView: View, MenuRowKind {
  * Init
  */
 extension LabelRowView {
-   // - Fixme: ⚠️️ maybe use RowKind and add to MenuRowKind? or make it generic or something?
-   init(labelType: LabelType, /*selected: Binding<UUID?>,*/ index: CombinedIndex, selection: Binding<CombinedIndex?>) {
+   /**
+    * - Fixme: ⚠️️ maybe use RowKind and add to MenuRowKind? or make it generic or something?
+    * - Parameters:
+    *   - labelType:  - Fixme: ⚠️️ add description
+    *   - index:  - Fixme: ⚠️️ add description
+    *   - selection:  - Fixme: ⚠️️ add description
+    */
+   init(labelType: LabelType, index: CombinedIndex, selection: Binding<CombinedIndex?>) {
       self.init(
          selection: selection,
          index: index,
-         /*selected: selected,*/
-//         uuid: .init(),
          titleText: labelType.title,
          action: labelType.action,
          color: labelType.color,

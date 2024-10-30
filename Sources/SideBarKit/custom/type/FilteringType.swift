@@ -5,9 +5,20 @@ import SwiftUI
  * - Fixme: ⚠️️ move to example project?
  */
 struct FilteringType: RowKind {
+   /**
+    * - Fixme: ⚠️️ add description
+    */
    let icon: String
+   /**
+    * - Fixme: ⚠️️ add description
+    */
    let title: String
-   let action: () -> Void
-   // we can rebind from db etc here
+   /**
+    * - Fixme: ⚠️️ add description
+    */
+   let action: EmptyClosure
+   /**
+    * - Note: We can rebind from db etc here
+    */
    @Binding var tag: Int
 }

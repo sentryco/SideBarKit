@@ -32,7 +32,7 @@ struct FilterRowView: View, MenuRowKind {
    /**
     * - Fixme: ⚠️️ add description
     */
-   let action: () -> Void // (Binding or closure)
+   let action: EmptyClosure // (Binding or closure)
    // tagCount hock (group,row) // we do wiring in the implementor. switch enum for enum etc
    @Binding var tagCount: Int
    /**
