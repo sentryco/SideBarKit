@@ -21,6 +21,7 @@ extension MenuStack {
 extension MenuStack {
    /**
     * scrollStack
+    * - Description: This property is used to create a scrollable stack of views, which is essential for displaying the menu items in the sidebar. It ensures that the menu items are scrollable and can be viewed in a list format.
     * - Fixme: ⚠️️ use better foreach here
     */
    var scrollStack: some View {
@@ -30,7 +31,7 @@ extension MenuStack {
    }
    /**
     * Content
-    * - Fixme: ⚠️️ add description
+    * - Description: This property is used to create a scrollable stack of views, which is essential for displaying the menu items in the sidebar. It ensures that the menu items are scrollable and can be viewed in a list format.
     */
    @ViewBuilder var content: some View {
       let list = Array(groups.enumerated())

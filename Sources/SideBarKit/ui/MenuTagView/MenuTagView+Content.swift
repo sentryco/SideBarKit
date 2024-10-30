@@ -13,8 +13,8 @@ extension MenuTagView {
    var body: some View {
       Button(action: {}, // ⚠️️ We need button for the style to work, for now, maybe ask copilot for different syntax?
              label: {
-         titleText
-      })
+                titleText
+             })
       .menuTagStyle(selected: isSelected) // Applies the menu tag style to the button
       .disabled(true) // Disable interactivity, we just need the graphics
    }

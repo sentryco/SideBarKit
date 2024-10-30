@@ -3,9 +3,9 @@ import Foundation
  * Each group view needs to contain this
  */
 protocol MenuGroupKind {
-//   var title: String { get }
    /**
-    * - Fixme: ⚠️️ add doc
+    * The type of the group.
+    * - Description: This property represents the type of the group, providing a reference to the specific group kind.
     */
-   var groupType: any GroupKind { get } // any GroupKind.Type
+   var groupType: any GroupKind { get } 
 }

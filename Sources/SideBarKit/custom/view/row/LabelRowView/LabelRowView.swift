@@ -1,26 +1,31 @@
 import SwiftUI
 /**
- * - Fixme: ⚠️️ add description
+ * Represents a row view that displays a label with associated properties and actions.
  */
 struct LabelRowView: View, MenuRowKind {
    /**
-    * - Fixme: ⚠️️ add description
+    * Represents the selection binding for the row.
+    * - Description: A binding to the currently selected index, allowing the row to update its appearance based on selection state.
     */
    let selection: Binding<CombinedIndex?>
    /**
-    * - Fixme: ⚠️️ add description
+    * Index
+    * - Description: The index of the row item in the collection.
     */
    let index: CombinedIndex
    /**
-    * - Fixme: ⚠️️ add description
+    * Title text
+    * - Description: The title text of the row item.
     */
    let titleText: String
    /**
-    * - Fixme: ⚠️️ add description
+    * Action
+    * - Description: The action to be performed when the row item is selected.
     */
    let action: EmptyClosure
    /**
-    * - Fixme: ⚠️️ add description
+    * Color
+    * - Description: The color associated with the row item.
     */
    let color: Color
    /**
@@ -30,10 +35,6 @@ struct LabelRowView: View, MenuRowKind {
     * - Note: This should be a binding
     */
    @Binding var tagCount: Int
-   /**
-    * - Fixme: ⚠️️ add description
-    */
-//   let isSelected: Bool = false
 }
 /**
  * Init
@@ -42,9 +43,9 @@ extension LabelRowView {
    /**
     * - Fixme: ⚠️️ maybe use RowKind and add to MenuRowKind? or make it generic or something?
     * - Parameters:
-    *   - labelType:  - Fixme: ⚠️️ add description
-    *   - index:  - Fixme: ⚠️️ add description
-    *   - selection:  - Fixme: ⚠️️ add description
+    *   - labelType: The type of label to be displayed, containing the title, action, color, and tag information.
+    *   - index: The index of the row item in the collection.
+    *   - selection: A binding to the currently selected index, allowing the row to update its appearance based on selection state.
     */
    init(labelType: LabelType, index: CombinedIndex, selection: Binding<CombinedIndex?>) {
       self.init(

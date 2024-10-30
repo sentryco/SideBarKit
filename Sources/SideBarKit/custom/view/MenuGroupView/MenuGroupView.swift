@@ -1,6 +1,7 @@
 import SwiftUI
 /**
  * - Abstract: Boilerplate view for the group models
+ * - Description: A view that displays a group of items with a toggle for visibility.
  * - Note: Previews are in implementation groups
  */
 struct MenuGroupView: View, MenuGroupKind {
@@ -10,17 +11,17 @@ struct MenuGroupView: View, MenuGroupKind {
    @Binding var selection: CombinedIndex?
    /**
     * Group index
-    * - Fixme: ⚠️️ add description
+    * - Description: The index of the group in the collection.
     */
    let index: Int
    /**
     * Ref to the group model
-    * - Fixme: ⚠️️ add doc
+    * - Description: The type of the group model.
     */
    let groupType: any GroupKind // any GroupKind.Type
    /**
     * Toggle visibility
-    * - Fixme: ⚠️️ add doc
+    * - Description: A boolean binding that controls the visibility of the group.
     */
    @State var isOn: Bool = false
 }

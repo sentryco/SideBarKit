@@ -1,7 +1,7 @@
 import Foundation
 /**
  * - Abstract: Basic atonomy of a menu item
- * - Fixme: ⚠️️ add description
+ * - Description: This protocol defines the basic structure of a menu item, including its title and the action to perform when selected.
  */
 protocol RowKind {
    /**
@@ -17,6 +17,6 @@ protocol RowKind {
 }
 /**
  * Bulk typealias
- * - Fixme: ⚠️️ add description
+ * - Description: This typealias represents an array of items conforming to the `RowKind` protocol, providing a convenient way to handle multiple menu items.
  */
 typealias RowKinds = [RowKind]

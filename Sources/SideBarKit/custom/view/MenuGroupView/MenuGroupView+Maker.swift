@@ -6,14 +6,15 @@ extension MenuGroupView {
    /**
     * rowItem
     * - Abstract: Create views from models
+    * - Description: Creates a view based on the provided row item type.
     * - Fixme: ⚠️️ Add HStack, left aligned
     * - Fixme: ⚠️️ implement isSelected index == selected etc
     * - Fixme: ⚠️️ make this static
     * - Note: index is used for keeping track of selection index etc
     * - Parameters:
-    *   - rowItem: - Fixme: ⚠️️ add doc
-    *   - index: - Fixme: ⚠️️ add doc
-    * - Returns: - Fixme: ⚠️️ add doc
+    *   - rowItem: The row item to be displayed.
+    *   - index: The index of the row item.
+    * - Returns: A view representing the row item.
     */
    @ViewBuilder func rowItem(rowItem: RowKind, index: CombinedIndex) -> some View {
       switch rowItem {

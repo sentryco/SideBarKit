@@ -1,24 +1,24 @@
 import SwiftUI
 /**
  * Labels etc
- * - Fixme: ⚠️️ add description
+ * - Description: Represents a label with a color, title, and action.
  * - Fixme: ⚠️️ move to example project?
  */
 struct LabelType: RowKind {
    /**
-    * - Fixme: ⚠️️ add description
+    * The color of the label.
     */
    let color: Color
    /**
-    * - Fixme: ⚠️️ add description
+    * The title of the label.
     */
    let title: String
    /**
-    * - Fixme: ⚠️️ add description
+    * The action to be performed when the label is selected.
     */
    let action: EmptyClosure
    /**
-    * - Fixme: ⚠️️ add description
+    * The tag associated with the label.
     * - Note: we can rebind from db etc here
     */
    @Binding var tag: Int

@@ -5,7 +5,7 @@ import SwiftUI
 extension MenuGroupView {
    /**
     * Content
-    * - Fixme: ⚠️️ add description
+    * - Description: The main body of the MenuGroupView, displaying the group title and row items.
     */
    var body: some View {
       VStack(spacing: .zero) { // - Fixme: ⚠️️ add some sort of metric here
@@ -15,6 +15,7 @@ extension MenuGroupView {
    }
    /**
     * groupTitle
+    * - Description: The title of the group.
     * - Fixme: ⚠️️ use hstack
     */
    var groupTitle: some View {
@@ -26,6 +27,7 @@ extension MenuGroupView {
    }
    /**
     * rowItems
+    * - Description: The items of the group.
     * - Fixme: ⚠️️ add animation to the isON toggeling
     * - Fixme: ⚠️️ use better forloop
     */

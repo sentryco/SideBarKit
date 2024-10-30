@@ -10,11 +10,23 @@ import HybridColor
  * - Fixme: ⚠️️ move to example project?
  */
 struct MiscGroup: GroupKind {
-   /*static*/ let title: String = "Misc"
+   /**
+    * Represents a group of miscellaneous items in the middle menu.
+    */
+   let title: String = "Misc"
+   /**
+    * Binding variable to control the presentation of preferences.
+    */
    @Binding var isPrefsPresented: Bool
 }
 extension MiscGroup {
+   /**
+    * Represents the type of items contained within the miscellaneous group.
+    */
    typealias EnumType = Items
+   /**
+    * - Description: Enum representing the different types of miscellaneous items that can be managed in the middle menu.
+    */
    enum Items: CaseIterable {
       case all, favorites, trash, archived, prefs
    }

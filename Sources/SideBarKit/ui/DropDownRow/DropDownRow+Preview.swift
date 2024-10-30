@@ -14,9 +14,9 @@ import SwiftUI
                .onChange(of: isOn) { (_ old: Bool, _ new: Bool) in // ⚠️️ this doesn't work in preview for some reason, - Fixme: ⚠️️ it will work if you add a debugview etc, does it work now?
                   Swift.print("old: \(old) new: \(new)")
                }
-#if os(macOS)
+               #if os(macOS)
                .padding(.horizontal)
-#endif
+               #endif
          }
       }
    }

@@ -3,7 +3,7 @@ import HybridColor
 /**
  * Convenient
  * - Description: A view modifier that applies a consistent style to dropdown text elements, setting the font and color according to the provided parameters.
- * - Note used in menu-header-view and drop-down-row
+ * - Note: Used in menu-header-view and drop-down-row
  * - Note: Alt name: `DropDownTextModifier`
  */
 public struct DropDownTextStyle: ViewModifier {
@@ -27,7 +27,8 @@ public struct DropDownTextStyle: ViewModifier {
 }
 /**
  * Convenient
- * - Fixme: ⚠️️ doc how the viewmodifer and where clause works etc, use copilot
+ * - Description: This extension provides a convenient way to create a `DropDownTextStyle` using a static method within the `ViewModifier` protocol.
+ * - Note: The `where Self == DropDownTextStyle` clause ensures that this method is only available for the `DropDownTextStyle` type.
  */
 extension ViewModifier where Self == DropDownTextStyle {
    /**

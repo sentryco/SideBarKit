@@ -1,5 +1,7 @@
 import SwiftUI
-// - Fixme: ⚠️️ add darkmode modifier etc
+/**
+ * - Description: Provides a preview environment for the LabelGroup, showcasing the UI components and layout.
+ */
 #Preview {
    ZStack {
       Color.whiteOrBlack

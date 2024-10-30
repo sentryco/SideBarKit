@@ -38,12 +38,12 @@ struct MenuStack: View {
    @Binding var selectedIndex: CombinedIndex?
    /**
     * - Abstract: Stores the data for the top and the bottom menues
-    * - Fixme: ⚠️️ add description
+    * - Description: This property holds the data for the menu groups, which are used to organize and display the menu items in the sidebar. It defines the structure and content of the top and bottom sections of the menu.
     */
    let groups: GroupKinds
 }
 /**
- * - Fixme: ⚠️️ add description
+ * - Description: This property is used to determine if the menu is in test mode. It is set to true when the menu is in test mode, which is used for debugging and visualizing the menu structure.
  */
 var isTest: Bool = false
 

@@ -4,7 +4,6 @@ import HybridColor
  * Used as the style for list items with chevron arrow
  * - Description: A button style for list items that may include leading and trailing icons, such as a chevron arrow, with text in between. It is designed to be used in lists where additional information or actions are presented with a clear visual hierarchy.
  * - Note: Has `left-icon` and `text next to it
- * - Fixme: ⚠️️ doc each variable
  */
 public struct AccessoryButtonStyle: ButtonStyle {
    /**
@@ -93,6 +92,7 @@ public struct AccessoryButtonStyle: ButtonStyle {
 extension Button {
    /**
     * Applies the accessory button style to the button.
+    * - Description: Applies the accessory button style to the button, changing its leading and trailing icons, text color, and font.
     * - Note: Used by `DropDownRow` and `AccessoryRow`
     * - Parameters:
     *   - leadingIconName: The name of the icon to be displayed on the leading side of the button.

@@ -8,18 +8,12 @@ struct FilterRowView: View, MenuRowKind {
    let selection: Binding<CombinedIndex?>
    /**
     * Index
+    * - Description: The index of the row item in the collection.
     */
    let index: CombinedIndex
    /**
-    * - Fixme: ⚠️️ add docc
-    */
-//   var selected: Binding<UUID?>
-   /**
-    * - Fixme: ⚠️️ add doc
-    */
-//   let uuid: UUID/* = .init()*/
-   /**
-    * - Fixme: ⚠️️ add description
+    * Title text
+    * - Description: The title text of the row item.
     */
    let titleText: String
    /**
@@ -30,34 +24,33 @@ struct FilterRowView: View, MenuRowKind {
     */
    let iconName: String
    /**
-    * - Fixme: ⚠️️ add description
+    * Action
+    * - Description: The action to be performed when the row item is selected.
     */
    let action: EmptyClosure // (Binding or closure)
-   // tagCount hock (group,row) // we do wiring in the implementor. switch enum for enum etc
-   @Binding var tagCount: Int
    /**
-    * - Fixme: ⚠️️ add description
+    * Tag count
+    * - Description: The count of the tag associated with the row item.
+    * - Note: tagCount hock (group,row) // we do wiring in the implementor. switch enum for enum etc
     */
-//   let isSelected: Bool
+   @Binding var tagCount: Int
 }
 /**
  * Init
  */
 extension FilterRowView {
    /**
-    * - Parameter filterType: - Fixme: ⚠️️ add doc
+    * Initializes a new instance of `FilterRowView` with the specified filtering type, index, and selection binding.
+    * - Parameter filterType: The filtering type to be displayed.
     */
    init(filterType: FilteringType, /*selected: Binding<UUID?>, *//*uuid: UUID,*/ index: CombinedIndex, selection: Binding<CombinedIndex?>) {
       self.init(
          selection: selection,
          index: index,
-//         selected: selected,
-//         uuid: uuid,
          titleText: filterType.title,
          iconName: filterType.icon,
          action: filterType.action,
-         tagCount: filterType.$tag//,
-//         isSelected: isSelected
+         tagCount: filterType.$tag
       )
    }
 }

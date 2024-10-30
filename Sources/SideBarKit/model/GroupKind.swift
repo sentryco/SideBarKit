@@ -1,46 +1,44 @@
 import Foundation
 /**
- * - Fixme: ⚠️️ maybe use some sort of generic here? check with copilot
- * - Fixme: ⚠️️ add description
+ * - Description: This protocol defines a group of items, each represented by an enum case, with a title and methods to retrieve the items.
  */
-protocol GroupKind /*CaseIterable*/ {
-   // A protocol with an associated type that represents the kind of items the conforming type will handle.
-   // This protocol will also need a method or computed property to provide the items.
-   associatedtype EnumType: CaseIterable// & RowKind
-   /*static var index: Int { get }*/
+protocol GroupKind {
    /**
-    * - Fixme: ⚠️️ add doc
+    * The type of the enum that represents the items in the group.
+    * - Description: This associated type represents the type of the enum that contains the items for the group.
     */
-   /*static*/ var title: String { get }
+   associatedtype EnumType: CaseIterable
    /**
-    * - Fixme: ⚠️️ add doc
+    * The title of the group.
+    * - Description: This property represents the title of the group, providing a human-readable name for the group.
+    */
+   var title: String { get }
+   /**
+    * Retrieves the row item for the given enum case.
+    * - Parameter item: The enum case representing the item in the group.
+    * - Returns: An instance of a type conforming to `RowKind` representing the row item.
     */
    func getItem(item: EnumType) -> any RowKind /*, index: Int*/
    /**
-    * - Fixme: ⚠️️ add description
+    * The items in the group.
+    * - Description: This property represents an array of items conforming to `RowKind` that belong to the group.
     */
    var items: [RowKind] { get }
 }
 extension GroupKind {
    /**
+    * The items in the group.
+    * - Description: This property represents an array of items conforming to `RowKind` that belong to the group.
     * - Fixme: ⚠️️ try to move items to a protocol extension
     */
    var items: [RowKind] {
       EnumType.allCases.enumerated().map {
-         getItem(item: $0.element/*, index: $0.offset*/)
+         getItem(item: $0.element)
       }
    }
-   /**
-    * - Fixme: ⚠️️ add doc
-    */
-//   static var items: [RowKind] {
-//      Self.allCases.enumerated().map {
-//         getItem(item: $0.element/*, index: $0.offset*/)
-//      }
-//   }
 }
 /**
  * - Abstract: This struct represents the data for the top and bottom menues, including the filter on credential-types and the misc items like prefs, favs, archived, and trash.
  * - Description: This struct organizes the menu data into two main categories: top and bottom. The top menu typically contains items related to credential types, while the bottom menu includes miscellaneous items such as preferences, favorites, archived items, and trash.
  */
-typealias GroupKinds = [any GroupKind/*.Type*/]
+typealias GroupKinds = [any GroupKind]

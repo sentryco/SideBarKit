@@ -1,8 +1,19 @@
-//
-//  File.swift
-//  
-//
-//  Created by eon on 28/10/2024.
-//
+import SwiftUI
 
-import Foundation
+extension ScrollableVStack {
+   /**
+    * body
+    * - Description: The body of the ScrollableVStack.
+    */
+   var body: some View {
+      ScrollView(
+         .vertical, // The scroll view scrolls vertically.
+         showsIndicators: showsIndicators // Indicates whether to show the scroll indicators based on the showsIndicators property
+      ) {
+         VStack(spacing: spacing) {
+            content() // Inject content here
+         }
+         .padding(padding ?? EdgeInsets())
+      }
+   }
+}

@@ -25,13 +25,9 @@ protocol MenuRowKind {
     */
    var isSelected: Binding<Bool> { get }
    /**
-    * - Fixme: ⚠️️ add doc
+    * The selection state of the menu item.
+    * - Description: This property represents the selection state of the menu item, providing a binding to track whether the item is selected or not.
     */
-//   var uuid: UUID { get }
-   /**
-    * - Fixme: ⚠️️ add doc
-    */
-//   var selected: Binding<UUID?> { get }
    var selection: Binding<CombinedIndex?> { get }
    /**
     * Index
@@ -47,7 +43,6 @@ extension MenuRowKind {
     */
    var isSelected: Binding<Bool> {
       .init {
-         //selected.wrappedValue == uuid
          selection.wrappedValue == index
       } set: { value in
          _ = value

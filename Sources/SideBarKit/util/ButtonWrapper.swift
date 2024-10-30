@@ -2,6 +2,7 @@ import SwiftUI
 import HybridColor
 /**
  * View modifier
+ * - Description: A view modifier that wraps a button, ensuring consistent styling and behavior across platforms.
  */
 fileprivate struct ButtonWrapper: ViewModifier {
    let action: EmptyClosure
@@ -12,6 +13,7 @@ fileprivate struct ButtonWrapper: ViewModifier {
 extension ButtonWrapper {
    /**
     * Body
+    * - Description: The body of the ButtonWrapper.
     */
    @ViewBuilder
    fileprivate func body(content: Content) -> some View {
@@ -37,6 +39,7 @@ extension ButtonWrapper {
 extension View {
    /**
     * Convenient
+    * - Description: Conveniently wraps a button with a given action closure.
     */
    @warn_unqualified_access // ref: https://www.hackingwithswift.com/quick-start/swiftui/how-to-make-swiftui-modifiers-safer-to-use-with-warn-unqualified-access
    internal func buttonWrapper(action: @escaping EmptyClosure) -> some View {

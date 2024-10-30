@@ -1,20 +1,21 @@
 import SwiftUI
 /**
  * Filter etc, login, payment, securenote, other, wifi
+ * - Description: Represents a filtering type with an icon, title, and action.
  * - Fixme: ⚠️️ rename to FilterType again
  * - Fixme: ⚠️️ move to example project?
  */
 struct FilteringType: RowKind {
    /**
-    * - Fixme: ⚠️️ add description
+    * The icon associated with the filtering type.
     */
    let icon: String
    /**
-    * - Fixme: ⚠️️ add description
+    * The title of the filtering type.
     */
    let title: String
    /**
-    * - Fixme: ⚠️️ add description
+    * The action to be performed when the filtering type is selected.
     */
    let action: EmptyClosure
    /**

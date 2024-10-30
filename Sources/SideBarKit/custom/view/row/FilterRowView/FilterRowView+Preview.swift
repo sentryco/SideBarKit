@@ -11,16 +11,13 @@ import SwiftUI
       FilterRowView(
          selection: .constant(.init(group: 0, item: 0)),
          index: .init(group: 0, item: 0),
-//         selected: .constant(.init()),
-//         uuid: .init(),
          titleText: "Menu item",
          iconName: "heart",
          action: { print("✨") },
          tagCount: .constant(5)/*, isSelected: false*/
-      )  /*true*/
+      )
          .padding(16)
          .background(Color.blackOrWhite.opacity(1)) // Color.blackOrWhite
-      // .frame(maxWidth: 300)
          #if os(macOS)
          .padding(.horizontal)
          #endif

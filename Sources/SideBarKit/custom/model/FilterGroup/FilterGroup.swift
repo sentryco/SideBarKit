@@ -6,13 +6,22 @@ import SwiftUI
  * - Fixme: ⚠️️ move into seperate files etc 👈
  */
 struct FilterGroup: GroupKind {
-   /*static*/ let title: String = "Type"
+   /**
+    * The title of the filter group, representing the type of credentials.
+    */
+   let title: String = "Type"
 }
 /**
  * Ext
  */
 extension FilterGroup {
+   /**
+    * Represents the type of items contained within the filter group.
+    */
    typealias EnumType = Items
+   /**
+    * Enum representing the different types of items that can be filtered.
+    */
    enum Items: CaseIterable {
       case login, paymentcard, wifi, securenote, other
    }

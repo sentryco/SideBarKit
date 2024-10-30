@@ -10,8 +10,7 @@ extension MiscRowView {
          Self.text(isSelected: isSelected.wrappedValue, titleText: titleText)// center
          Spacer()
       }
-      .buttonWrapper { // - Fixme: ⚠️️ doc this line
-//         selected.wrappedValue = self.uuid
+      .buttonWrapper { // Wraps the HStack in a button-like interaction, allowing for selection and action triggering.
          selection.wrappedValue = self.index
          action()
       }

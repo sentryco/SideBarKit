@@ -7,8 +7,6 @@ import SwiftUI
       LabelRowView(
          selection: .constant(.init(group: 0, item: 0)), 
          index: .init(group: 0, item: 0),
-//         selected: .constant(nil),
-//         uuid: .init(),
          titleText: "Hobby",
          action: { Swift.print("action") },
          color: .green,
@@ -22,4 +20,3 @@ import SwiftUI
    }
    .environment(\.colorScheme, .dark)
 }
- 

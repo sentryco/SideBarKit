@@ -9,46 +9,37 @@ import SwiftUI
  * - Fixme: ⚠️️ move to interfacelib, potentially move to OSS etc
  */
 struct ScrollableVStack<Content: View>: View {
+   /**
+    * spacing
+    * - Description: The spacing between the items in the VStack.
+    */
    let spacing: CGFloat
+   /**
+    * showsIndicators
+    * - Description: A boolean value indicating whether to show the scroll indicators.
+    */
    let showsIndicators: Bool
+   /**
+    * padding
+    * - Description: The padding around the VStack.
+    */
    let padding: EdgeInsets?
+   /**
+    * content
+    * - Description: The content of the VStack.
+    */
    let content: () -> Content
    /**
     * - Parameters:
-    *   - spacing: - Fixme: ⚠️️ add doc
-    *   - showsIndicators: - Fixme: ⚠️️ add doc
-    *   - padding: - Fixme: ⚠️️ add doc
-    *   - content: - Fixme: ⚠️️ add doc
+    *   - spacing: The spacing between the items in the VStack.
+    *   - showsIndicators: A boolean value indicating whether to show the scroll indicators.
+    *   - padding: The padding around the VStack.
+    *   - content: The content of the VStack.
     */
    init(spacing: CGFloat = 16, showsIndicators: Bool = false, padding: EdgeInsets? = nil, @ViewBuilder content: @escaping () -> Content) {
       self.spacing = spacing
       self.showsIndicators = showsIndicators
       self.padding = padding
       self.content = content
-   }
-   var body: some View {
-      ScrollView(
-         .vertical, // - Fixme: ⚠️️ doc this line
-         showsIndicators: showsIndicators // - Fixme: ⚠️️ doc this line
-      ) {
-         VStack(spacing: spacing) {
-            content() // Inject content here
-         }
-         .padding(padding ?? EdgeInsets())
-      }
-   }
-}
-/**
- * Preview
- */
-#Preview {
-   ScrollableVStack {
-      ForEach(1...50, id: \.self) { index in
-         Text("Item \(index)")
-            .padding()
-            .frame(maxWidth: .infinity)
-            .background(Color.blue.opacity(0.2))
-            .cornerRadius(8)
-      }
    }
 }

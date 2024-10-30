@@ -1,6 +1,7 @@
 import SwiftUI
 /**
  * Preview
+ * - Description: Provides a preview environment for the MiscGroup, showcasing the UI components and layout.
  */
 #Preview {
    ZStack {

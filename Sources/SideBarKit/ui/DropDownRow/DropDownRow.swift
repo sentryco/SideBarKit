@@ -47,6 +47,7 @@ public struct DropDownRow: View {
    public let textStyle: DropDownTextStyle
    /**
     * Initializes a DropDownRow with a title, toggle state, optional leading image name, and text style.
+    * - Description: Initializes a DropDownRow with a title, toggle state, optional leading image name, and text style. This initializer allows you to create a DropDownRow with the specified title, binding for the toggle state, optional leading image, and text style.
     * - Parameters:
     *   - title: The title of the DropDownRow.
     *   - isOn: A binding to a boolean that controls the toggle state of the DropDownRow.

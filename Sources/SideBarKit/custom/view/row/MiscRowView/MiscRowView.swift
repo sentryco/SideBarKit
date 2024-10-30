@@ -4,52 +4,46 @@ import SwiftUI
  */
 struct MiscRowView: View, MenuRowKind {
    /**
-    * selection
+    * Selection
+    * - Description: A binding to the currently selected index, allowing the row to update its appearance based on selection state.
     */
    let selection: Binding<CombinedIndex?>
-//   @Binding var selection: CombinedIndex?
    /**
     * Index
+    * - Description: The index of the row item in the collection.
     */
    let index: CombinedIndex
    /**
-    * - Fixme: ⚠️️ add doc
-    */
-//   var selected: Binding<UUID?>
-   /**
-    * - Fixme: ⚠️️ add doc
-    */
-//   let uuid: UUID = .init()
-   /**
-    * - Fixme: ⚠️️ add doc
+    * Title text
+    * - Description: The title text of the row item.
     */
    let titleText: String
    /**
-    * - Fixme: ⚠️️ add doc
+    * Action
+    * - Description: The action to be performed when the row item is selected.
     */
    let action: EmptyClosure
    /**
-    * - Fixme: ⚠️️ add doc
+    * Icon
+    * - Description: The icon associated with the row item.
     */
    let icon: String
-   /**
-    * - Fixme: ⚠️️ add doc
-    */
-//   let isSelected: Bool = false
 }
 /**
  * Init
  */
 extension MiscRowView {
    /**
-    * - Fixme: ⚠️️ add doc
+    * - Description: Initializes a new instance of `MiscRowView` with the provided miscellaneous type, index, and selection binding.
+    * - Parameters:
+    *   - miscType: The type of miscellaneous item to be displayed, containing the title, action, and icon information.
+    *   - index: The index of the row item in the collection.
+    *   - selection: A binding to the currently selected index, allowing the row to update its appearance based on selection state.
     */
-   init(miscType: MiscType /*selected: Binding<UUID?>*/, index: CombinedIndex, selection: Binding<CombinedIndex?>) {
+   init(miscType: MiscType, index: CombinedIndex, selection: Binding<CombinedIndex?>) {
       self.init(
          selection: selection,
          index: index,
-//         selected: selected, 
-//         uuid: .init(),
          titleText: miscType.title,
          action: miscType.action,
          icon: miscType.icon

@@ -15,8 +15,7 @@ extension FilterRowView {
          Spacer()
          Self.rightSideTag(tagCount: $tagCount, isSelected: isSelected.wrappedValue) // right
       }
-      .buttonWrapper { // - Fixme: ⚠️️ doc this line
-         // selected.wrappedValue = self.uuid
+      .buttonWrapper { // Wraps the HStack in a button-like interaction, allowing for selection and action triggering.
          selection.wrappedValue = self.index
          action()
       }

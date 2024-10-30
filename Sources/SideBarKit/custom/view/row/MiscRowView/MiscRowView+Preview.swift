@@ -7,8 +7,6 @@ import SwiftUI
       MiscRowView(
          selection: .constant(.init(group: 0, item: 0)),
          index: .init(group: 0, item: 0),
-//         selected: .constant(.init()),
-//         uuid: .init(),
          titleText: "Prefs",
          action: { Swift.print("action") },
          icon: "heart"
@@ -21,4 +19,3 @@ import SwiftUI
    }
    .environment(\.colorScheme, .dark)
 }
-
