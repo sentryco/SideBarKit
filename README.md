@@ -20,7 +20,7 @@ SideBarKit is a customizable Sidebar framework. Decouple the sidebar implementat
 
 ## Example:
 
-```swiftui
+```swift
 @State var selectedIdx: CombinedIndex? = .init(group: 0, item: 0) // Track selection
 let model = [Top(), Middle(), Bottom()] // Define your model
 MenuStack(selectedIndex: $selectedIdx, groups: model) // Add sidebar view
