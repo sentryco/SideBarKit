@@ -24,7 +24,7 @@ public struct MiscRowModel: RowKind {
     *   - icon: - Fixme: ⚠️️ add doc
     *   - action: - Fixme: ⚠️️ add doc
     */
-   init(title: String, icon: String, action: @escaping () -> Void) {
+   public init(title: String, icon: String, action: @escaping () -> Void) {
       self.title = title
       self.icon = icon
       self.action = action
