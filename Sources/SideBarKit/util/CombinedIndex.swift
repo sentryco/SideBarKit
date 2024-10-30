@@ -1,5 +1,6 @@
 import Foundation
 /**
+ * - Abstract: Used for selecting / deselecting items in a 2 level multi-dim UI construct
  * typealias Selection = (column: Int, row: Int)
  * We define a CombinedIndex struct to represent the row and column together.
  * equatable so we can assert if its selected etc
@@ -10,7 +11,7 @@ import Foundation
  * - Fixme: ⚠️️ Use combinedIndex, as its easier to set init selection etc
  */
 struct CombinedIndex: Equatable {
-   var row: Int
-   var column: Int
+   var group: Int
+   var item: Int
 }
 

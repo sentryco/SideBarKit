@@ -7,9 +7,9 @@ import SwiftUI
       Color.whiteOrBlack
          .edgesIgnoringSafeArea(.all)
       MenuGroupView(
-         selection: .constant(.init(row: 0, column: 0)),
+         selection: .constant(.init(group: 0, item: 0)),
          index: 1,
-         groupType: MiscGroup.self//,
+         groupType: MiscGroup()//,.self
          // selected: .constant(.init())
       )
       .padding()

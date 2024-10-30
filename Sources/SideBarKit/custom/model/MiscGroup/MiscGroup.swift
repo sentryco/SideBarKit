@@ -9,7 +9,12 @@ import HybridColor
  * - Fixme: ⚠️️ moveprefs out of bottom menu model etc
  * - Fixme: ⚠️️ move to example project?
  */
-enum MiscGroup: GroupKind {
-   static let title: String = "Misc"
-   case all, favorites, trash, archived, prefs
+struct MiscGroup: GroupKind {
+   /*static*/ let title: String = "Misc"
+}
+extension MiscGroup {
+   typealias EnumType = Items
+   enum Items: CaseIterable {
+      case all, favorites, trash, archived, prefs
+   }
 }

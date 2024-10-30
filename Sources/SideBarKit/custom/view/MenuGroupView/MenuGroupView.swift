@@ -9,14 +9,17 @@ struct MenuGroupView: View, MenuGroupKind {
     */
    @Binding var selection: CombinedIndex?
    /**
-    * - Fixme: ⚠️️ add doc
+    * Group index
+    * - Fixme: ⚠️️ add description
     */
    let index: Int
    /**
+    * Ref to the group model
     * - Fixme: ⚠️️ add doc
     */
-   let groupType: any GroupKind.Type
+   let groupType: any GroupKind // any GroupKind.Type
    /**
+    * Toggle visibility
     * - Fixme: ⚠️️ add doc
     */
    @State var isOn: Bool = false

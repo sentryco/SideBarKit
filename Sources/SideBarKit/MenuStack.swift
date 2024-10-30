@@ -35,12 +35,15 @@ struct MenuStack: View {
     * - Fixme: ⚠️️ add note about CombinedIndex. Equatable etc?
     * - Fixme: ⚠️️ Maybe make selection: UUID ? (that works in multi-dimensional setup etc)
     */
-   @State var selectedIndex: CombinedIndex? = .init(row: 0, column: 0)
+   @Binding var selectedIndex: CombinedIndex?
    /**
     * - Abstract: Stores the data for the top and the bottom menues
     * - Fixme: ⚠️️ add description
     */
    let groups: GroupKinds
 }
+/**
+ * - Fixme: ⚠️️ add description
+ */
 var isTest: Bool = false
 

@@ -9,8 +9,8 @@ import SwiftUI
 #Preview(traits: .fixedLayout(width: 350, height: 200)) { // ⚠️️ traits only work for macOS I think
    PreviewContainer {
       FilterRowView(
-         selection: .constant(.init(row: 0, column: 0)),
-         index: .init(row: 0, column: 0),
+         selection: .constant(.init(group: 0, item: 0)),
+         index: .init(group: 0, item: 0),
 //         selected: .constant(.init()),
 //         uuid: .init(),
          titleText: "Menu item",

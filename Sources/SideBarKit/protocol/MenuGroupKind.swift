@@ -4,5 +4,8 @@ import Foundation
  */
 protocol MenuGroupKind {
 //   var title: String { get }
-   var groupType: any GroupKind.Type { get }
+   /**
+    * - Fixme: ⚠️️ add doc
+    */
+   var groupType: any GroupKind { get } // any GroupKind.Type
 }

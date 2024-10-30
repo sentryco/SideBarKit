@@ -6,7 +6,7 @@ extension FilterGroup {
    /**
     * implementation code
     */
-   static func getItem(item: Self) -> any RowKind {
+   /*static*/ func getItem(item: Items) -> any RowKind {
       switch item {
       case .login:
          return FilteringType(icon: "heart", title: "Login", action: { Swift.print("action");  }, tag: .constant(14))

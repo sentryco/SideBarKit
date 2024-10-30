@@ -19,6 +19,7 @@ SideBarKit enables apps to decouled generic sidebar implementation from app code
 - Improve readme (copilot)
 - Make sure comments are max 80 char wide etc
 - Make things public
+- Add the accessIDs
 - Integrate in main project 🔥 Add it to SideBarContainer that has models, callbacks, etc
 - Make gif
 - Add a way to customize metrics a bit. paddings, offsets etc

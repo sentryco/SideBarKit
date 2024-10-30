@@ -6,7 +6,7 @@ extension MiscGroup {
    /**
     * Custom implementation
     */
-   static func getItem(item: Self) -> any RowKind {
+   /*static*/ func getItem(item: Items) -> any RowKind {
       switch item {
       case .prefs:
          return MiscType(title: "Preferences", icon: "star", action: { Swift.print("action") })

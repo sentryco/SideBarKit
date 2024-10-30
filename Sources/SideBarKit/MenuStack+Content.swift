@@ -24,19 +24,21 @@ extension MenuStack {
     * - Fixme: ⚠️️ use better foreach here
     */
    var scrollStack: some View {
-      ScrollableVStack {
-         content
+      ScrollableVStack { // handles scrolling and vStacking
+         content // embed group-views
       }
    }
    /**
     * Content
+    * - Fixme: ⚠️️ add description
     */
    @ViewBuilder var content: some View {
-      ForEach(Array(groups.enumerated()), id: \.offset) { (_ i: Int, groupType: any GroupKind.Type) in
-         MenuGroupView(
-            selection: $selectedIndex,
-            index: i,
-            groupType: groupType
+      let list = Array(groups.enumerated())
+      ForEach(list, id: \.offset) { (_ i: Int, groupType: any GroupKind/*.Type*/) in
+         MenuGroupView( // group view
+            selection: $selectedIndex, // combined-index
+            index: i, // group index
+            groupType: groupType // class ref
          )
       }
    }

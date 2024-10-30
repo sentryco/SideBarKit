@@ -8,14 +8,13 @@ extension MenuGroupView {
     * - Fixme: ⚠️️ add description
     */
    var body: some View {
-      VStack(spacing: .zero) {
+      VStack(spacing: .zero) { // - Fixme: ⚠️️ add some sort of metric here
          groupTitle
          rowItems
       }
    }
    /**
     * groupTitle
-    * - Fixme: ⚠️️ add the hide button
     * - Fixme: ⚠️️ use hstack
     */
    var groupTitle: some View {
@@ -23,7 +22,7 @@ extension MenuGroupView {
          text: groupType.title,
          isOn: $isOn
       )
-      .padding(.vertical)
+      .padding(.vertical) // - Fixme: ⚠️️ add metric here?
    }
    /**
     * rowItems
@@ -34,10 +33,11 @@ extension MenuGroupView {
       if !isOn { // Toggle visibility via the arrow icon
          VStack(/*spacing: .zero*/) { // Measure.defaultDoubleSpacing
             // Iterates through each element in the top section of the menu model, along with its index
-            ForEach(Array(groupType.items.enumerated()), id: \.offset) { i, element in
+            let items = Array(groupType.items.enumerated())
+            ForEach(items, id: \.offset) { i, element in // - Fixme: ⚠️️ add type
                rowItem(
-                  rowItem: element,
-                  index: .init(row: i, column: index)
+                  rowItem: element, // rowItem
+                  index: .init(group: index, item: i) // store the Combined index
                )  
             }
          }

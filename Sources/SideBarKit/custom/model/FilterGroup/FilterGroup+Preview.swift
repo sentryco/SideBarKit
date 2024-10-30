@@ -5,12 +5,12 @@ import SwiftUI
 #Preview {
    struct DebugContainer: View {
       @State var selected: UUID? = nil
-      @State var selectedIndex: CombinedIndex? = .init(row: 0, column: 0)
+      @State var selectedIndex: CombinedIndex? = .init(group: 0, item: 0)
       var body: some View {
          MenuGroupView(
             selection: $selectedIndex,
             index: 0,
-            groupType: FilterGroup.self//,
+            groupType: FilterGroup()//,
             //            selected: $selected
          )
          .background(Color.blackOrWhite)

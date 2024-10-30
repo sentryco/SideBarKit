@@ -5,7 +5,15 @@ import SwiftUI
  * - Fixme: ⚠️️ move to example project? (probably not)
  * - Fixme: ⚠️️ move into seperate files etc 👈
  */
-enum FilterGroup: GroupKind {
-   static let title: String = "Type"
-   case login, paymentcard, wifi, securenote, other
+struct FilterGroup: GroupKind {
+   /*static*/ let title: String = "Type"
+}
+/**
+ * Ext
+ */
+extension FilterGroup {
+   typealias EnumType = Items
+   enum Items: CaseIterable {
+      case login, paymentcard, wifi, securenote, other
+   }
 }

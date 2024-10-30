@@ -5,8 +5,8 @@ import SwiftUI
 #Preview {
    PreviewContainer {
       LabelRowView(
-         selection: .constant(.init(row: 0, column: 0)), 
-         index: .init(row: 0, column: 0),
+         selection: .constant(.init(group: 0, item: 0)), 
+         index: .init(group: 0, item: 0),
 //         selected: .constant(nil),
 //         uuid: .init(),
          titleText: "Hobby",
