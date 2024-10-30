@@ -4,15 +4,17 @@ import HybridColor
  * - Fixme: ⚠️️ move to example project?
  */
 enum MiscGroup: GroupKind {
-//   static var index: Int { 1 }
    static let title: String = "Misc"
    case all, favorites, trash, archived, prefs
 }
+/**
+ * Makerr
+ */
 extension MiscGroup {
    /**
     * Custom implementation
     */
-   static func getItem(item: Self/*, index: Int*/) -> any RowKind {
+   static func getItem(item: Self) -> any RowKind {
       switch item {
       case .prefs: 
          return MiscType(title: "Preferences", icon: "star", action: { Swift.print("action") })
@@ -27,11 +29,19 @@ extension MiscGroup {
       }
    }
 }
+/**
+ * Preview
+ */
 #Preview {
    ZStack {
       Color.whiteOrBlack
          .edgesIgnoringSafeArea(.all)
-      MenuGroupView(selection: .constant(.init(row: 0, column: 0)), index: 1, groupType: MiscGroup.self, selected: .constant(.init()))
+      MenuGroupView(
+         selection: .constant(.init(row: 0, column: 0)),
+         index: 1,
+         groupType: MiscGroup.self//,
+//         selected: .constant(.init())
+      )
          .padding()
          .background(Color.blackOrWhite)
          .environment(\.colorScheme, .dark)

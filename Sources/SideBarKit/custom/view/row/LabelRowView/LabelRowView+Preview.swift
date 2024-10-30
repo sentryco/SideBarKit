@@ -7,8 +7,8 @@ import SwiftUI
       LabelRowView(
          selection: .constant(.init(row: 0, column: 0)), 
          index: .init(row: 0, column: 0),
-         selected: .constant(nil),
-         uuid: .init(),
+//         selected: .constant(nil),
+//         uuid: .init(),
          titleText: "Hobby",
          action: { Swift.print("action") },
          color: .green,

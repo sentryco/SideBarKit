@@ -7,8 +7,8 @@ import SwiftUI
       MiscRowView(
          selection: .constant(.init(row: 0, column: 0)),
          index: .init(row: 0, column: 0),
-         selected: .constant(.init()),
-         uuid: .init(),
+//         selected: .constant(.init()),
+//         uuid: .init(),
          titleText: "Prefs",
          action: { Swift.print("action") },
          icon: "heart"

@@ -20,5 +20,5 @@ struct MenuGroupView: View, MenuGroupKind {
    /**
     * Selection binding
     */
-   @Binding var selected: UUID?
+//   @Binding var selected: UUID?
 }

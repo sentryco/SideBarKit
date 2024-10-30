@@ -9,11 +9,11 @@ struct LabelRowView: View, MenuRowKind {
    /**
     * - Fixme: ⚠️️ add doc
     */
-   let selected: Binding<UUID?>
+//   let selected: Binding<UUID?>
    /**
     * - Fixme: ⚠️️ add doc
     */
-   let uuid: UUID /*= .init()*/
+//   let uuid: UUID = .init()
    /**
     * - Fixme: ⚠️️ add description
     */
@@ -43,12 +43,12 @@ struct LabelRowView: View, MenuRowKind {
  */
 extension LabelRowView {
    // - Fixme: ⚠️️ maybe use RowKind and add to MenuRowKind? or make it generic or something?
-   init(labelType: LabelType, selected: Binding<UUID?>, index: CombinedIndex, selection: Binding<CombinedIndex?>) {
+   init(labelType: LabelType, /*selected: Binding<UUID?>,*/ index: CombinedIndex, selection: Binding<CombinedIndex?>) {
       self.init(
          selection: selection,
          index: index,
-         selected: selected,
-         uuid: .init(),
+         /*selected: selected,*/
+//         uuid: .init(),
          titleText: labelType.title,
          action: labelType.action,
          color: labelType.color,

@@ -1,6 +1,8 @@
 import SwiftUI
-// Labels etc
-// - Fixme: ⚠️️ move to example project?
+/**
+ * Labels etc
+ * - Fixme: ⚠️️ move to example project?
+ */
 struct LabelType: RowKind {
    let color: Color
    let title: String

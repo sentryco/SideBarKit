@@ -1,7 +1,7 @@
 import SwiftUI
 /**
  * Normal will be used for prefs for instance
- * - Fixme: ⚠️️ move to example project?
+ * - Fixme: ⚠️️ Move to example project?
  */
 struct MiscType: RowKind {
    let title: String

@@ -5,15 +5,17 @@ import SwiftUI
  * - Fixme: ⚠️️ move into seperate files etc 👈
  */
 enum FilterGroup: GroupKind {
-//   static var index: Int { 0 }
    static let title: String = "Type"
    case login, paymentcard, wifi, securenote, other
 }
+/**
+ * Maker
+ */
 extension FilterGroup {
    /**
     * implementation code
     */
-   static func getItem(item: Self/*, index: Int*/) -> any RowKind {
+   static func getItem(item: Self) -> any RowKind {
       switch item {
       case .login:
          return FilteringType(icon: "heart", title: "Login", action: { Swift.print("action");  }, tag: .constant(14))
@@ -36,8 +38,12 @@ extension FilterGroup {
       @State var selected: UUID? = nil
       @State var selectedIndex: CombinedIndex? = .init(row: 0, column: 0)
       var body: some View {
-         MenuGroupView(selection: $selectedIndex, index: 0, groupType: FilterGroup.self, selected: $selected)
-//            .padding()
+         MenuGroupView(
+            selection: $selectedIndex,
+            index: 0,
+            groupType: FilterGroup.self//,
+//            selected: $selected
+         )
             .background(Color.blackOrWhite)
             .environment(\.colorScheme, .dark)
             .onChange(of: selected) { _, _ in

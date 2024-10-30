@@ -13,11 +13,11 @@ struct FilterRowView: View, MenuRowKind {
    /**
     * - Fixme: ⚠️️ add docc
     */
-   var selected: Binding<UUID?>
+//   var selected: Binding<UUID?>
    /**
     * - Fixme: ⚠️️ add doc
     */
-   let uuid: UUID/* = .init()*/
+//   let uuid: UUID/* = .init()*/
    /**
     * - Fixme: ⚠️️ add description
     */
@@ -47,12 +47,12 @@ extension FilterRowView {
    /**
     * - Parameter filterType: - Fixme: ⚠️️ add doc
     */
-   init(filterType: FilteringType, selected: Binding<UUID?>, uuid: UUID, index: CombinedIndex, selection: Binding<CombinedIndex?>) {
+   init(filterType: FilteringType, /*selected: Binding<UUID?>, *//*uuid: UUID,*/ index: CombinedIndex, selection: Binding<CombinedIndex?>) {
       self.init(
          selection: selection,
          index: index,
-         selected: selected,
-         uuid: uuid,
+//         selected: selected,
+//         uuid: uuid,
          titleText: filterType.title,
          iconName: filterType.icon,
          action: filterType.action,

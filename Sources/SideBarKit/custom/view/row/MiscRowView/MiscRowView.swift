@@ -15,11 +15,11 @@ struct MiscRowView: View, MenuRowKind {
    /**
     * - Fixme: ⚠️️ add doc
     */
-   var selected: Binding<UUID?>
+//   var selected: Binding<UUID?>
    /**
     * - Fixme: ⚠️️ add doc
     */
-   let uuid: UUID/* = .init()*/
+//   let uuid: UUID = .init()
    /**
     * - Fixme: ⚠️️ add doc
     */
@@ -44,12 +44,12 @@ extension MiscRowView {
    /**
     * - Fixme: ⚠️️ add doc
     */
-   init(miscType: MiscType, selected: Binding<UUID?>, index: CombinedIndex, selection: Binding<CombinedIndex?>) {
+   init(miscType: MiscType /*selected: Binding<UUID?>*/, index: CombinedIndex, selection: Binding<CombinedIndex?>) {
       self.init(
          selection: selection,
          index: index,
-         selected: selected, 
-         uuid: .init(),
+//         selected: selected, 
+//         uuid: .init(),
          titleText: miscType.title,
          action: miscType.action,
          icon: miscType.icon

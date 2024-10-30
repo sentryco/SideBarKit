@@ -5,12 +5,11 @@ import SwiftUI
  * - Fixme: ⚠️️ move to example project?
  */
 enum LabelGroup: GroupKind {
-//   static var index: Int { 2 }
    static let title: String = "Tags"
    case otp, passkeys, work, personal, custom(title: String, color: Color, tagCount: Binding<Int>)
 }
 /**
- * Implementation
+ * Maker
  */
 extension LabelGroup {
    /**
@@ -25,7 +24,7 @@ extension LabelGroup {
    /**
     * Custom implementation
     */
-   static func getItem(item: Self/*, index: Int*/) -> RowKind {
+   static func getItem(item: Self) -> RowKind {
       switch item {
       case .otp: 
          return LabelType(color: .pink, title: "OTP", action: { Swift.print("action") }, tag: .constant(4))
@@ -45,7 +44,12 @@ extension LabelGroup {
    ZStack {
       Color.whiteOrBlack
          .edgesIgnoringSafeArea(.all)
-      MenuGroupView(selection: .constant(.init(row: 0, column: 0)), index: 2, groupType: LabelGroup.self, selected: .constant(.init()))
+      MenuGroupView(
+         selection: .constant(.init(row: 0, column: 0)),
+         index: 2,
+         groupType: LabelGroup.self//,
+//         selected: .constant(.init())
+      )
          .padding()
          .background(Color.blackOrWhite)
          .environment(\.colorScheme, .dark)

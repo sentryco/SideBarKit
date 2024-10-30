@@ -21,17 +21,17 @@ protocol MenuRowKind {
     * - Abstract: This property indicates whether the menu item is currently selected or not.
     * - Description: Indicates the current selection state of the menu item, where `true` means the item is active or highlighted in the UI.
     * - Fixme: ⚠️️ See selected state in DevicePicker?
+    * - Fixme: ⚠️️ this might not need to be binding, try without
     */
    var isSelected: Binding<Bool> { get }
    /**
     * - Fixme: ⚠️️ add doc
     */
-   var uuid: UUID { get }
+//   var uuid: UUID { get }
    /**
     * - Fixme: ⚠️️ add doc
     */
-   var selected: Binding<UUID?> { get }
-   
+//   var selected: Binding<UUID?> { get }
    var selection: Binding<CombinedIndex?> { get }
    /**
     * Index
