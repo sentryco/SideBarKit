@@ -1,6 +1,4 @@
-// swift-tools-version: 5.10
-// The swift-tools-version declares the minimum version of Swift required to build this package.
-
+// swift-tools-version: 5.9
 import PackageDescription
 
 let package = Package(
@@ -10,7 +8,6 @@ let package = Package(
       .iOS(.v17)
     ],
     products: [
-        // Products define the executables and libraries a package produces, making them visible to other packages.
         .library(
             name: "SideBarKit",
             targets: ["SideBarKit"]),
@@ -28,5 +25,4 @@ let package = Package(
          name: "SideBarKitTests",
          dependencies: ["SideBarKit"])
     ]
-    
 )
