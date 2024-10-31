@@ -56,6 +56,7 @@ extension MenuRowKind {
          title: "\(tagCount.wrappedValue/* ?? .zero*/)", // Converts the optional tagCount to a string, defaulting to "0" if nil,
          isSelected: isSelected // Passes the isSelected state to the MenuTagView
       )
+      .padding(.horizontal, MenuStack.sizing.tagHorizontalPadding)
       // ⚠️️ New is that it also is hidden if tagCount is zero. this way things are more minimalistic
       .opacity(/*tagCount == nil || */tagCount.wrappedValue == .zero ? .zero : 1) // hide prefs for instance, prefs has no tags and is set to nil
       // .background(.teal) // ⚠️️ debug

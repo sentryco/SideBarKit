@@ -85,7 +85,7 @@ internal struct AccessoryButtonStyle: ButtonStyle {
             color: iconColor
          ) // Sets the size and padding of the icon
          .background(isTest ? .blue : .clear) // ⚠️️ debug
-         .padding(.horizontal, 6)
+//         .padding(.horizontal, 0)
          .background(isTest ? .pink : .clear) // ⚠️️ debug
    }
 }

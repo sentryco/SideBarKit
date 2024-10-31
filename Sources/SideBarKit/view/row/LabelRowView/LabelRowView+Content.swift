@@ -7,7 +7,7 @@ extension LabelRowView {
     * Body
     */
    var body: some View {
-      HStack(/*spacing: .zero*/) {
+      HStack(spacing: .zero) {
          labelColor()
          Self.text(isSelected: self.isSelected.wrappedValue, titleText: titleText)// center
          Spacer()
@@ -32,7 +32,8 @@ extension LabelRowView {
       Circle()
          .frame(width: 18, height: 18)
          .foregroundColor(color)
-         .padding(.horizontal, 12)
+         .padding(.horizontal, MenuStack.sizing.iconHorizontalPadding)
+         .background(isTest ? Color.brown : Color.clear)
    }
 }
 

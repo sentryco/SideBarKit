@@ -38,6 +38,8 @@ To install SideBarKit using Swift Package Manager, add the following dependency 
 - Add a way to customize metrics a bit. paddings, offsets etc to match original component 
 - Consider removing binding from selection var. Bidning might not be needed  
 - Remove unit tests 
+- Tag count may not need to be a binding 
+- Tweak padding around groups. Looks too tall when collapsed
 
 ## Not-todo:
 
@@ -49,3 +51,5 @@ To install SideBarKit using Swift Package Manager, add the following dependency 
 
 - Consider implementing toggle compact-mode / expanded-mode functionality etc, or not? at least wait and do it later when things are 👉 more stable 👈 etc (align icons to support compact mode)
 - Consider adding UITests?
+- Consider persisting collapsed state
+- Consider persisting selected index

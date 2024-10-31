@@ -30,7 +30,7 @@ extension MenuStack {
     * - Fixme: ⚠️️ Use better foreach here
     */
    internal var scrollStack: some View {
-      ScrollableVStack { // Handles scrolling and vStacking
+      ScrollableVStack(spacing: 12) { // Handles scrolling and vStacking
          content // Embed group-views
       }
    }
@@ -43,11 +43,11 @@ extension MenuStack {
     */
    @ViewBuilder internal var content: some View {
       let list = Array(groups.enumerated())
-      ForEach(list, id: \.offset) { (_ i: Int, groupType: any GroupKind/*.Type*/) in
+      ForEach(list, id: \.offset) { (_ i: Int, group: any GroupKind) in
          MenuGroupView( // group view
             selection: $selectedIndex, // combined-index
             index: i, // group index
-            groupType: groupType // class ref
+            groupType: group // struct instance
          )
       }
    }

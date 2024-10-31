@@ -47,7 +47,7 @@ extension View {
     *   - font: The font style of the text.
     * - Returns: A view with the applied row text style.
     */
-   internal func rowTextStyle(textColor: Color = Color.whiteOrBlack.opacity(0.8), padding: CGFloat = 4, font: Font = Font.headline) -> some View {
+   internal func rowTextStyle(textColor: Color = Color.whiteOrBlack.opacity(0.8), padding: CGFloat = MenuStack.sizing.textHorizontalPadding, font: Font = Font.headline) -> some View {
       self
          .font(font) 
          .foregroundColor(textColor)  

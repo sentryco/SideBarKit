@@ -17,6 +17,7 @@ public struct MenuGroupView: View, MenuGroupKind {
    /**
     * Ref to the group model
     * - Description: The type of the group model.
+    * - Fixme: ⚠️️ rename to group
     */
    internal let groupType: any GroupKind // any GroupKind.Type
    /**

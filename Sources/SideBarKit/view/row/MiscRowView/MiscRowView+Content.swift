@@ -8,7 +8,7 @@ extension MiscRowView {
       HStack(spacing: .zero) {
          Self.leftSideIcon(isSelected: isSelected.wrappedValue, iconName: icon) // left
          Self.text(isSelected: isSelected.wrappedValue, titleText: titleText)// center
-         Spacer()
+         Spacer() // pin left
       }
       .buttonWrapper { // Wraps the HStack in a button-like interaction, allowing for selection and action triggering.
          selection.wrappedValue = self.index

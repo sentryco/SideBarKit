@@ -7,7 +7,6 @@ import SwiftUI
  * - Note: Preview works for iPhone as well (more narrow way of previewing)
  * - Fixme: ⚠️️ Make dual PreviewContainer to see both dark and light mode at the same time, maybe only for iPad and macOS? or? at least maybe horizontally stacked then? for ipad at leat?
  * - Fixme: ⚠️️ add the subdued background
- * - Fixme: ⚠️️⚠️️⚠️️ hock up isPrefsPresented binding 🏀 or at least a onChange trace for it etc?
  */
 #Preview(traits: .fixedLayout(width: 450, height: 550)) {
    struct DebugView: View { // ⚠️️ we use debug view to hold the states

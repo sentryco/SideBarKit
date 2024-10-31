@@ -5,18 +5,15 @@ import SwiftUI
  * - Description: This view serves as the primary navigation panel, allowing 
  *                users to access different sections of the application 
  *                through a sidebar interface.
- * - Important: Model has the action callback
+ * - Important: ⚠️️ Model has the action callback
+ * - Note: We embed stack in a vscroll because List is very tricky to style across OSes
  * - Note: Sections should be minimizable
  * - Note: Use style modifiers as much as possible
  * - Note: The model create groups
  * - Note: Alternative name: 👉👉 `SideBarMenuView` ? 👈👈 Rename to this because, menu can be popover menu and all sorts of other menues, sidebarmenu is more speccific `SideBarView`
- * - Fixme: ⚠️️ add styles 👈
- * - Fixme: ⚠️️ add toggle button to groups 👈
- * - Fixme: ⚠️️ add debug isTest for debgug brackground colors etc
  * - Fixme: ⚠️️ Rename to SideBar ?
  * - Fixme: ⚠️️ Only show sidebar tags for rows that has more than zero, maybe
  * - Fixme: ⚠️️ Remove down state for buttons in macOS and for ipad? `configuration.isPressed`
- * - Fixme: ⚠️️ Simplify all this, probably use VStack embedded in a scroller etc. List is very tricky to style across OSes
  */
 public struct MenuStack: View {
    /**
@@ -38,7 +35,7 @@ public struct MenuStack: View {
     * - Fixme: ⚠️️ add note about CombinedIndex. Equatable etc?
     * - Fixme: ⚠️️ Maybe make selection: UUID ? (that works in multi-dimensional setup etc)
     */
-   @Binding var selectedIndex: CombinedIndex?
+   @Binding internal var selectedIndex: CombinedIndex?
    /**
     * - Abstract: Stores the data for the top and the bottom menues
     * - Description: This property holds the data for the menu groups, 
@@ -46,16 +43,21 @@ public struct MenuStack: View {
     *               items in the sidebar. It defines the structure and 
     *               content of the top and bottom sections of the menu.
     */
-   let groups: GroupKinds
+   internal let groups: GroupKinds
+   /**
+    * - Fixme: ⚠️️ add doc
+    */
+   internal static var sizing: SideBarSizing = SideBarSizing.defaultSizing
    /**
     * - Fixme: ⚠️️ add description
     * - Parameters:
     *   - selectedIndex: - Fixme: ⚠️️ add doc
     *   - groups: - Fixme: ⚠️️ add doc
     */
-   public init(selectedIndex: Binding<CombinedIndex?>, groups: GroupKinds) {
+   public init(selectedIndex: Binding<CombinedIndex?>, groups: GroupKinds, sizing: SideBarSizing = SideBarSizing.defaultSizing) {
       self._selectedIndex = selectedIndex
       self.groups = groups
+      Self.sizing = sizing
    }
 }
 /**
@@ -65,4 +67,3 @@ public struct MenuStack: View {
  *               menu structure.
  */
 var isTest: Bool = false
-

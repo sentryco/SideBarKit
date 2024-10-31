@@ -9,7 +9,7 @@ extension MenuGroupView {
     *                displaying the group title and row items.
     */
    public var body: some View {
-      VStack(spacing: .zero) { // - Fixme: ⚠️️ add some sort of metric here
+      VStack(spacing: MenuStack.sizing.groupSpace) { // - Fixme: ⚠️️ add some sort of metric here
          groupTitle
          rowItems
       }
@@ -24,7 +24,9 @@ extension MenuGroupView {
          text: groupType.title,
          isOn: $isOn
       )
-      .padding(.vertical) // - Fixme: ⚠️️ add metric here?
+      .background(isTest ? Color.purple : Color.clear)
+      // .padding(.vertical, .zero) // - Fixme: ⚠️️ add metric here?
+      // .background(isTest ? Color.orange : Color.clear)
    }
    /**
     * rowItems
@@ -34,7 +36,7 @@ extension MenuGroupView {
     */
    @ViewBuilder public var rowItems: some View {
       if !isOn { // Toggle visibility via the arrow icon
-         VStack(/*spacing: .zero*/) { // Measure.defaultDoubleSpacing
+         VStack(spacing: MenuStack.sizing.rowSpace) { // Measure.defaultDoubleSpacing
             // Iterates through each element in the top section of the menu model, along with its index
             let items = Array(groupType.items.enumerated())
             ForEach(items, id: \.offset) { i, element in // - Fixme: ⚠️️ add type
