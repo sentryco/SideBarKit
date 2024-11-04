@@ -2,28 +2,27 @@ import Foundation
 
 public struct SideBarSizing {
    /**
-    * - Fixme: ⚠️️ add doc
+    * The space between rows.
     */
    let rowSpace: CGFloat
    /**
-    * - Fixme: ⚠️️ add doc
+    * The space between groups.
     */
    let groupSpace: CGFloat
    /**
-    * - Fixme: ⚠️️ add doc
+    * The space between the icon and the text.
     */
    let iconHorizontalPadding: CGFloat
    /**
-    * - Fixme: ⚠️️ add doc
+    * The space between the text and the toggle.
     */
    let textHorizontalPadding: CGFloat
    /**
-    * - Fixme: ⚠️️ add doc
-    * - Fixme: ⚠️️ this is not added yet. add it later
+    * The space between the toggle and the text.
     */
    let toggleHorizontalPadding: CGFloat
    /**
-    * - Fixme: ⚠️️ add doc
+    * The space between the tag and the text.
     */
    let tagHorizontalPadding: CGFloat
 }
@@ -32,7 +31,7 @@ public struct SideBarSizing {
  */
 extension SideBarSizing {
    /**
-    * - Fixme: ⚠️️ add doc
+    * The default sizing configuration for the sidebar menu.
     */
    public static var defaultSizing: SideBarSizing {
       .init(

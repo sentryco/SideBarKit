@@ -21,18 +21,17 @@ import Foundation
  */
 public struct CombinedIndex: Equatable {
    /**
-    * - Fixme: ⚠️️ add description
+    * The index of the group.
     */
    public var group: Int
    /**
-    * - Fixme: ⚠️️ add description
+    * The index of the item.
     */
    public var item: Int
    /**
-    * - Fixme: ⚠️️ add description
     * - Parameters:
-    *   - group: - Fixme: ⚠️️ add doc
-    *   - item: - Fixme: ⚠️️ add doc
+    *   - group: The index of the group.
+    *   - item: The index of the item.
     */
    public init(group: Int, item: Int) {
       self.group = group
