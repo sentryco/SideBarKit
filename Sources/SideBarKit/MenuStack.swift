@@ -45,14 +45,19 @@ public struct MenuStack: View {
     */
    internal let groups: GroupKinds
    /**
-    * - Fixme: ⚠️️ add doc
+    * - Abstract: Stores the sizing configuration for the sidebar menu
+    * - Description: This property holds the sizing configuration for the 
+    *               sidebar menu, which defines the dimensions and layout 
+    *               of the menu items. It is used to ensure consistent 
+    *               sizing across different sections of the menu.
     */
    internal static var sizing: SideBarSizing = SideBarSizing.defaultSizing
    /**
-    * - Fixme: ⚠️️ add description
+    * - Description: Initializes a new instance of the MenuStack view with the provided selected index, groups, and optional sizing configuration.
     * - Parameters:
-    *   - selectedIndex: - Fixme: ⚠️️ add doc
-    *   - groups: - Fixme: ⚠️️ add doc
+    *   - selectedIndex: A binding to the index of the selected sidebar menu item.
+    *   - groups: The data for the top and bottom menu groups.
+    *   - sizing: The sizing configuration for the sidebar menu. Defaults to `SideBarSizing.defaultSizing`.
     */
    public init(selectedIndex: Binding<CombinedIndex?>, groups: GroupKinds, sizing: SideBarSizing = SideBarSizing.defaultSizing) {
       self._selectedIndex = selectedIndex

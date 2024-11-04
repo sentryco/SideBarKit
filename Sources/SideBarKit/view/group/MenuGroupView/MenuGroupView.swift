@@ -27,10 +27,10 @@ public struct MenuGroupView: View, MenuGroupKind {
    @State internal var isOn: Bool = false
    /**
     * - Parameters:
-    *   - selection: - Fixme: ⚠️️ add doc
-    *   - index: - Fixme: ⚠️️ add doc
-    *   - groupType: - Fixme: ⚠️️ add doc
-    *   - isOn: - Fixme: ⚠️️ add doc
+    *   - selection: A binding to the selected index of the sidebar menu.
+    *   - index: The index of the group in the collection.
+    *   - groupType: The type of the group model.
+    *   - isOn: A boolean binding that controls the visibility of the group.
     */
    public init(selection: Binding<CombinedIndex?>, index: Int, groupType: any GroupKind, isOn: Bool = false) {
       self._selection = selection

@@ -23,12 +23,11 @@ public struct LabelRowModel: RowKind {
     */
    @Binding var tag: Int
    /**
-    * - Fixme: ⚠️️ add doc
     * - Parameters:
-    *   - color: - Fixme: ⚠️️ add doc
-    *   - title: - Fixme: ⚠️️ add doc
-    *   - action: - Fixme: ⚠️️ add doc
-    *   - tag: - Fixme: ⚠️️ add doc
+    *   - color: The color of the label.
+    *   - title: The title of the label.
+    *   - action: The action to be performed when the label is selected.
+    *   - tag: A binding to the tag of the label.
     */
    public init(color: Color, title: String, action: @escaping () -> Void, tag: Binding<Int>) {
       self.color = color

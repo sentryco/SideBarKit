@@ -16,8 +16,8 @@ internal struct NoButtonStyle: ButtonStyle {
     */
    internal init() {}
    /**
-    * - Parameter configuration: - Fixme: ⚠️️ add doc
-    * - Returns: - Fixme: ⚠️️ add doc
+    * - Parameter configuration: The configuration of the button, containing its label and state.
+    * - Returns: A view that represents the body of a button.
     */
    internal func makeBody(configuration: Self.Configuration) -> some View {
       configuration.label

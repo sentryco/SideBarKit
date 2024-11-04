@@ -18,11 +18,10 @@ public struct MiscRowModel: RowKind {
     */
    public let action: () -> Void
    /**
-    * - Fixme: ⚠️️ add doc
     * - Parameters:
-    *   - title: - Fixme: ⚠️️ add doc
-    *   - icon: - Fixme: ⚠️️ add doc
-    *   - action: - Fixme: ⚠️️ add doc
+    *   - title: The title of the miscellaneous type.
+    *   - icon: The icon associated with the miscellaneous type.
+    *   - action: The action to be performed when the miscellaneous type is selected.
     */
    public init(title: String, icon: String, action: @escaping () -> Void) {
       self.title = title

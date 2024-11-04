@@ -1,12 +1,9 @@
 import SwiftUI
 /**
- * - Fixme: ⚠️️ Add doc from legacy
  * - Fixme: ⚠️️ could we make these types .modifiers? or button styles?
- * - Fixme: ⚠️️ rename to FilterRowView
+ * - Fixme: ⚠️️ rename to FilterRowView?
  */
 struct FilterRowView: View, MenuRowKind {
-   // - Fixme: ⚠️️ add doc
-   let selection: Binding<CombinedIndex?>
    /**
     * Index
     * - Description: The index of the row item in the collection.
