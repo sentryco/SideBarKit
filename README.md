@@ -1,4 +1,5 @@
 [![Tests](https://github.com/sentryco/SideBarKit/actions/workflows/Tests.yml/badge.svg)](https://github.com/sentryco/SideBarKit/actions/workflows/Tests.yml)
+[![codebeat badge](https://codebeat.co/badges/84b7c1e2-9998-4996-8724-57d86ebcd835)](https://codebeat.co/projects/github-com-sentryco-sidebarkit-main)
 
 # SideBarKit
 
