@@ -5,6 +5,10 @@ import SwiftUI
  */
 struct FilterRowView: View, MenuRowKind {
    /**
+    * - Fixme: ⚠️️ add doc
+    */
+   var selection: Binding<CombinedIndex?>
+   /**
     * Index
     * - Description: The index of the row item in the collection.
     */
