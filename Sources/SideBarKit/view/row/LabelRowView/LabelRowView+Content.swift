@@ -36,5 +36,3 @@ extension LabelRowView {
          .background(isTest ? Color.brown : Color.clear)
    }
 }
-
-

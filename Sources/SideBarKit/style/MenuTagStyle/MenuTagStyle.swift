@@ -49,9 +49,9 @@ extension View {
     */
    internal func rowTextStyle(textColor: Color = Color.whiteOrBlack.opacity(0.8), padding: CGFloat = MenuStack.sizing.textHorizontalPadding, font: Font = Font.headline) -> some View {
       self
-         .font(font) 
-         .foregroundColor(textColor)  
-         .padding(.horizontal, padding)  
+         .font(font)
+         .foregroundColor(textColor)
+         .padding(.horizontal, padding)
    }
 }
 /**

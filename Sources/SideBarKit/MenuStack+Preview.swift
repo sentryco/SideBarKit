@@ -20,7 +20,7 @@ import SwiftUI
             .onChange(of: selectedIdx) { _, _ in // ⚠️️ debug
                Swift.print("selectedIdx: \(String(describing: selectedIdx))")
             }
-            .onChange(of: isPrefsPresented) { oldValue, newValue in
+            .onChange(of: isPrefsPresented) { _, newValue in
                print("isPrefsPresented changed to: \(newValue)")
             }
       }
@@ -43,7 +43,6 @@ import SwiftUI
             .background(Color.blackOrWhite)
             .environment(\.colorScheme, .dark)
          }
-
       }
    }
    return DebugView()

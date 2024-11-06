@@ -9,5 +9,5 @@ protocol MenuGroupKind {
     *                group, providing a reference to the 
     *                specific group kind.
     */
-   var groupType: any GroupKind { get } 
+   var groupType: any GroupKind { get }
 }

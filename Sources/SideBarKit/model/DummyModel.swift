@@ -10,7 +10,7 @@ struct TopGroup: GroupKind {
    func getItem(item: Items) -> any RowKind {
       FilterRowModel(
          icon: "heart", // - Fixme: ⚠️️ randomize this
-         title: String.init(describing: item.rawValue),
+         title: String(describing: item.rawValue),
          action: { Swift.print("action") },
          tag: .constant(5) // - Fixme: ⚠️️ randomize this
       )
@@ -27,17 +27,17 @@ struct MiddleGroup: GroupKind {
       switch item {
       case .seventh:
          MiscRowModel(
-            title: String.init(describing: item.rawValue),
-            icon: "star", // - Fixme: ⚠️️ randomize this
-            action: {
+            title: String(describing: item.rawValue),
+            icon: "star"
+         ) // - Fixme: ⚠️️ randomize this
+            {
                Swift.print("action")
                isPrefsPresented = true
             }
-         )
       default:
          FilterRowModel(
             icon: "star",
-            title: String.init(describing: item.rawValue),
+            title: String(describing: item.rawValue),
             action: { Swift.print("action") },
             tag: .constant(29)
          )

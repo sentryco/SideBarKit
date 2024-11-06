@@ -51,7 +51,7 @@ public struct MenuStack: View {
     *               of the menu items. It is used to ensure consistent 
     *               sizing across different sections of the menu.
     */
-   internal static var sizing: SideBarSizing = SideBarSizing.defaultSizing
+   internal static var sizing = SideBarSizing.defaultSizing
    /**
     * - Description: Initializes a new instance of the MenuStack view with the provided selected index, groups, and optional sizing configuration.
     * - Parameters:

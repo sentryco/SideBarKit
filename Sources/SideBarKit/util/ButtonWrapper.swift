@@ -53,7 +53,7 @@ extension View {
 #Preview(traits: .fixedLayout(width: 200, height: 200)) {
    PreviewContainer {
       EmptyView()
-         .buttonWrapper(action: { Swift.print("action") })
+         .buttonWrapper { Swift.print("action") }
       // .padding(0) // .frame(width: 44, height: 44)
          .padding(.vertical)
          .frame(maxWidth: .infinity)

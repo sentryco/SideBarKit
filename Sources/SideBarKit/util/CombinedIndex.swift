@@ -38,4 +38,3 @@ public struct CombinedIndex: Equatable {
       self.item = item
    }
 }
-

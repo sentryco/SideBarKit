@@ -43,7 +43,7 @@ extension MenuGroupView {
                rowItem(
                   rowItem: element, // rowItem
                   index: .init(group: index, item: i) // store the Combined index
-               )  
+               )
             }
          }
       }
