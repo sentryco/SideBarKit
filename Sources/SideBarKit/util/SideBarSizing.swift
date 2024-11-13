@@ -1,30 +1,33 @@
 import Foundation
-
+/**
+ * - Fixme: ⚠️️ Add doc
+ * - Fixme: ⚠️️ Add public init?
+ */
 public struct SideBarSizing {
    /**
     * The space between rows.
     */
-   let rowSpace: CGFloat
+   internal let rowSpace: CGFloat
    /**
     * The space between groups.
     */
-   let groupSpace: CGFloat
+   internal let groupSpace: CGFloat
    /**
     * The space between the icon and the text.
     */
-   let iconHorizontalPadding: CGFloat
+   internal let iconHorizontalPadding: CGFloat
    /**
     * The space between the text and the toggle.
     */
-   let textHorizontalPadding: CGFloat
+   internal let textHorizontalPadding: CGFloat
    /**
     * The space between the toggle and the text.
     */
-   let toggleHorizontalPadding: CGFloat
+   internal let toggleHorizontalPadding: CGFloat
    /**
     * The space between the tag and the text.
     */
-   let tagHorizontalPadding: CGFloat
+   internal let tagHorizontalPadding: CGFloat
 }
 /**
  * Const

@@ -5,6 +5,7 @@ import HybridColor
  * - Description: A view modifier that applies a consistent style 
  *                to dropdown text elements, setting the font and 
  *                color according to the provided parameters.
+ * - Important: ⚠️️ These must be internal
  * - Note: Used in menu-header-view and drop-down-row
  * - Note: Alt name: `DropDownTextModifier`
  */
@@ -55,8 +56,8 @@ extension ViewModifier where Self == DropDownTextStyle {
  */
 extension View {
    /**
-    * - Description: Applies the DropDownTextStyle to the view.
-    * - Returns: A view with the DropDownTextStyle applied.
+    * - Description: Applies the `DropDownTextStyle` to the view
+    * - Returns: A view with the `DropDownTextStyle` applied
     */
    internal var dropDownTextStyle: some View {
       self.modifier(.dropDownTextStyle())

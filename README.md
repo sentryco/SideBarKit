@@ -34,23 +34,21 @@ To install SideBarKit using Swift Package Manager, add the following dependency 
 .package(url: "https://github.com/sentryco/SideBarKit", branch: "main")
 ```
 
+## Dependencies:
+
+- [HybridColor](https://github.com/sentryco/HybridColor)
+
 ## Todo:
 
 - Add a way to customize metrics a bit. paddings, offsets etc to match original component 
 - Consider removing binding from selection var. Bidning might not be needed  
-- Remove unit tests 
+- Remove unit-tests 
+- Add UITests
 - Tag count may not need to be a binding 
 - Tweak padding around groups. Looks too tall when collapsed
-
-## Not-todo:
-
-- Add optional sidebar toggle button at the top 🚫 (we can put that elsewhere?)
-- Add example proj with bidnings etc or? 🚫 (preview with dummy model is fine for now)
-- Simulating change with dispatch etc (maybe) 🚫 (not needed it will work)
 
 ## Future considerations:
 
 - Consider implementing toggle compact-mode / expanded-mode functionality etc, or not? at least wait and do it later when things are 👉 more stable 👈 etc (align icons to support compact mode)
-- Consider adding UITests?
 - Consider persisting collapsed state
 - Consider persisting selected index

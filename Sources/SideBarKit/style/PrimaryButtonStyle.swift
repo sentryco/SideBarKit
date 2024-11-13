@@ -13,25 +13,25 @@ import SwiftUI
  * - Fixme: ⚠️️ make the padding edgeInset?
  * - Fixme: ⚠️️ break up this into many files
  */
-internal struct PrimaryButtonStyle: ButtonStyle {
+fileprivate struct PrimaryButtonStyle: ButtonStyle {
    /**
     * The background color of the button.
     */
-   internal let backgroundColor: Color
+   fileprivate let backgroundColor: Color
    /**
     * The color of the button text.
     */
-   internal let textColor: Color
+   fileprivate let textColor: Color
    /**
     * The horizontal padding to apply to the button.
     */
-   internal let padding: CGFloat
+   fileprivate let padding: CGFloat
    /**
     * - Description: This style creates a primary button with a 
     *               capsule shape, blue background, and white text. 
     *               It applies horizontal padding to the button.
     */
-   internal func makeBody(configuration: Configuration) -> some View {
+   fileprivate func makeBody(configuration: Configuration) -> some View {
       configuration.label // The label of the button
          .background(backgroundColor) // Sets the background color of the button
          .clipShape(Capsule()) // Clips the button shape to a capsule

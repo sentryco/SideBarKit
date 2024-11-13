@@ -2,7 +2,8 @@ import SwiftUI
 /**
  * Labels etc
  * - Description: Represents a label with a color, title, and action.
- * - Fixme: ⚠️️ move to example project?
+ * - Fixme: ⚠️️ Move to example project?
+ * - Fixme: ⚠️️ can vars be internal or?
  */
 public struct LabelRowModel: RowKind {
    /**

@@ -11,9 +11,9 @@ import SwiftUI
  * - Note: Use style modifiers as much as possible
  * - Note: The model create groups
  * - Note: Alternative name: 👉👉 `SideBarMenuView` ? 👈👈 Rename to this because, menu can be popover menu and all sorts of other menues, sidebarmenu is more speccific `SideBarView`
- * - Fixme: ⚠️️ Rename to SideBar ?
- * - Fixme: ⚠️️ Only show sidebar tags for rows that has more than zero, maybe
- * - Fixme: ⚠️️ Remove down state for buttons in macOS and for ipad? `configuration.isPressed`
+ * - Fixme: ⚠️️ Rename to SideBar? or SideBarView? Check with copilot etc
+ * - Fixme: ⚠️️ Only show sidebar tags for rows that has more than zero, maybe?
+ * - Fixme: ⚠️️ Remove down state for buttons in macOS and for iPad? `configuration.isPressed`
  */
 public struct MenuStack: View {
    /**
@@ -31,7 +31,7 @@ public struct MenuStack: View {
     * - Note: can be nil, for instance in compact mode for ipad etc
     * - Fixme: ⚠️️ Make this optional etc or?
     * - Fixme: ⚠️️ If we want to isolate anim on just text, we could, use onChange and wrap withAnim in tht call etc or somet other solution? or is this done now?
-    * - Fixme: ⚠️️ UUIDs change when view refreshes. instead use combined col:row index. ask copilot to make a suggested design. maybe use hashable and identifiable etc?
+    * - Fixme: ⚠️️ UUID's change when view refreshes. instead use combined col:row index. ask copilot to make a suggested design. maybe use hashable and identifiable etc?
     * - Fixme: ⚠️️ add note about CombinedIndex. Equatable etc?
     * - Fixme: ⚠️️ Maybe make selection: UUID ? (that works in multi-dimensional setup etc)
     */
@@ -39,17 +39,17 @@ public struct MenuStack: View {
    /**
     * - Abstract: Stores the data for the top and the bottom menues
     * - Description: This property holds the data for the menu groups, 
-    *               which are used to organize and display the menu 
-    *               items in the sidebar. It defines the structure and 
-    *               content of the top and bottom sections of the menu.
+    *                which are used to organize and display the menu
+    *                items in the sidebar. It defines the structure and
+    *                content of the top and bottom sections of the menu.
     */
    internal let groups: GroupKinds
    /**
     * - Abstract: Stores the sizing configuration for the sidebar menu
     * - Description: This property holds the sizing configuration for the 
-    *               sidebar menu, which defines the dimensions and layout 
-    *               of the menu items. It is used to ensure consistent 
-    *               sizing across different sections of the menu.
+    *                sidebar menu, which defines the dimensions and layout
+    *                of the menu items. It is used to ensure consistent
+    *                sizing across different sections of the menu.
     */
    internal static var sizing = SideBarSizing.defaultSizing
    /**
@@ -67,8 +67,8 @@ public struct MenuStack: View {
 }
 /**
  * - Description: This property is used to determine if the menu is in 
- *               test mode. It is set to true when the menu is in test 
- *               mode, which is used for debugging and visualizing the 
- *               menu structure.
+ *                test mode. It is set to true when the menu is in test
+ *                mode, which is used for debugging and visualizing the
+ *                menu structure.
  */
 var isTest: Bool = false

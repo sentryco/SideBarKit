@@ -9,38 +9,38 @@ import HybridColor
  *                clear visual hierarchy.
  * - Note: Has `left-icon` and `text next to it
  */
-internal struct AccessoryButtonStyle: ButtonStyle {
+fileprivate struct AccessoryButtonStyle: ButtonStyle {
    /**
     * - Description: The name of the leading icon.
     */
-   internal let leadingIconName: String?
+   fileprivate let leadingIconName: String?
    /**
     * - Description: The name of the trailing icon.
     */
-   internal let trailingIconName: String?
+   fileprivate let trailingIconName: String?
    /**
     * - Description: The font style of the text.
     */
-   internal let font: Font
+   fileprivate let font: Font
    /**
     * - Description: The color of the text.
     */
-   internal let textColor: Color
+   fileprivate let textColor: Color
    /**
     * - Description: The color of icon.
     */
-   internal let iconColor: Color
+   fileprivate let iconColor: Color
    /**
     * Makes the body of the button.
     * - Description: Makes the body of the button.
-    * - Fixme: ⚠️️ add color to icon?
-    * - Fixme: ⚠️️ use the pinLeft call etc?
-    * - Fixme: ⚠️️ use the iconModifier with precice icon size here
+    * - Fixme: ⚠️️ Add color to icon?
+    * - Fixme: ⚠️️ Use the pinLeft call etc?
+    * - Fixme: ⚠️️ Use the iconModifier with precice icon size here
     * - Parameters:
     *   - configuration: The configuration of the button.
     * - Returns: A view representing the body of the button.
     */
-   internal func makeBody(configuration: Configuration) -> some View {
+   fileprivate func makeBody(configuration: Configuration) -> some View {
       HStack(spacing: 6) { // Creates a horizontal stack with default spacing between elements
          leftIcon // Displays the left icon
          configuration.label // Displays the label of the configuration
@@ -49,9 +49,7 @@ internal struct AccessoryButtonStyle: ButtonStyle {
                padding: leadingIconName == nil ? .zero : 4 // Sets the padding around the text based on the presence of a leading icon.
                /*font: font*/ // - Fixme: ⚠️️ add later again // Sets the font style of the text.
             )
-         // new ⚠️️
             .lineLimit(1) // Limits the number of lines of text to 1
-         // new ⚠️️
             .frame(maxWidth: .infinity, alignment: .leading) // Aligns the text to the leading edge of the stack.
          Spacer()
          rightIcon // Displays the right icon
@@ -67,11 +65,7 @@ internal struct AccessoryButtonStyle: ButtonStyle {
          .iconStyle(
             size: 18,
             padding: 0
-            /*color: iconColor*/ // - Fixme: ⚠️️ add this back later
          )
-      // .background(isTest ? .blue : .clear) // ⚠️️ debug
-      // .padding(.horizontal, Measure.defaultSpacing)
-      // .background(isTest ? .pink : .clear) // ⚠️️ debug
    }
    /**
     * Right icon

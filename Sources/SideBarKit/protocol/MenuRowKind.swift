@@ -1,7 +1,7 @@
 import SwiftUI
 /**
  * Each row view needs to contain this
- * - Fixme: ⚠️️ extend identifiable? or hashable?
+ * - Fixme: ⚠️️ Extend identifiable? or hashable?
  */
 protocol MenuRowKind {
    /**
@@ -48,7 +48,7 @@ extension MenuRowKind {
    /**
     * is item selected
     */
-   var isSelected: Binding<Bool> {
+   internal var isSelected: Binding<Bool> {
       .init {
          selection.wrappedValue == index
       } set: { value in

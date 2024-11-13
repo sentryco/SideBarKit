@@ -9,7 +9,7 @@ extension MenuHeaderView {
     * - Description: Defines the text style for the menu header.
     * - Fixme: ⚠️️ why do we store the textStyle?
     */
-   static let textStyle: DropDownTextStyle = {
+   internal static let textStyle: DropDownTextStyle = {
       // let textColor = Palette.SideBar.description
       let textColor: Color = .whiteOrBlack.opacity(1)
       return .dropDownTextStyle(

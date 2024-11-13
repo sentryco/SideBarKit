@@ -27,7 +27,7 @@ extension MenuStack {
     *               views, which is essential for displaying the menu items 
     *               in the sidebar. It ensures that the menu items are 
     *               scrollable and can be viewed in a list format.
-    * - Fixme: ⚠️️ Use better foreach here
+    * - Fixme: ⚠️️ use const for spacing?
     */
    internal var scrollStack: some View {
       ScrollableVStack(spacing: 12) { // Handles scrolling and vStacking
@@ -40,6 +40,7 @@ extension MenuStack {
     *               views, which is essential for displaying the menu items 
     *               in the sidebar. It ensures that the menu items are 
     *               scrollable and can be viewed in a list format.
+    * - Fixme: ⚠️️ Use better foreach here?
     */
    @ViewBuilder internal var content: some View {
       let list = Array(groups.enumerated())

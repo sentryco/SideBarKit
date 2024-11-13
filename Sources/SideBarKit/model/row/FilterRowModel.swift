@@ -3,6 +3,7 @@ import SwiftUI
  * Filter etc, login, payment, securenote, other, wifi
  * - Description: Represents a filtering type with an icon, title, and action.
  * - Fixme: ⚠️️ Move to example project?
+ * - Fixme: ⚠️️ can vars be internal or?
  */
 public struct FilterRowModel: RowKind {
    /**

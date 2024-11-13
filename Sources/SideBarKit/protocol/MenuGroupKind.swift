@@ -4,10 +4,10 @@ import Foundation
  */
 protocol MenuGroupKind {
    /**
-    * The type of the group.
+    * The type of the group
     * - Description: This property represents the type of the 
     *                group, providing a reference to the 
-    *                specific group kind.
+    *                specific group kind
     */
    var groupType: any GroupKind { get }
 }

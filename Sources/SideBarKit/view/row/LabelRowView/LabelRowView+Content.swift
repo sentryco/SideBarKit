@@ -6,7 +6,7 @@ extension LabelRowView {
    /**
     * Body
     */
-   var body: some View {
+   internal var body: some View {
       HStack(spacing: .zero) {
          labelColor()
          Self.text(isSelected: self.isSelected.wrappedValue, titleText: titleText)// center
@@ -28,7 +28,7 @@ extension LabelRowView {
     * - Description: A circular view representing the color of the label.
     * - Fixme: ⚠️️ This should be relative to height of parent, width should be 1:1
     */
-   func labelColor() -> some View {
+   internal func labelColor() -> some View {
       Circle()
          .frame(width: 18, height: 18)
          .foregroundColor(color)

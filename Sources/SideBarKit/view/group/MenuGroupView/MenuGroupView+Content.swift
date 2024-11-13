@@ -17,7 +17,7 @@ extension MenuGroupView {
    /**
     * groupTitle
     * - Description: The title of the group.
-    * - Fixme: ⚠️️ use hstack
+    * - Fixme: ⚠️️ Use hstack?
     */
    public var groupTitle: some View {
       MenuHeaderView(
@@ -25,21 +25,19 @@ extension MenuGroupView {
          isOn: $isOn
       )
       .background(isTest ? Color.purple : Color.clear)
-      // .padding(.vertical, .zero) // - Fixme: ⚠️️ add metric here?
-      // .background(isTest ? Color.orange : Color.clear)
    }
    /**
     * rowItems
     * - Description: The items of the group.
-    * - Fixme: ⚠️️ add animation to the isON toggeling
-    * - Fixme: ⚠️️ use better forloop
+    * - Fixme: ⚠️️ Add animation to the isON toggeling
+    * - Fixme: ⚠️️ Use better forloop
     */
    @ViewBuilder public var rowItems: some View {
       if !isOn { // Toggle visibility via the arrow icon
          VStack(spacing: MenuStack.sizing.rowSpace) { // Measure.defaultDoubleSpacing
             // Iterates through each element in the top section of the menu model, along with its index
             let items = Array(groupType.items.enumerated())
-            ForEach(items, id: \.offset) { i, element in // - Fixme: ⚠️️ add type
+            ForEach(items, id: \.offset) { i, element in // - Fixme: ⚠️️ Add type?
                rowItem(
                   rowItem: element, // rowItem
                   index: .init(group: index, item: i) // store the Combined index

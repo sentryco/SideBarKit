@@ -25,13 +25,16 @@ public protocol GroupKind {
     */
    func getItem(item: EnumType) -> any RowKind
 }
+/**
+ * Ext
+ */
 extension GroupKind {
    /**
     * The items in the group.
     * - Description: This property represents an array of items 
     *                conforming to `RowKind` that belong to the 
     *                group.
-    * - Fixme: ⚠️️ try to move items to a protocol extension
+    * - Fixme: ⚠️️ Try to move items to a protocol extension
     */
    public var items: RowKinds {
       EnumType.allCases.enumerated().map {

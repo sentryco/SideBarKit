@@ -11,7 +11,7 @@ extension FilterRowView {
     *               tag into a cohesive horizontal layout, ensuring all 
     *               elements are aligned and interactively responsive.
     */
-   var body: some View {
+   internal var body: some View {
       HStack(spacing: .zero) {
          Self.leftSideIcon(isSelected: isSelected.wrappedValue, iconName: iconName) // left
          Self.text(isSelected: isSelected.wrappedValue, titleText: titleText)// center

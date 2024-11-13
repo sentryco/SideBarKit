@@ -3,6 +3,7 @@ import HybridColor
 /**
  * View modifier
  * - Description: A view modifier that wraps a button, ensuring consistent styling and behavior across platforms.
+ * - Fixme: ⚠️️ Add abstract regarding what we use this for
  */
 fileprivate struct ButtonWrapper: ViewModifier {
    let action: EmptyClosure
@@ -40,6 +41,8 @@ extension View {
    /**
     * Convenient
     * - Description: Conveniently wraps a button with a given action closure.
+    * - Parameter action: - Fixme: ⚠️️ add doc
+    * - Returns: - Fixme: ⚠️️ add doc
     */
    @warn_unqualified_access // ref: https://www.hackingwithswift.com/quick-start/swiftui/how-to-make-swiftui-modifiers-safer-to-use-with-warn-unqualified-access
    internal func buttonWrapper(action: @escaping EmptyClosure) -> some View {
@@ -54,7 +57,6 @@ extension View {
    PreviewContainer {
       EmptyView()
          .buttonWrapper { Swift.print("action") }
-      // .padding(0) // .frame(width: 44, height: 44)
          .padding(.vertical)
          .frame(maxWidth: .infinity)
          .background(Color.blackOrWhite)

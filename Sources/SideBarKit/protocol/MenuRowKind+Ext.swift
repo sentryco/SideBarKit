@@ -12,6 +12,10 @@ extension MenuRowKind {
     *                purpose or category.
     * - Fixme: ⚠️️ move this to MenuRowKind
     * - Fixme: ⚠️️ Maybe use the modifier that doesn't need a size, see other icon code etc 👈
+    * - Parameters:
+    *   - isSelected: - Fixme: ⚠️️ add doc
+    *   - iconName: - Fixme: ⚠️️ add doc
+    * - Returns: - Fixme: ⚠️️ add doc
     */
    internal static func leftSideIcon(isSelected: Bool, iconName: String) -> some View {
       // - Fixme: ⚠️️ Add the bellow later
@@ -34,6 +38,10 @@ extension MenuRowKind {
     *                readability and providing context about the 
     *                item's function within the application.
     * - Fixme: ⚠️️ move this to MenuRowKind
+    * - Parameters:
+    *   - isSelected: - Fixme: ⚠️️ add doc
+    *   - titleText: - Fixme: ⚠️️ add doc
+    * - Returns: - Fixme: ⚠️️ add doc
     */
    internal static func text(isSelected: Bool, titleText: String) -> some View {
       // - Fixme: ⚠️️ Add the bellow later
@@ -50,6 +58,10 @@ extension MenuRowKind {
     *                the menu item, providing a visual indicator of 
     *                associated items or notifications.
     * - Fixme: ⚠️️ Add some selected-state to tag icon as well? 👈 or is this in now?
+    * - Parameters:
+    *   - tagCount: - Fixme: ⚠️️ add doc
+    *   - isSelected: - Fixme: ⚠️️ add doc
+    * - Returns: - Fixme: ⚠️️ add doc
     */
    internal static func rightSideTag(tagCount: Binding<Int>, isSelected: Bool) -> some View {
       MenuTagView( // Initializes the MenuTagView

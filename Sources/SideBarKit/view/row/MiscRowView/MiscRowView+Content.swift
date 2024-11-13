@@ -4,7 +4,7 @@ extension MiscRowView {
    /**
     * Body
     */
-   var body: some View {
+   internal var body: some View {
       HStack(spacing: .zero) {
          Self.leftSideIcon(isSelected: isSelected.wrappedValue, iconName: icon) // left
          Self.text(isSelected: isSelected.wrappedValue, titleText: titleText)// center

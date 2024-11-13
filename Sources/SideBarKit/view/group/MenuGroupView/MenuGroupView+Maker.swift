@@ -8,8 +8,8 @@ extension MenuGroupView {
     * - Abstract: Create views from models
     * - Description: Creates a view based on the provided row item type.
     * - Fixme: ⚠️️ Add HStack, left aligned
-    * - Fixme: ⚠️️ implement isSelected index == selected etc
-    * - Fixme: ⚠️️ make this static
+    * - Fixme: ⚠️️ Implement isSelected index == selected etc
+    * - Fixme: ⚠️️ Make this static
     * - Note: index is used for keeping track of selection index etc
     * - Parameters:
     *   - rowItem: The row item to be displayed.

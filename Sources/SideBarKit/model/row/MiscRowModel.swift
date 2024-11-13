@@ -3,6 +3,7 @@ import SwiftUI
  * Normal will be used for prefs for instance
  * - Description: Represents a miscellaneous type with a title, icon, and action.
  * - Fixme: ⚠️️ Move to example project?
+ * - Fixme: ⚠️️ can vars be internal or?
  */
 public struct MiscRowModel: RowKind {
    /**
