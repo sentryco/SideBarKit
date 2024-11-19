@@ -14,7 +14,7 @@ fileprivate struct NoButtonStyle: ButtonStyle {
    /**
     *  - Fixme: ⚠️️ Seems like this must be here to make public work
     */
-   fileprivate init() {}
+//   fileprivate init() {}
    /**
     * - Parameter configuration: The configuration of the button, containing its label and state.
     * - Returns: A view that represents the body of a button.

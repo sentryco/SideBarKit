@@ -17,7 +17,7 @@ extension MenuRowKind {
     *   - iconName: - Fixme: ⚠️️ add doc
     * - Returns: - Fixme: ⚠️️ add doc
     */
-   internal static func leftSideIcon(isSelected: Bool, iconName: String) -> some View {
+   internal /*static*/ func leftSideIcon(isSelected: Bool, iconName: String) -> some View {
       // - Fixme: ⚠️️ Add the bellow later
       // icon color for active / inactive state
       // let iconColor: Color = isSelected ? Palette.SideBar.iconTint.active : Palette.SideBar.iconTint.inActive
@@ -43,7 +43,8 @@ extension MenuRowKind {
     *   - titleText: - Fixme: ⚠️️ add doc
     * - Returns: - Fixme: ⚠️️ add doc
     */
-   internal static func text(isSelected: Bool, titleText: String) -> some View {
+   @MainActor // ⚠️️ swift 6.0 support
+   internal /*static*/ func text(isSelected: Bool, titleText: String) -> some View {
       // - Fixme: ⚠️️ Add the bellow later
       // let textColor = isSelected ? Palette.SideBar.buttonText.active : Palette.SideBar.buttonText.inActive
       let textColor: Color = .whiteOrBlack.opacity(isSelected ? 1.0 : 0.6) // We change color based on selected state
@@ -63,7 +64,8 @@ extension MenuRowKind {
     *   - isSelected: - Fixme: ⚠️️ add doc
     * - Returns: - Fixme: ⚠️️ add doc
     */
-   internal static func rightSideTag(tagCount: Binding<Int>, isSelected: Bool) -> some View {
+   @MainActor // ⚠️️ swift 6.0 support
+   internal /*static*/ func rightSideTag(tagCount: Binding<Int>, isSelected: Bool) -> some View {
       MenuTagView( // Initializes the MenuTagView
          title: "\(tagCount.wrappedValue/* ?? .zero*/)", // Converts the optional tagCount to a string, defaulting to "0" if nil,
          isSelected: isSelected // Passes the isSelected state to the MenuTagView

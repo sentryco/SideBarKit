@@ -4,6 +4,7 @@ import Foundation
  *                represented by an enum case, with a title and 
  *                methods to retrieve the items.
  */
+//@MainActor // ⚠️️ Swift 6.0 support
 public protocol GroupKind {
    /**
     * The type of the enum that represents the items in the group.

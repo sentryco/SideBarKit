@@ -2,6 +2,7 @@ import SwiftUI
 /**
  * - Fixme: ⚠️️ This should not be selectable
  */
+//@MainActor
 internal struct MiscRowView: View, MenuRowKind {
    /**
     * Selection
