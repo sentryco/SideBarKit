@@ -43,7 +43,7 @@ extension MenuRowKind {
     *   - titleText: - Fixme: ⚠️️ add doc
     * - Returns: - Fixme: ⚠️️ add doc
     */
-   @MainActor // ⚠️️ swift 6.0 support
+   // @MainActor // ⚠️️ swift 6.0 support
    internal /*static*/ func text(isSelected: Bool, titleText: String) -> some View {
       // - Fixme: ⚠️️ Add the bellow later
       // let textColor = isSelected ? Palette.SideBar.buttonText.active : Palette.SideBar.buttonText.inActive
@@ -64,7 +64,7 @@ extension MenuRowKind {
     *   - isSelected: - Fixme: ⚠️️ add doc
     * - Returns: - Fixme: ⚠️️ add doc
     */
-   @MainActor // ⚠️️ swift 6.0 support
+   // @MainActor // ⚠️️ swift 6.0 support
    internal /*static*/ func rightSideTag(tagCount: Binding<Int>, isSelected: Bool) -> some View {
       MenuTagView( // Initializes the MenuTagView
          title: "\(tagCount.wrappedValue/* ?? .zero*/)", // Converts the optional tagCount to a string, defaulting to "0" if nil,
