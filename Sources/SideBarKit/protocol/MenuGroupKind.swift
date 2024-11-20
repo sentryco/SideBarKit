@@ -2,7 +2,7 @@ import Foundation
 /**
  * Each group view needs to contain this
  */
-@MainActor // ⚠️️ Swift 6.0 support
+//@MainActor // ⚠️️ Swift 6.0 support
 protocol MenuGroupKind {
    /**
     * The type of the group

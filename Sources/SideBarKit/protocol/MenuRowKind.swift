@@ -3,7 +3,7 @@ import SwiftUI
  * Each row view needs to contain this
  * - Fixme: ⚠️️ Extend identifiable? or hashable?
  */
-@MainActor // ⚠️️ Needed to support swift 6.0
+//@MainActor // ⚠️️ Needed to support swift 6.0
 protocol MenuRowKind {
    /**
     * The title of the menu item.
