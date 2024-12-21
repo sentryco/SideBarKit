@@ -1,6 +1,6 @@
 import Foundation
 /**
- * - Fixme: ⚠️️ Add doc
+ * Represents the sizing configuration for the sidebar menu.
  * - Fixme: ⚠️️ Add public init?
  */
 public struct SideBarSizing {

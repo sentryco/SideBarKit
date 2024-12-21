@@ -13,9 +13,9 @@ extension MenuRowKind {
     * - Fixme: ⚠️️ move this to MenuRowKind
     * - Fixme: ⚠️️ Maybe use the modifier that doesn't need a size, see other icon code etc 👈
     * - Parameters:
-    *   - isSelected: - Fixme: ⚠️️ add doc
-    *   - iconName: - Fixme: ⚠️️ add doc
-    * - Returns: - Fixme: ⚠️️ add doc
+    *   - isSelected: A boolean indicating whether the menu item is currently selected.
+    *   - iconName: The name of the icon to be displayed.
+    * - Returns: A view representing the left-side icon.
     */
    internal /*static*/ func leftSideIcon(isSelected: Bool, iconName: String) -> some View {
       // - Fixme: ⚠️️ Add the bellow later
@@ -39,9 +39,9 @@ extension MenuRowKind {
     *                item's function within the application.
     * - Fixme: ⚠️️ move this to MenuRowKind
     * - Parameters:
-    *   - isSelected: - Fixme: ⚠️️ add doc
-    *   - titleText: - Fixme: ⚠️️ add doc
-    * - Returns: - Fixme: ⚠️️ add doc
+    *   - isSelected: A boolean indicating whether the menu item is currently selected.
+    *   - titleText: The text to be displayed as the title of the menu item.
+    * - Returns: A view representing the title text of the menu item.
     */
    // @MainActor // ⚠️️ swift 6.0 support
    internal /*static*/ func text(isSelected: Bool, titleText: String) -> some View {
@@ -60,9 +60,9 @@ extension MenuRowKind {
     *                associated items or notifications.
     * - Fixme: ⚠️️ Add some selected-state to tag icon as well? 👈 or is this in now?
     * - Parameters:
-    *   - tagCount: - Fixme: ⚠️️ add doc
-    *   - isSelected: - Fixme: ⚠️️ add doc
-    * - Returns: - Fixme: ⚠️️ add doc
+    *   - tagCount: The number of items associated with the menu item.
+    *   - isSelected: A boolean indicating whether the menu item is currently selected.
+    * - Returns: A view representing the tag count of the menu item.
     */
    // @MainActor // ⚠️️ swift 6.0 support
    internal /*static*/ func rightSideTag(tagCount: Binding<Int>, isSelected: Bool) -> some View {

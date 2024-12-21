@@ -41,8 +41,8 @@ extension View {
    /**
     * Convenient
     * - Description: Conveniently wraps a button with a given action closure.
-    * - Parameter action: - Fixme: ⚠️️ add doc
-    * - Returns: - Fixme: ⚠️️ add doc
+    * - Parameter action: The action to perform when the button is pressed.
+    * - Returns: A view that wraps the button with the specified action.
     * - Fixme: ⚠️️ the @warn_unqualified_access creates warnings in swift 6.0, figure out how to deal with this later
     */
    // @warn_unqualified_access // ref: https://www.hackingwithswift.com/quick-start/swiftui/how-to-make-swiftui-modifiers-safer-to-use-with-warn-unqualified-access

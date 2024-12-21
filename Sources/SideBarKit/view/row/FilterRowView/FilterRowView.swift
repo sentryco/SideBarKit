@@ -5,7 +5,8 @@ import SwiftUI
  */
 internal struct FilterRowView: View, MenuRowKind {
    /**
-    * - Fixme: ⚠️️ Add doc
+    * Selection
+    * - Description: The currently selected item in the menu
     */
    internal var selection: Binding<CombinedIndex?>
    /**

@@ -12,7 +12,7 @@ extension View {
     * - Fixme: ⚠️️ add preview?
     * - Fixme: ⚠️️ Use const from ConstLib?
     * - Parameter selected: Indicates if the menu tag is selected.
-    * - Returns: - Fixme: ⚠️️ add doc
+    * - Returns: A modified view with the menu tag text style applied.
     */
    internal func menuTagTextStyle(selected: Bool) -> some View {
       // let fontColor = Palette.SideBar.Tag.text
