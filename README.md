@@ -13,11 +13,10 @@ SideBarKit is a customizable Sidebar framework. Decouple the sidebar implementat
 
 ## Features:
 
-- Toggleable groups (hide / show)
-- Reactive tag labels (count change reactivly)
-- Dark / Light mode support
-- BYO (Bring your own) enum models
-- Works for iOS (iPad) and macOS
+- 🔄 Toggleable groups (hide / show)
+- 🏷️ Reactive tag labels (count change reactively)
+- 🌗 Dark / Light mode support
+- 🧩 BYO (Bring your own) enum models
 
 ## Example:
 
