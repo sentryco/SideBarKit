@@ -45,6 +45,7 @@ To install SideBarKit using Swift Package Manager, add the following dependency 
 - Add UITests
 - Tag count may not need to be a binding 
 - Tweak padding around groups. Looks too tall when collapsed
+- Make sure icons keeps its aspect ratio, double check this
 
 ## Future considerations:
 

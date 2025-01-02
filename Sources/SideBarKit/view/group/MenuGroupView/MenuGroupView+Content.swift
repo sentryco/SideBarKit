@@ -23,7 +23,7 @@ extension MenuGroupView {
          text: groupType.title,
          isOn: $isOn
       )
-      .background(isTest ? Color.purple : Color.clear)
+      .background(isTestingSideBar ? Color.purple : Color.clear)
    }
    /**
     * rowItems
@@ -43,6 +43,7 @@ extension MenuGroupView {
                )
             }
          }
+         .padding(.horizontal, MenuStack.sizing.horRowPadding)
       }
    }
 }

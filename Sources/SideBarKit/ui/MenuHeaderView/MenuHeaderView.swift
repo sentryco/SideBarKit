@@ -6,8 +6,8 @@ import SwiftUI
  *                application, featuring a dropdown button to expand or collapse 
  *                the respective menu section.
  * - Important: ⚠️️ The logic is in DropDownRow
- * - Fixme: ⚠️️ make this a menuTextStyle instead of a struct?  elaborate please
- * - Fixme: ⚠️️ add some sort of subtle stroke around icon? rounded rect or circle etc?
+ * - Fixme: ⚠️️ Make this a menuTextStyle instead of a struct?  elaborate please
+ * - Fixme: ⚠️️ Add some sort of subtle stroke around icon? rounded rect or circle etc?
  */
 internal typealias MenuHeaderView = DropDownRow
 /**

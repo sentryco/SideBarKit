@@ -25,7 +25,6 @@ extension DropDownRow {
          leadingIconName: leadingImageName, // Sets the leading icon name based on the leadingImageName property
          trailingIconName: $isOn.wrappedValue ? onImage : offImage // Toggles between onImage and offImage based on the isOn state
       )
-      .padding(.trailing, MenuStack.sizing.toggleHorizontalPadding)
       #if os(macOS) // - Fixme: ⚠️️ We might need this for iOS as well
       .padding(.vertical, 8) // This must be here so the entire area is hittable, if added to the component it will not be
       #endif

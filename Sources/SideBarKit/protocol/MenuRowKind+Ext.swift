@@ -26,10 +26,11 @@ extension MenuRowKind {
          .iconStyle(
             // - Fixme: ⚠️️ use Metric.iconSize or relative?
             size: 18, // Sets the size of the icon
-            padding: 12, // Applies default margin padding around the icon
+            // - Fixme: ⚠️️ needed?
+            padding: .zero/*12*/, // Applies default margin padding around the icon
             color: iconColor // Sets the color of the icon based on the iconColor variable
          )
-         .background(isTest ? .pink : .clear) // ⚠️️ debug
+         .background(isTestingSideBar ? .pink : .clear) // ⚠️️ debug
    }
    /**
     * TitleText (left aligned)
@@ -50,7 +51,7 @@ extension MenuRowKind {
       let textColor: Color = .whiteOrBlack.opacity(isSelected ? 1.0 : 0.6) // We change color based on selected state
       return Text(titleText)
          .rowTextStyle(textColor: textColor)
-         .background(isTest ? .blue : .clear) // ⚠️️ debug
+         .background(isTestingSideBar ? .blue : .clear) // ⚠️️ debug
    }
    /**
     * Tag - Create the `Tag-view` (badge with number of items)
@@ -70,7 +71,7 @@ extension MenuRowKind {
          title: "\(tagCount.wrappedValue/* ?? .zero*/)", // Converts the optional tagCount to a string, defaulting to "0" if nil,
          isSelected: isSelected // Passes the isSelected state to the MenuTagView
       )
-      .padding(.horizontal, MenuStack.sizing.tagHorizontalPadding)
+//      .padding(.horizontal, MenuStack.sizing.tagHorizontalPadding)
       // ⚠️️ New is that it also is hidden if tagCount is zero. this way things are more minimalistic
       .opacity(/*tagCount == nil || */tagCount.wrappedValue == .zero ? .zero : 1) // hide prefs for instance, prefs has no tags and is set to nil
       // .background(.teal) // ⚠️️ debug

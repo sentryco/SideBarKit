@@ -18,6 +18,7 @@ extension View {
       // let fontColor = Palette.SideBar.Tag.text
       let fontColor = Color.whiteOrBlack.opacity(selected ? 1 : 0.7)
       return self
+      // - Fixme: ⚠️️ move to const?
          .padding(.vertical, 4)  // Applies padding to the view
          .padding(.horizontal, 12)
          .font(Font.headline/*Font.menuTag*/) // Sets the font style to headline

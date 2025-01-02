@@ -12,7 +12,7 @@ extension FilterRowView {
     *               elements are aligned and interactively responsive.
     */
    internal var body: some View {
-      HStack(spacing: .zero) {
+      HStack(spacing: MenuStack.sizing.horRowSpacing) {
          self.leftSideIcon(
             isSelected: isSelected.wrappedValue,
             iconName: iconName

@@ -28,7 +28,7 @@ extension ButtonWrapper {
       })
       .noButtonStyle // This avoids down state changing apperance of text etc, it seems also to works as a fix for the multiple action firing at once issue that was solved with a .plain buttonstyle. but plain has the downstate, so thats why we use this custom style
       // ⚠️️ New, macOS needed space between
-      .background(isTest ? .green : .clear) // ⚠️️ debug
+      .background(isTestingSideBar ? .green : .clear) // ⚠️️ debug
       #if os(macOS)
       .buttonStyle(.plain) // ⚠️️ Needed to not inherit default button-style in macOS
       #endif

@@ -72,4 +72,4 @@ public struct MenuStack: View {
  *                mode, which is used for debugging and visualizing the
  *                menu structure.
  */
-let isTest: Bool = false
+public var isTestingSideBar: Bool = false

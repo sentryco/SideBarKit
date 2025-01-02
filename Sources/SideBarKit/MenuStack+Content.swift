@@ -13,7 +13,7 @@ extension MenuStack {
     */
    public var body: some View {
       scrollStack
-         .background(isTest ? .indigo : .clear) // ⚠️️ Debug
+         .background(isTestingSideBar ? .indigo : .clear) // ⚠️️ Debug
          .accessibilityIdentifier("sideBar")
    }
 }

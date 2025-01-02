@@ -45,8 +45,8 @@ fileprivate struct AccessoryButtonStyle: ButtonStyle {
          leftIcon // Displays the left icon
          configuration.label // Displays the label of the configuration
             .rowTextStyle( // Applies row text style to the label
-               textColor: textColor, // Sets the color of the text.
-               padding: leadingIconName == nil ? .zero : 4 // Sets the padding around the text based on the presence of a leading icon.
+               textColor: textColor//, // Sets the color of the text.
+//               padding: leadingIconName == nil ? .zero : 4 // Sets the padding around the text based on the presence of a leading icon.
                /*font: font*/ // - Fixme: ⚠️️ add later again // Sets the font style of the text.
             )
             .lineLimit(1) // Limits the number of lines of text to 1
@@ -78,9 +78,9 @@ fileprivate struct AccessoryButtonStyle: ButtonStyle {
             padding: 0,
             color: iconColor
          ) // Sets the size and padding of the icon
-         .background(isTest ? .blue : .clear) // ⚠️️ debug
+         .background(isTestingSideBar ? .blue : .clear) // ⚠️️ debug
 //         .padding(.horizontal, 0)
-         .background(isTest ? .pink : .clear) // ⚠️️ debug
+         .background(isTestingSideBar ? .pink : .clear) // ⚠️️ debug
    }
 }
 /**
