@@ -9,9 +9,13 @@ public struct SideBarSizing {
     */
    internal let rowSpace: CGFloat
    /**
-    * The space between groups.
+    * The space between title and rows in group
     */
    internal let groupSpace: CGFloat
+   /**
+    * THe space between each group item in the vstack
+    */
+   internal let vStackSpace: CGFloat
    /**
     * The space between the icon and the text.
     */
@@ -28,6 +32,18 @@ public struct SideBarSizing {
     * The space between the tag and the text.
     */
    internal let tagHorizontalPadding: CGFloat
+   /**
+    * - Fixme: ⚠️️ add doc
+    */
+   public init(rowSpace: CGFloat, groupSpace: CGFloat, vStackSpace: CGFloat, iconHorizontalPadding: CGFloat, textHorizontalPadding: CGFloat, toggleHorizontalPadding: CGFloat, tagHorizontalPadding: CGFloat) {
+      self.rowSpace = rowSpace
+      self.groupSpace = groupSpace
+      self.vStackSpace = vStackSpace
+      self.iconHorizontalPadding = iconHorizontalPadding
+      self.textHorizontalPadding = textHorizontalPadding
+      self.toggleHorizontalPadding = toggleHorizontalPadding
+      self.tagHorizontalPadding = tagHorizontalPadding
+   }
 }
 /**
  * Const
@@ -38,9 +54,10 @@ extension SideBarSizing {
     */
    public static var defaultSizing: SideBarSizing {
       .init(
-         rowSpace: 12,
-         groupSpace: 12,
-         iconHorizontalPadding: 12,
+         rowSpace: 12, // - Fixme: ⚠️️ rename to rowVSpace
+         groupSpace: 12, // - Fixme: ⚠️️ rename to groupVSpace
+         vStackSpace: 12,
+         iconHorizontalPadding: 12, // space between icon and text
          textHorizontalPadding: 4,
          toggleHorizontalPadding: 12,
          tagHorizontalPadding: 0

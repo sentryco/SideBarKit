@@ -30,7 +30,7 @@ extension MenuStack {
     * - Fixme: ⚠️️ use const for spacing?
     */
    internal var scrollStack: some View {
-      ScrollableVStack(spacing: 12) { // Handles scrolling and vStacking
+      ScrollableVStack(spacing: MenuStack.sizing.vStackSpace) { // Handles scrolling and vStacking
          content // Embed group-views
       }
    }

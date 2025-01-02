@@ -50,6 +50,7 @@ public struct MenuStack: View {
     *                sidebar menu, which defines the dimensions and layout
     *                of the menu items. It is used to ensure consistent
     *                sizing across different sections of the menu.
+    * - Fixme: ⚠️️ make this non static?
     */
    internal static var sizing = SideBarSizing.defaultSizing
    /**

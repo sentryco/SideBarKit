@@ -9,9 +9,15 @@ extension LabelRowView {
    internal var body: some View {
       HStack(spacing: .zero) {
          labelColor()
-         self.text(isSelected: self.isSelected.wrappedValue, titleText: titleText)// center
+         self.text(
+            isSelected: self.isSelected.wrappedValue,
+            titleText: titleText
+         ) // center
          Spacer()
-         self.rightSideTag(tagCount: $tagCount, isSelected: isSelected.wrappedValue) // right
+         self.rightSideTag(
+            tagCount: $tagCount,
+            isSelected: isSelected.wrappedValue
+         ) // right
       }
       .buttonWrapper { // Wraps the HStack in a button-like interaction, allowing for selection and action triggering.
          selection.wrappedValue = self.index
@@ -30,7 +36,7 @@ extension LabelRowView {
     */
    internal func labelColor() -> some View {
       Circle()
-         .frame(width: 18, height: 18)
+         .frame(width: 18, height: 18) // - Fixme: ⚠️️ move this to a const?
          .foregroundColor(color)
          .padding(.horizontal, MenuStack.sizing.iconHorizontalPadding)
          .background(isTest ? Color.brown : Color.clear)
